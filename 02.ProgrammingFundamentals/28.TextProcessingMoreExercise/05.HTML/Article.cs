@@ -1,5 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using System.Text;
 
 namespace _05.HTML
 {
@@ -11,25 +11,27 @@ namespace _05.HTML
             Content = content;
             Comments = new List<string>();
         }
-
         public string Title { get; set; }
         public string Content { get; set; }
         public List<string> Comments { get; set; }
 
-        public void ToHTML()
+        public override string ToString()
         {
-            Console.WriteLine("<h1>");
-            Console.WriteLine($"    {Title}");
-            Console.WriteLine("</h1>");
-            Console.WriteLine("<article>");
-            Console.WriteLine($"   {Content}");
-            Console.WriteLine("</article>");
-            for (int i = 0; i < Comments.Count; i++)
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine("<h1>");
+            sb.AppendLine($"    {Title}");
+            sb.AppendLine("</h1>");
+            sb.AppendLine("<article>");
+            sb.AppendLine($"    {Content}");
+            sb.AppendLine("</article>");
+            foreach (var comment in Comments)
             {
-                Console.WriteLine("<div>");
-                Console.WriteLine($"    {Comments[i]}");
-                Console.WriteLine("</div>");
+                sb.AppendLine("<div>");
+                sb.AppendLine($"    {comment}");
+                sb.AppendLine("</div>");
             }
+
+            return sb.ToString().Trim();
         }
     }
 }

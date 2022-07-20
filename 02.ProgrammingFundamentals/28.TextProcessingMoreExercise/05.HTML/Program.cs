@@ -8,18 +8,17 @@ namespace _05.HTML
         {
             string title = Console.ReadLine();
             string content = Console.ReadLine();
-            string comment = Console.ReadLine();
-
+            
             Article article = new Article(title, content);
-
+            
+            string comment = Console.ReadLine();
             while (comment != "end of comments")
             {
                 article.Comments.Add(comment);
-
                 comment = Console.ReadLine();
             }
 
-            article.ToHTML();
+            Console.WriteLine(article);
         }
     }
 }
