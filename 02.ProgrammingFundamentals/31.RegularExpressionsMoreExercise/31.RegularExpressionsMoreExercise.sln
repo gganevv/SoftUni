@@ -5,6 +5,8 @@ VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01.WinningTicket", "01.WinningTicket\01.WinningTicket.csproj", "{2A57135E-87D1-47EA-8479-4C47A36D21EC}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02.RageQuit", "02.RageQuit\02.RageQuit.csproj", "{EDC28C30-AB0F-44F5-AA7D-67D28DA963C2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{2A57135E-87D1-47EA-8479-4C47A36D21EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2A57135E-87D1-47EA-8479-4C47A36D21EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2A57135E-87D1-47EA-8479-4C47A36D21EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDC28C30-AB0F-44F5-AA7D-67D28DA963C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDC28C30-AB0F-44F5-AA7D-67D28DA963C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDC28C30-AB0F-44F5-AA7D-67D28DA963C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDC28C30-AB0F-44F5-AA7D-67D28DA963C2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

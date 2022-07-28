@@ -8,7 +8,7 @@ namespace _01.WinningTicket
         static void Main(string[] args)
         {
             string[] tickets = Console.ReadLine().Split(new char[] { ',', ' ' }, StringSplitOptions.RemoveEmptyEntries);
-            string winningPattern = @"[@#$^]{6,}";
+            string winningPattern = @"([@#$^])\1{5,9}";
             for (int i = 0; i < tickets.Length; i++)
             {
                 string currentTicket = tickets[i];
@@ -19,6 +19,7 @@ namespace _01.WinningTicket
                 }
                 string leftHalf = currentTicket.Substring(0, 10);
                 string rightHalf = currentTicket.Substring(10, 10);
+
                 var leftHalfCheck = Regex.Match(leftHalf, winningPattern);
                 var rightHalfCheck = Regex.Match(rightHalf, winningPattern);
                 if (leftHalfCheck.Value.Length >= 6 && rightHalfCheck.Value.Length >= 6 && (leftHalfCheck.Value.Contains(rightHalfCheck.Value) || rightHalfCheck.Value.Contains(leftHalfCheck.Value)))
