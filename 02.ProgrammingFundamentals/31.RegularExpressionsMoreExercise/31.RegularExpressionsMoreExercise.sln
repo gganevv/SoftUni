@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01.WinningTicket", "01.Winn
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02.RageQuit", "02.RageQuit\02.RageQuit.csproj", "{EDC28C30-AB0F-44F5-AA7D-67D28DA963C2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.PostOffice", "03.PostOffice\03.PostOffice.csproj", "{5D7E1D37-A8BC-43B8-B77A-693CD80AC05A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03.PostOffice", "03.PostOffice\03.PostOffice.csproj", "{5D7E1D37-A8BC-43B8-B77A-693CD80AC05A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.SantasSecretHelper", "04.SantasSecretHelper\04.SantasSecretHelper.csproj", "{2E71963F-D682-44F0-A6B4-9EAD20C377AC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{5D7E1D37-A8BC-43B8-B77A-693CD80AC05A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5D7E1D37-A8BC-43B8-B77A-693CD80AC05A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5D7E1D37-A8BC-43B8-B77A-693CD80AC05A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E71963F-D682-44F0-A6B4-9EAD20C377AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E71963F-D682-44F0-A6B4-9EAD20C377AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E71963F-D682-44F0-A6B4-9EAD20C377AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E71963F-D682-44F0-A6B4-9EAD20C377AC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
