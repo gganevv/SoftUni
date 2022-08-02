@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace _03.HeroesOfCodeAndLogic
 {
@@ -104,30 +103,6 @@ namespace _03.HeroesOfCodeAndLogic
             }
             Console.WriteLine($"{heroName} healed for {currentHero.HitPoints - startingHP} HP!");
 
-        }
-    }
-
-    class Hero
-    {
-
-        public Hero(string heroName, int heroHitPoints, int heroManaPoints)
-        {
-            Name = heroName;
-            HitPoints = heroHitPoints;
-            ManaPoints = heroManaPoints;
-        }
-
-        public string Name { get; set; }
-        public int HitPoints { get; set; }
-        public int ManaPoints { get; set; }
-
-        public override string ToString()
-        {
-            StringBuilder sb = new StringBuilder();
-            sb.AppendLine(Name);
-            sb.AppendLine($"  HP: {HitPoints}");
-            sb.AppendLine($"  MP: {ManaPoints}");
-            return sb.ToString().Trim();
         }
     }
 }
