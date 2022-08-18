@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.RockPaperScissorsGame", "01.RockPaperScissorsGame\01.RockPaperScissorsGame.csproj", "{B5EB40DD-732C-4605-A796-57991DE44612}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01.RockPaperScissorsGame", "01.RockPaperScissorsGame\01.RockPaperScissorsGame.csproj", "{B5EB40DD-732C-4605-A796-57991DE44612}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.GuestTheNumber", "02.GuestTheNumber\02.GuestTheNumber.csproj", "{1DD97DE6-2E86-426B-9913-A46AC5ECD7C1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02.GuestTheNumber", "02.GuestTheNumber\02.GuestTheNumber.csproj", "{1DD97DE6-2E86-426B-9913-A46AC5ECD7C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.QuickDraw", "03.QuickDraw\03.QuickDraw.csproj", "{B3D6EFF5-0076-4F92-851A-43EEA3B439C2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{1DD97DE6-2E86-426B-9913-A46AC5ECD7C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1DD97DE6-2E86-426B-9913-A46AC5ECD7C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1DD97DE6-2E86-426B-9913-A46AC5ECD7C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3D6EFF5-0076-4F92-851A-43EEA3B439C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3D6EFF5-0076-4F92-851A-43EEA3B439C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3D6EFF5-0076-4F92-851A-43EEA3B439C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3D6EFF5-0076-4F92-851A-43EEA3B439C2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
