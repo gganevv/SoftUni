@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02.GuestTheNumber", "02.Gue
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03.QuickDraw", "03.QuickDraw\03.QuickDraw.csproj", "{B3D6EFF5-0076-4F92-851A-43EEA3B439C2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.CurrencyConverter", "04.CurrencyConverter\04.CurrencyConverter.csproj", "{82C38468-11A6-42BF-9A80-7A8FA4530958}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04.CurrencyConverter", "04.CurrencyConverter\04.CurrencyConverter.csproj", "{82C38468-11A6-42BF-9A80-7A8FA4530958}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.RandomSentencesGenerator", "05.RandomSentencesGenerator\05.RandomSentencesGenerator.csproj", "{D6E5773E-14E1-41BA-B11A-C5590DF0B140}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{82C38468-11A6-42BF-9A80-7A8FA4530958}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{82C38468-11A6-42BF-9A80-7A8FA4530958}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{82C38468-11A6-42BF-9A80-7A8FA4530958}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6E5773E-14E1-41BA-B11A-C5590DF0B140}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6E5773E-14E1-41BA-B11A-C5590DF0B140}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6E5773E-14E1-41BA-B11A-C5590DF0B140}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6E5773E-14E1-41BA-B11A-C5590DF0B140}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
