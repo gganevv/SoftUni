@@ -13,10 +13,10 @@ namespace _01.Hangman
             {
                 using (StreamReader streamReader = new StreamReader(FileLocation.LOCATION))
                 {
-                    Game game = new Game();
                     string[] words = streamReader.ReadToEnd().Split('\n');
                     bool playing = true;
                     int defaultLives = Game.DifficultitySelector();
+                    string difficultity = Game.GetDifficultity(defaultLives);
 
                     while (playing)
                     {
@@ -28,7 +28,7 @@ namespace _01.Hangman
 
                         while (lives > 0 && !guessed)
                         {
-                            Drawler.DrawCurrentGameState(lives, currentGuess, usedLetters);
+                            Drawler.DrawCurrentGameState(lives, currentGuess, usedLetters, difficultity);
                             char currentLetter = Game.GetCurrentChar(usedLetters);
 
                             if (currentWord.Contains(currentLetter) && !currentGuess.Contains(currentLetter))

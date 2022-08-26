@@ -1,12 +1,73 @@
 ﻿namespace _01.Hangman
 {
+    public static class Animation
+    {
+		public static string[] wrongGuesses =
+{
+	@"      ╔═══╗   " + '\n' +
+	@"      |   ║   " + '\n' +
+	@"      O   ║   " + '\n' +
+	@"     /|\  ║   " + '\n' +
+	@"     / \  ║   " + '\n' +
+	@"     ███  ║   " + '\n' +
+	@"    ══════╩═══",
+
+	@"      ╔═══╗   " + '\n' +
+	@"      |   ║   " + '\n' +
+	@"      O   ║   " + '\n' +
+	@"     /|\  ║   " + '\n' +
+	@"       \  ║   " + '\n' +
+	@"     ███  ║   " + '\n' +
+	@"    ══════╩═══",
+
+	@"      ╔═══╗   " + '\n' +
+	@"      |   ║   " + '\n' +
+	@"      O   ║   " + '\n' +
+	@"     /|\  ║   " + '\n' +
+	@"          ║   " + '\n' +
+	@"     ███  ║   " + '\n' +
+	@"    ══════╩═══",
+
+	@"      ╔═══╗   " + '\n' +
+	@"      |   ║   " + '\n' +
+	@"      O   ║   " + '\n' +
+	@"      |\  ║   " + '\n' +
+	@"          ║   " + '\n' +
+	@"     ███  ║   " + '\n' +
+	@"    ══════╩═══",
+
+	@"      ╔═══╗   " + '\n' +
+	@"      |   ║   " + '\n' +
+	@"      O   ║   " + '\n' +
+	@"      |   ║   " + '\n' +
+	@"          ║   " + '\n' +
+	@"     ███  ║   " + '\n' +
+	@"    ══════╩═══",
+
+	@"      ╔═══╗   " + '\n' +
+	@"      |   ║   " + '\n' +
+	@"      O   ║   " + '\n' +
+	@"          ║   " + '\n' +
+	@"          ║   " + '\n' +
+	@"     ███  ║   " + '\n' +
+	@"    ══════╩═══",
+
+	@"      ╔═══╗   " + '\n' +
+	@"      |   ║   " + '\n' +
+	@"          ║   " + '\n' +
+	@"          ║   " + '\n' +
+	@"          ║   " + '\n' +
+	@"     ███  ║   " + '\n' +
+	@"    ══════╩═══"
+};
+	}
     public static class Texts
     {
         public const string INTRO = ">>>HANGMAN<<<";
         public const string SELECT_DIFFICULTITY = 
 @"Select difficultity.
-1 - Easy >> 10 lives
-2 - Medium >> 6 lives
+1 - Easy >> 14 lives
+2 - Medium >> 7 lives
 3 - Hard >> 3 lives";
         public const string PLAY_AGAIN = "Play again? 1 = yes, 2 = no";
         public const string WIN = "You win.";
@@ -16,10 +77,10 @@
 
     public static class MagicNumbers
     {
-        public const int EASY_LIVES = 10;
-        public const int MEDIUM_LIVES = 6;
+        public const int EASY_LIVES = 14;
+        public const int MEDIUM_LIVES = 7;
         public const int HARD_LIVES = 3;
-        public const int WAIT_TIME = 5000;
+        public const int WAIT_TIME = 2500;
     }
 
     public static class ErrorMessages

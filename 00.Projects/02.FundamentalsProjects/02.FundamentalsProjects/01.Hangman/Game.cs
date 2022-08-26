@@ -23,6 +23,26 @@ namespace _01.Hangman
             return playing;
         }
 
+        internal static string GetDifficultity(int defaultLives)
+        {
+            string difficultity = string.Empty;
+            switch (defaultLives)
+            {
+                case 14:
+                    difficultity = "easy";
+                    break;
+                case 7:
+                    difficultity = "medium";
+                    break;
+                case 3:
+                    difficultity = "hard";
+                    break;
+                default:
+                    break;
+            }
+            return difficultity;
+        }
+
         internal static void CheckLetter(List<char> currentWord, List<char> currentGuess, char currentLetter)
         {
             for (int i = 0; i < currentWord.Count; i++)
