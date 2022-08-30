@@ -25,6 +25,8 @@ namespace _02.GameOfWar
                 Engine.DrawCurrentState(firstPlayer.Cards, secondPlayer.Cards);
                 moves++;
             }
+
+            Engine.DeterminateWinner(firstPlayer, secondPlayer, moves);
         }
     }
 
@@ -137,6 +139,18 @@ namespace _02.GameOfWar
                 Card card = deck[i];
                 deck.Remove(deck[i]);
                 deck.Insert(random.Next(52), card);
+            }
+        }
+
+        internal static void DeterminateWinner(Player firstPlayer, Player secondPlayer, int moves)
+        {
+            if (firstPlayer.Cards.Count == 0)
+            {
+                Console.WriteLine($"Second Player wins after {moves} moves!");
+            }
+            else if (secondPlayer.Cards.Count == 0)
+            {
+                Console.WriteLine($"First Player wins after {moves} moves!");
             }
         }
     }
