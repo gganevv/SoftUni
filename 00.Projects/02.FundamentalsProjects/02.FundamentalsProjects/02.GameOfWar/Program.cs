@@ -6,8 +6,6 @@ namespace _02.GameOfWar
 {
     internal class Program
     {
-        
-
         static void Main(string[] args)
         {
             List<Card> deck = Engine.FillDeck();

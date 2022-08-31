@@ -13,7 +13,7 @@ namespace _02.GameOfWar
             string winner = string.Empty;
             if (firstCard.CardFace > secondCard.CardFace)
             {
-                winner = "fist";
+                winner = Texts.FIRST;
                 DrawWinner(firstCard, secondCard, winner);
                 firstPlayerCards.Remove(firstCard);
                 secondPlayerCards.Remove(secondCard);
@@ -22,7 +22,7 @@ namespace _02.GameOfWar
             }
             else if (firstCard.CardFace < secondCard.CardFace)
             {
-                winner = "second";
+                winner = Texts.SECOND;
                 DrawWinner(firstCard, secondCard, winner);
                 firstPlayerCards.Remove(firstCard);
                 secondPlayerCards.Remove(secondCard);
@@ -39,53 +39,63 @@ namespace _02.GameOfWar
 
         private static void ProcessWar(List<Card> firstPlayerCards, List<Card> secondPlayerCards)
         {
-            Console.WriteLine("WAR!");
+            Console.WriteLine(Texts.WAR);
+            bool enoughCards = CheckEnoughCardsForWar(firstPlayerCards, secondPlayerCards);
+            if (enoughCards)
+            {
+                List<Card> firstPlayercardsInWar = firstPlayerCards.Take(3).ToList();
+                List<Card> secondPlayerCardsInWar = secondPlayerCards.Take(3).ToList();
+                firstPlayerCards.RemoveRange(0, 3);
+                secondPlayerCards.RemoveRange(0, 3);
+                string winner = Fight(firstPlayerCards, secondPlayerCards);
+                if (winner == Texts.FIRST)
+                {
+                    firstPlayerCards.AddRange(firstPlayercardsInWar);
+                    firstPlayerCards.AddRange(secondPlayerCardsInWar);
+                }
+                else
+                {
+                    secondPlayerCards.AddRange(firstPlayercardsInWar);
+                    secondPlayerCards.AddRange(secondPlayerCardsInWar);
+                }
+            }
+            else return;
+        }
+
+        private static bool CheckEnoughCardsForWar(List<Card> firstPlayerCards, List<Card> secondPlayerCards)
+        {
             if (firstPlayerCards.Count < 4)
             {
                 secondPlayerCards.AddRange(firstPlayerCards);
                 firstPlayerCards.Clear();
-                Console.WriteLine($"First player does not have enough cards to contunue playing...");
-                return;
+                Console.WriteLine(Texts.FIRST_PLAYER_NOT_ENOUGH_CARDS);
+                return false;
             }
 
             if (secondPlayerCards.Count < 4)
             {
                 firstPlayerCards.AddRange(secondPlayerCards);
                 secondPlayerCards.Clear();
-                Console.WriteLine($"Second player does not have enough cards to contunue playing...");
-                return;
+                Console.WriteLine(Texts.SECOND_PLAYER_NOT_ENOUGH_CARDS);
+                return false;
             }
 
-            List<Card> firstPlayercardsInWar = firstPlayerCards.Take(3).ToList();
-            List<Card> secondPlayerCardsInWar = secondPlayerCards.Take(3).ToList();
-            firstPlayerCards.RemoveRange(0, 3);
-            secondPlayerCards.RemoveRange(0, 3);
-            string winner = Fight(firstPlayerCards, secondPlayerCards);
-            if (winner == "first")
-            {
-                firstPlayerCards.AddRange(firstPlayercardsInWar);
-                firstPlayerCards.AddRange(secondPlayerCardsInWar);
-            }
-            else
-            {
-                secondPlayerCards.AddRange(firstPlayercardsInWar);
-                secondPlayerCards.AddRange(secondPlayerCardsInWar);
-            }
+            return true;
         }
 
         private static void DrawWinner(Card firstCard, Card secondCard, string winner)
         {
-            Console.WriteLine($"First player has drawn: {firstCard}");
-            Console.WriteLine($"Second player has drawn: {secondCard}");
+            Console.WriteLine($"{Texts.FIRST_PLAYER_DRAWN}{firstCard}");
+            Console.WriteLine($"{Texts.SECOND_PLAYER_DRAWN}{secondCard}");
             Console.WriteLine($"The {winner} player has won the cards!");
         }
 
         internal static void DrawCurrentState(List<Card> firstPlayerCards, List<Card> secondPlayerCards)
         {
-            Console.WriteLine("================================================================================");
+            Console.WriteLine(Texts.SEPARATOR);
             Console.WriteLine($"First player currently has {firstPlayerCards.Count} cards.");
             Console.WriteLine($"Second player currently has {secondPlayerCards.Count} cards.");
-            Console.WriteLine("================================================================================");
+            Console.WriteLine(Texts.SEPARATOR);
         }
 
         internal static List<Card> FillDeck()

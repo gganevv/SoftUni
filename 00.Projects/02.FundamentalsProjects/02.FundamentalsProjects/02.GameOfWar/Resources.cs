@@ -23,5 +23,13 @@
 ||                                                                            ||
 ||                              Have fun!                                     ||
 ================================================================================";
+        public const string WAR = "WAR";
+        public const string FIRST_PLAYER_NOT_ENOUGH_CARDS = "First player does not have enough cards to contunue playing...";
+        public const string SECOND_PLAYER_NOT_ENOUGH_CARDS = "Second player does not have enough cards to contunue playing...";
+        public const string FIRST = "first";
+        public const string SECOND = "second";
+        public const string SEPARATOR = "================================================================================";
+        public const string FIRST_PLAYER_DRAWN = "First player has drawn: ";
+        public const string SECOND_PLAYER_DRAWN = "First player has drawn: ";
     }
 }
