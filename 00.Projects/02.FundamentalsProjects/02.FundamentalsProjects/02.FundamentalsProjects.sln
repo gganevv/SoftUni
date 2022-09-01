@@ -5,7 +5,9 @@ VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01.Hangman", "01.Hangman\01.Hangman.csproj", "{C7E3CF1F-C14C-4001-A025-EC445941143C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.GameOfWar", "02.GameOfWar\02.GameOfWar.csproj", "{14CF6194-42D2-49BA-82C5-136F814B79FF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02.GameOfWar", "02.GameOfWar\02.GameOfWar.csproj", "{14CF6194-42D2-49BA-82C5-136F814B79FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.TicTacToe", "03.TicTacToe\03.TicTacToe.csproj", "{A425C5BB-2B2E-42D8-B915-74902BD2F09F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{14CF6194-42D2-49BA-82C5-136F814B79FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{14CF6194-42D2-49BA-82C5-136F814B79FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{14CF6194-42D2-49BA-82C5-136F814B79FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A425C5BB-2B2E-42D8-B915-74902BD2F09F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A425C5BB-2B2E-42D8-B915-74902BD2F09F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A425C5BB-2B2E-42D8-B915-74902BD2F09F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A425C5BB-2B2E-42D8-B915-74902BD2F09F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
