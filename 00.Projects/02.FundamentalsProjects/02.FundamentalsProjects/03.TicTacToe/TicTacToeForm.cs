@@ -148,7 +148,6 @@ namespace _03.TicTacToe
             }
 
             MessageBox.Show("Game Draw");
-            Application.Exit();
         }
 
         private void ShowWinner(List<Button> winnerButtons)
@@ -157,7 +156,6 @@ namespace _03.TicTacToe
             {
                 button.BackColor = Color.LightGreen;
             }
-            Application.Exit();
         }
 
 
