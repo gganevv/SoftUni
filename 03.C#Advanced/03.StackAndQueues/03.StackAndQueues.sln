@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.ReverseAString", "01.Rev
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.StackSum", "02.StackSum\02.StackSum.csproj", "{C332AEB9-34C0-4511-B8FA-3F72411D2A20}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.SimpleCalculator", "03.SimpleCalculator\03.SimpleCalculator.csproj", "{38A5F3D2-DDE9-4F24-B632-FA0DD66DD435}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{C332AEB9-34C0-4511-B8FA-3F72411D2A20}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C332AEB9-34C0-4511-B8FA-3F72411D2A20}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C332AEB9-34C0-4511-B8FA-3F72411D2A20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38A5F3D2-DDE9-4F24-B632-FA0DD66DD435}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38A5F3D2-DDE9-4F24-B632-FA0DD66DD435}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38A5F3D2-DDE9-4F24-B632-FA0DD66DD435}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38A5F3D2-DDE9-4F24-B632-FA0DD66DD435}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
