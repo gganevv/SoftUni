@@ -5,6 +5,8 @@ VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.ReverseAString", "01.ReverseAString\01.ReverseAString.csproj", "{07CBF220-071E-470A-8DAB-DFFF118EE92A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.StackSum", "02.StackSum\02.StackSum.csproj", "{C332AEB9-34C0-4511-B8FA-3F72411D2A20}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{07CBF220-071E-470A-8DAB-DFFF118EE92A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{07CBF220-071E-470A-8DAB-DFFF118EE92A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{07CBF220-071E-470A-8DAB-DFFF118EE92A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C332AEB9-34C0-4511-B8FA-3F72411D2A20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C332AEB9-34C0-4511-B8FA-3F72411D2A20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C332AEB9-34C0-4511-B8FA-3F72411D2A20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C332AEB9-34C0-4511-B8FA-3F72411D2A20}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
