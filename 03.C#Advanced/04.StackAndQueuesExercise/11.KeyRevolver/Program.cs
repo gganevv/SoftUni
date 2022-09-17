@@ -19,22 +19,7 @@ namespace _11.KeyRevolver
 
             while (locks.Any() && bullets.Any())
             {
-                bulletCounter++;
-                int currentLock = locks.Peek();
-                int currentBullet = bullets.Pop();
-                if (currentBullet <= currentLock)
-                {
-                    locks.Dequeue();
-                    Console.WriteLine("Bang!");
-                }
-                else
-                {
-                    Console.WriteLine("Ping!");
-                }
-                if (bulletCounter % barrelSize == 0 && bullets.Any())
-                {
-                    Console.WriteLine("Reloading!");
-                }
+                bulletCounter = Shoot(barrelSize, locks, bullets, bulletCounter);
             }
 
             if (locks.Any())
@@ -47,6 +32,28 @@ namespace _11.KeyRevolver
                 Console.WriteLine($"{bullets.Count} bullets left. Earned ${moneyEarned}");
             }
 
+        }
+
+        private static int Shoot(int barrelSize, Queue<int> locks, Stack<int> bullets, int bulletCounter)
+        {
+            bulletCounter++;
+            int currentLock = locks.Peek();
+            int currentBullet = bullets.Pop();
+            if (currentBullet <= currentLock)
+            {
+                locks.Dequeue();
+                Console.WriteLine("Bang!");
+            }
+            else
+            {
+                Console.WriteLine("Ping!");
+            }
+            if (bulletCounter % barrelSize == 0 && bullets.Any())
+            {
+                Console.WriteLine("Reloading!");
+            }
+
+            return bulletCounter;
         }
     }
 }
