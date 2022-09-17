@@ -19,36 +19,57 @@ namespace _09.SimpleTextEditor
                 switch (command)
                 {
                     case "1":
-                        text.Append(inputArgs[1]);
-                        memory.Push(text.ToString());
+                        AppendText(text, memory, inputArgs);
                         break;
                     case "2":
-                        int index = text.Length - int.Parse(inputArgs[1]);
-                        int length = text.Length - index;
-                        text.Remove(index, length);
-                        memory.Push(text.ToString());
+                        RemoveText(text, memory, inputArgs);
                         break;
                     case "3":
-                        int indexToReturn = int.Parse(inputArgs[1]) - 1;
-                        Console.WriteLine(text[indexToReturn]);
+                        ReturnText(text, inputArgs);
                         break;
                     case "4":
-                        memory.Pop();
-                        if (memory.Count > 0)
-                        {
-                            text = new StringBuilder(memory.Peek());
-                        }
-                        else
-                        {
-                            text = new StringBuilder();
-                        }
-                        
+                        text = Undo(memory);
                         break;
                     default:
                         break;
                 }
-                
             }
+        }
+
+        private static StringBuilder Undo(Stack<string> memory)
+        {
+            StringBuilder text;
+            memory.Pop();
+            if (memory.Count > 0)
+            {
+                text = new StringBuilder(memory.Peek());
+            }
+            else
+            {
+                text = new StringBuilder();
+            }
+
+            return text;
+        }
+
+        private static void ReturnText(StringBuilder text, string[] inputArgs)
+        {
+            int indexToReturn = int.Parse(inputArgs[1]) - 1;
+            Console.WriteLine(text[indexToReturn]);
+        }
+
+        private static void RemoveText(StringBuilder text, Stack<string> memory, string[] inputArgs)
+        {
+            int index = text.Length - int.Parse(inputArgs[1]);
+            int length = text.Length - index;
+            text.Remove(index, length);
+            memory.Push(text.ToString());
+        }
+
+        private static void AppendText(StringBuilder text, Stack<string> memory, string[] inputArgs)
+        {
+            text.Append(inputArgs[1]);
+            memory.Push(text.ToString());
         }
     }
 }
