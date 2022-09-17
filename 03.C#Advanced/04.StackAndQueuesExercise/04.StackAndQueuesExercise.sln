@@ -21,6 +21,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08.BalancedParwntheses", "0
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09.SimpleTextEditor", "09.SimpleTextEditor\09.SimpleTextEditor.csproj", "{77223F92-4A37-4907-ABC3-18D7E25AB2EE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10.Crossroads", "10.Crossroads\10.Crossroads.csproj", "{EEB1D2F1-CC9F-4B39-9A86-6646769E1EF3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11.KeyRevolver", "11.KeyRevolver\11.KeyRevolver.csproj", "{39E23C64-6626-49E4-B747-AF2233BBEDF8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +67,14 @@ Global
 		{77223F92-4A37-4907-ABC3-18D7E25AB2EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{77223F92-4A37-4907-ABC3-18D7E25AB2EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{77223F92-4A37-4907-ABC3-18D7E25AB2EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EEB1D2F1-CC9F-4B39-9A86-6646769E1EF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEB1D2F1-CC9F-4B39-9A86-6646769E1EF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEB1D2F1-CC9F-4B39-9A86-6646769E1EF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEB1D2F1-CC9F-4B39-9A86-6646769E1EF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39E23C64-6626-49E4-B747-AF2233BBEDF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39E23C64-6626-49E4-B747-AF2233BBEDF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39E23C64-6626-49E4-B747-AF2233BBEDF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39E23C64-6626-49E4-B747-AF2233BBEDF8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
