@@ -14,7 +14,8 @@ namespace _05.SnakeMoves
             char[,] matrix = new char[rows, cols];
 
             string input = Console.ReadLine();
-            Queue<char> inputQueue = new Queue<char>(string.Concat(Enumerable.Repeat(input, rows)).ToArray());
+            int splitTimes = rows * cols / input.Length;
+            Queue<char> inputQueue = new Queue<char>(string.Concat(Enumerable.Repeat(input, rows * 5)).ToArray());
 
             for (int row = 0; row < rows; row++)
             {
