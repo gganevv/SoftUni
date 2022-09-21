@@ -64,67 +64,17 @@ namespace _08.Bombs
 
         private static void DetonateBomb(int size, int[,] matrix, int bombRow, int bombCol, int bombValue)
         {
-            if (ValidCell(bombRow - 1, bombCol - 1, size))
+            for (int i = -1; i < 2; i++)
             {
-                if (CheckCellAlive(bombRow - 1, bombCol - 1, matrix))
+                for (int j = -1; j < 2; j++)
                 {
-                    matrix[bombRow - 1, bombCol - 1] -= bombValue;
-                }
-            }
-            if (ValidCell(bombRow - 1, bombCol, size))
-            {
-                if (CheckCellAlive(bombRow - 1, bombCol, matrix))
-                {
-                    matrix[bombRow - 1, bombCol] -= bombValue;
-                }
-            }
-            if (ValidCell(bombRow - 1, bombCol + 1, size))
-            {
-                if (CheckCellAlive(bombRow - 1, bombCol + 1, matrix))
-                {
-                    matrix[bombRow - 1, bombCol + 1] -= bombValue;
-                }
-            }
-            if (ValidCell(bombRow, bombCol - 1, size))
-            {
-                if (CheckCellAlive(bombRow, bombCol - 1, matrix))
-                {
-                    matrix[bombRow, bombCol - 1] -= bombValue;
-                }
-            }
-            if (ValidCell(bombRow, bombCol, size))
-            {
-                if (CheckCellAlive(bombRow, bombCol, matrix))
-                {
-                    matrix[bombRow, bombCol] -= bombValue;
-                }
-            }
-            if (ValidCell(bombRow, bombCol + 1, size))
-            {
-                if (CheckCellAlive(bombRow, bombCol + 1, matrix))
-                {
-                    matrix[bombRow, bombCol + 1] -= bombValue;
-                }
-            }
-            if (ValidCell(bombRow + 1, bombCol - 1, size))
-            {
-                if (CheckCellAlive(bombRow + 1, bombCol - 1, matrix))
-                {
-                    matrix[bombRow + 1, bombCol - 1] -= bombValue;
-                }
-            }
-            if (ValidCell(bombRow + 1, bombCol, size))
-            {
-                if (CheckCellAlive(bombRow + 1, bombCol, matrix))
-                {
-                    matrix[bombRow + 1, bombCol] -= bombValue;
-                }
-            }
-            if (ValidCell(bombRow + 1, bombCol + 1, size))
-            {
-                if (CheckCellAlive(bombRow + 1, bombCol + 1, matrix))
-                {
-                    matrix[bombRow + 1, bombCol + 1] -= bombValue;
+                    if (ValidCell(bombRow + i, bombCol + j, size))
+                    {
+                        if (CheckCellAlive(bombRow + i, bombCol + j, matrix))
+                        {
+                            matrix[bombRow + i, bombCol + j] -= bombValue;
+                        }
+                    }
                 }
             }
         }
