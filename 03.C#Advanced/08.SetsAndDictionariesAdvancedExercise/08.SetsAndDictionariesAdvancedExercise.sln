@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.SetsOfElements", "02.Set
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.PerodicTable", "03.PerodicTable\03.PerodicTable.csproj", "{32C23E58-1DF8-4D3A-B4AD-BC8FAF08655C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.EvenTimes", "04.EvenTimes\04.EvenTimes.csproj", "{4DC5A8FF-4B87-4675-B4F5-3026D65F913F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{32C23E58-1DF8-4D3A-B4AD-BC8FAF08655C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{32C23E58-1DF8-4D3A-B4AD-BC8FAF08655C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{32C23E58-1DF8-4D3A-B4AD-BC8FAF08655C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DC5A8FF-4B87-4675-B4F5-3026D65F913F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DC5A8FF-4B87-4675-B4F5-3026D65F913F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DC5A8FF-4B87-4675-B4F5-3026D65F913F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DC5A8FF-4B87-4675-B4F5-3026D65F913F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
