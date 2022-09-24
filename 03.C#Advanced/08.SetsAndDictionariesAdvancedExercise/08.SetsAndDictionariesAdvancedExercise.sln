@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07.TheV-Logger", "07.TheV-L
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08.Ranking", "08.Ranking\08.Ranking.csproj", "{0E9267FB-4C6D-46CF-99E0-BB47BE55F0BE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09.SoftUniExamResults", "09.SoftUniExamResults\09.SoftUniExamResults.csproj", "{F0ACA742-9824-420E-A500-D5A7FE34AA98}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{0E9267FB-4C6D-46CF-99E0-BB47BE55F0BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0E9267FB-4C6D-46CF-99E0-BB47BE55F0BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0E9267FB-4C6D-46CF-99E0-BB47BE55F0BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0ACA742-9824-420E-A500-D5A7FE34AA98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0ACA742-9824-420E-A500-D5A7FE34AA98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0ACA742-9824-420E-A500-D5A7FE34AA98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0ACA742-9824-420E-A500-D5A7FE34AA98}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
