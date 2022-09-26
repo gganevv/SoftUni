@@ -6,7 +6,7 @@ namespace _10.ForceBook
 {
     internal class Program
     {
-        //80/100
+        //90/100
         static void Main(string[] args)
         {
             HashSet<Side> sides = new HashSet<Side>();
@@ -25,7 +25,7 @@ namespace _10.ForceBook
                     }
                     Side side = sides.FirstOrDefault(x => x.Name == forceSide);
 
-                    if (!side.Memebers.Contains(user))
+                    if (!UserExist(user, sides))
                     {
                         side.Memebers.Add(user);
                     }
@@ -43,8 +43,8 @@ namespace _10.ForceBook
 
                     if (UserExist(user, sides))
                     {
-                        side.Memebers.Add(user);
                         sides.FirstOrDefault(x => x.Name != forceSide).Memebers.Remove(user);
+                        side.Memebers.Add(user);
                     }
                     else
                     {
