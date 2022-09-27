@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.OddLines", "01.OddLines\01.OddLines.csproj", "{2C49604E-D03B-4875-B86E-AF7C6D17CC4A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01.OddLines", "01.OddLines\01.OddLines.csproj", "{2C49604E-D03B-4875-B86E-AF7C6D17CC4A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.LineNumbers", "02.LineNumbers\02.LineNumbers.csproj", "{C9D29578-960E-491F-BCFB-807BDDE9E7EA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02.LineNumbers", "02.LineNumbers\02.LineNumbers.csproj", "{C9D29578-960E-491F-BCFB-807BDDE9E7EA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.WordCount", "03.WordCount\03.WordCount.csproj", "{6F5A3FD2-810A-4FFE-940B-EC7E1B8E4BF1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03.WordCount", "03.WordCount\03.WordCount.csproj", "{6F5A3FD2-810A-4FFE-940B-EC7E1B8E4BF1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.MergeFiles", "04.MergeFiles\04.MergeFiles.csproj", "{6B102B35-FA0C-45A4-8AA6-F4BA162C8B2B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04.MergeFiles", "04.MergeFiles\04.MergeFiles.csproj", "{6B102B35-FA0C-45A4-8AA6-F4BA162C8B2B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.ExtractSpecialBytes", "05.ExtractSpecialBytes\05.ExtractSpecialBytes.csproj", "{FDEAF41D-1743-4341-824A-129FA56F6844}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{6B102B35-FA0C-45A4-8AA6-F4BA162C8B2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6B102B35-FA0C-45A4-8AA6-F4BA162C8B2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6B102B35-FA0C-45A4-8AA6-F4BA162C8B2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDEAF41D-1743-4341-824A-129FA56F6844}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDEAF41D-1743-4341-824A-129FA56F6844}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDEAF41D-1743-4341-824A-129FA56F6844}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDEAF41D-1743-4341-824A-129FA56F6844}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
