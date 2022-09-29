@@ -20,4 +20,3 @@ public class SortEvenNumbers
         Console.WriteLine(String.Join(", ", filteredNums));
     }
 }
-
