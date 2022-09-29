@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 
-public class SortEvenNumbers
+class SortEvenNumbers
 {
     static void Main()
     {

@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Linq;
 
-public class SumNumbers
+class SumNumbers
 {
-    static void Main(string[] args)
+    static void Main()
     {
         Func<int[], int> countNumbers = x => x.Length;
         

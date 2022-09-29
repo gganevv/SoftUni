@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 
-public class CountUppercaseWords
+class CountUppercaseWords
 {
     static Func<string, bool> isFirstLetterUppercase =
         x => x[0] == x.ToUpper()[0];
