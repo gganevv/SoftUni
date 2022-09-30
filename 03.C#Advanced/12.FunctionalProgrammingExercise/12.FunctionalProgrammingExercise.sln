@@ -5,6 +5,8 @@ VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.ActionPoint", "01.ActionPoint\01.ActionPoint.csproj", "{BD971396-0EF0-4B05-AC87-8128A9E8AF0E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.KnightsOfHonor", "02.KnightsOfHonor\02.KnightsOfHonor.csproj", "{A981A4F9-58A9-425A-A29F-6E656DF0F0CD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{BD971396-0EF0-4B05-AC87-8128A9E8AF0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BD971396-0EF0-4B05-AC87-8128A9E8AF0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BD971396-0EF0-4B05-AC87-8128A9E8AF0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A981A4F9-58A9-425A-A29F-6E656DF0F0CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A981A4F9-58A9-425A-A29F-6E656DF0F0CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A981A4F9-58A9-425A-A29F-6E656DF0F0CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A981A4F9-58A9-425A-A29F-6E656DF0F0CD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
