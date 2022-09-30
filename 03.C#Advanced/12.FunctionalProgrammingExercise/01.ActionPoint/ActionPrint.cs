@@ -2,7 +2,7 @@
 
 class ActionPrint
 {
-    static void Main(string[] args)
+    static void Main()
     {
         Action<string[]> printNames = (names) =>
         {
