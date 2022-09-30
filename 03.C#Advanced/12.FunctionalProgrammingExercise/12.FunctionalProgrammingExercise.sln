@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.KnightsOfHonor", "02.Kni
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.CustomMinFunction", "03.CustomMinFunction\03.CustomMinFunction.csproj", "{1C8DA4E6-757F-48BC-8770-E35A1B027F64}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.FindEvensOrOdds", "04.FindEvensOrOdds\04.FindEvensOrOdds.csproj", "{244C2A48-ED8C-4CDF-8414-E82ECDA2A984}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{1C8DA4E6-757F-48BC-8770-E35A1B027F64}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1C8DA4E6-757F-48BC-8770-E35A1B027F64}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1C8DA4E6-757F-48BC-8770-E35A1B027F64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{244C2A48-ED8C-4CDF-8414-E82ECDA2A984}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{244C2A48-ED8C-4CDF-8414-E82ECDA2A984}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{244C2A48-ED8C-4CDF-8414-E82ECDA2A984}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{244C2A48-ED8C-4CDF-8414-E82ECDA2A984}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
