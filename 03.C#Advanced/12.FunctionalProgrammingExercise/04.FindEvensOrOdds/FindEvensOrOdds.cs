@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-class Program
+class FindEvensOrOdds
 {
     static void Main()
     {
