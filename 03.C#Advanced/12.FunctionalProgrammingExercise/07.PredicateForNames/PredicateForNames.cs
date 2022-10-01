@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-class Program
+class PredicateForNames
 {
     static void Main()
     {
