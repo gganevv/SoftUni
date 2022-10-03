@@ -26,11 +26,11 @@ namespace CarManufacturer
         private double fuelQuantity;
         private double fuelConsumption;
 
-        public string Make;
-        public string Model;
-        public int Year;
-        public double FuelQuantity;
-        public double FuelConsumption;
+        public string Make { get; set; }
+        public string Model { get; set; }
+        public int Year { get; set; }
+        public double FuelQuantity { get; set; }
+        public double FuelConsumption { get; set; }
 
         public void Drive(double distance)
         {
