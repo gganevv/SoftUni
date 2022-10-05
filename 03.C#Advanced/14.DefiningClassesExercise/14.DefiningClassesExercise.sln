@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.DefineAClassPerson", "01.DefineAClassPerson\01.DefineAClassPerson.csproj", "{10043E47-2780-4A16-8766-EFF320E054E5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01.DefineAClassPerson", "01.DefineAClassPerson\01.DefineAClassPerson.csproj", "{10043E47-2780-4A16-8766-EFF320E054E5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.CreatingConstructors", "02.CreatingConstructors\02.CreatingConstructors.csproj", "{8A56BA22-14A8-40A1-BADA-4F2B3275CD3D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02.CreatingConstructors", "02.CreatingConstructors\02.CreatingConstructors.csproj", "{8A56BA22-14A8-40A1-BADA-4F2B3275CD3D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.OldestFamilyMember", "03.OldestFamilyMember\03.OldestFamilyMember.csproj", "{7C9AB948-DA57-4E02-9460-67836E07F670}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03.OldestFamilyMember", "03.OldestFamilyMember\03.OldestFamilyMember.csproj", "{7C9AB948-DA57-4E02-9460-67836E07F670}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.OpinionPoll", "04.OpinionPoll\04.OpinionPoll.csproj", "{DAA98BDB-5AAB-4830-823B-0B0EEE0CA69F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{7C9AB948-DA57-4E02-9460-67836E07F670}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7C9AB948-DA57-4E02-9460-67836E07F670}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7C9AB948-DA57-4E02-9460-67836E07F670}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAA98BDB-5AAB-4830-823B-0B0EEE0CA69F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAA98BDB-5AAB-4830-823B-0B0EEE0CA69F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAA98BDB-5AAB-4830-823B-0B0EEE0CA69F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAA98BDB-5AAB-4830-823B-0B0EEE0CA69F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
