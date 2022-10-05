@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.OpinionPoll", "04.Opinio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.DateModifier", "05.DateModifier\05.DateModifier.csproj", "{43D8BD03-E2CC-4424-A7F0-22747109458B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06.SpeedRacing", "06.SpeedRacing\06.SpeedRacing.csproj", "{CD5CA58C-5458-4845-B870-A18A8CBECA66}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{43D8BD03-E2CC-4424-A7F0-22747109458B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{43D8BD03-E2CC-4424-A7F0-22747109458B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{43D8BD03-E2CC-4424-A7F0-22747109458B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD5CA58C-5458-4845-B870-A18A8CBECA66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD5CA58C-5458-4845-B870-A18A8CBECA66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD5CA58C-5458-4845-B870-A18A8CBECA66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD5CA58C-5458-4845-B870-A18A8CBECA66}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
