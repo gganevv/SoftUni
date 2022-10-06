@@ -9,13 +9,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02.CreatingConstructors", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03.OldestFamilyMember", "03.OldestFamilyMember\03.OldestFamilyMember.csproj", "{7C9AB948-DA57-4E02-9460-67836E07F670}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.OpinionPoll", "04.OpinionPoll\04.OpinionPoll.csproj", "{DAA98BDB-5AAB-4830-823B-0B0EEE0CA69F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04.OpinionPoll", "04.OpinionPoll\04.OpinionPoll.csproj", "{DAA98BDB-5AAB-4830-823B-0B0EEE0CA69F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.DateModifier", "05.DateModifier\05.DateModifier.csproj", "{43D8BD03-E2CC-4424-A7F0-22747109458B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05.DateModifier", "05.DateModifier\05.DateModifier.csproj", "{43D8BD03-E2CC-4424-A7F0-22747109458B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06.SpeedRacing", "06.SpeedRacing\06.SpeedRacing.csproj", "{CD5CA58C-5458-4845-B870-A18A8CBECA66}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "06.SpeedRacing", "06.SpeedRacing\06.SpeedRacing.csproj", "{CD5CA58C-5458-4845-B870-A18A8CBECA66}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08.CarSalesman", "07.RawData\08.CarSalesman.csproj", "{2447C2D3-2DC7-42E9-83C9-BB731D4EAAC6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "08.CarSalesman", "07.RawData\08.CarSalesman.csproj", "{2447C2D3-2DC7-42E9-83C9-BB731D4EAAC6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07.RawData", "07.RawData\07.RawData.csproj", "{08D07D36-88D3-4875-A8E1-8D4ED3DD469C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{2447C2D3-2DC7-42E9-83C9-BB731D4EAAC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2447C2D3-2DC7-42E9-83C9-BB731D4EAAC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2447C2D3-2DC7-42E9-83C9-BB731D4EAAC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08D07D36-88D3-4875-A8E1-8D4ED3DD469C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08D07D36-88D3-4875-A8E1-8D4ED3DD469C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08D07D36-88D3-4875-A8E1-8D4ED3DD469C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08D07D36-88D3-4875-A8E1-8D4ED3DD469C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
