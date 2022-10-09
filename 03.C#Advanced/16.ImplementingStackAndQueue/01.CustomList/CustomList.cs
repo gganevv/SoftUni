@@ -135,7 +135,12 @@ namespace _01.CustomList
 
         public override string ToString()
         {
-            return String.Join(", ", this.items);
+            string result = "";
+            for (int i = 0; i < this.Count; i++)
+            {
+                result += this.items[i] + " ";
+            }
+            return result;
         }
     }
 }
