@@ -4,9 +4,9 @@ using System.Linq;
 
 namespace _04.GenericSwapMethodIntegers
 {
-    internal class Program
+    internal class StartUp
     {
-        static void Main(string[] args)
+        static void Main()
         {
             List<Box<int>> boxes = new List<Box<int>>();
             int countOfBoxes = int.Parse(Console.ReadLine());
