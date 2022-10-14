@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace _03.GenericSwapMethodStrings
 {
-    public class Program
+    public class StartUp
     {
         static void Main()
         {
