@@ -18,15 +18,5 @@ namespace IteratorsAndComparators
             get { return books; }
             set { books = value; }
         }
-
-        public IEnumerator<Book> GetEnumerator()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        IEnumerator IEnumerable.GetEnumerator()
-        {
-            throw new System.NotImplementedException();
-        }
     }
 }
