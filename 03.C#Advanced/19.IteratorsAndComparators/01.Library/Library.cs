@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace IteratorsAndComparators
 {
-    public class Library : IEnumerable<Book>
+    public class Library
     {
         private List<Book> books;
 
