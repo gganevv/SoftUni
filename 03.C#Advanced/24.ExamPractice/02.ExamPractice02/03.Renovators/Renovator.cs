@@ -29,7 +29,7 @@ namespace Renovators
         {
             StringBuilder sb = new StringBuilder();
             sb.AppendLine($"-Renovator: {Name}");
-            sb.AppendLine($"--Speciality: {Type}");
+            sb.AppendLine($"--Specialty: {Type}");
             sb.AppendLine($"--Rate per day: {Rate} BGN");
 
             return sb.ToString().Trim();
