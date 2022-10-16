@@ -87,7 +87,7 @@ namespace Renovators
         public string Report()
         {
             StringBuilder sb = new StringBuilder();
-            sb.AppendLine($"Renovators avaible for Project {Project}:");
+            sb.AppendLine($"Renovators available for Project {Project}:");
             foreach (var renovator in Renovators)
             {
                 if (renovator.Hired == false)
