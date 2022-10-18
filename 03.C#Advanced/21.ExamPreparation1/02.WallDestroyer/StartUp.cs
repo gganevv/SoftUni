@@ -35,29 +35,28 @@ namespace _02.WallDestroyer
             int newY = newPosition[1];
             char currentWallPos = matrix[newX, newY];
 
-            if (currentWallPos == 'R')
+            switch (currentWallPos)
             {
-                vanko.RodsHit++;
-                Console.WriteLine("Vanko hit a rod!");
-            }
-            else if (currentWallPos == 'C')
-            {
-                vanko.Electrocuted = true;
-                matrix[newX, newY] = 'E';
-                vanko.HolesMade++;
-            }
-            else if (currentWallPos == '*')
-            {
-                Console.WriteLine($"The wall is already destroyed at position [{newX}, {newY}]!");
-                vanko.X = newX;
-                vanko.Y = newY;
-            }
-            else
-            {
-                vanko.HolesMade++;
-                matrix[newX, newY] = '*';
-                vanko.X = newX;
-                vanko.Y = newY;
+                case 'R':
+                    vanko.RodsHit++;
+                    Console.WriteLine("Vanko hit a rod!");
+                    break;
+                case 'C':
+                    vanko.Electrocuted = true;
+                    matrix[newX, newY] = 'E';
+                    vanko.HolesMade++;
+                    break;
+                case '*':
+                    Console.WriteLine($"The wall is already destroyed at position [{newX}, {newY}]!");
+                    vanko.X = newX;
+                    vanko.Y = newY;
+                    break;
+                default:
+                    vanko.HolesMade++;
+                    matrix[newX, newY] = '*';
+                    vanko.X = newX;
+                    vanko.Y = newY;
+                    break;
             }
         }
 
