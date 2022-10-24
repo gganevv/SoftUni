@@ -8,17 +8,17 @@ namespace _02.BeaverAtWork
     {
         static void Main()
         {
+            Beaver beaver = new Beaver();
+            int totalWood = 0;
+
             int size = int.Parse(Console.ReadLine());
-            int wood = 0;
-            int beaverX = 0;
-            int beaverY = 0;
-            List<char> fuckYou = new List<char>();
-            char[,] matrix = FillMatrix(size, ref wood, ref beaverX, ref beaverY);
+            char[,] matrix = FillMatrix(size, ref totalWood, beaver);
+
             string command = Console.ReadLine();
-            while (command != "end" && wood > 0)
+            while (command != "end" && totalWood > 0)
             {
-                int currentX = beaverX;
-                int currentY = beaverY;
+                int currentX = beaver.X;
+                int currentY = beaver.Y;
 
                 switch (command)
                 {
@@ -32,7 +32,7 @@ namespace _02.BeaverAtWork
                         currentY--;
                         break;
                     case "right":
-                        currentX++;
+                        currentY++;
                         break;
                     default:
                         break;
@@ -41,155 +41,111 @@ namespace _02.BeaverAtWork
                 bool validPosition = ValidatePosition(currentX, currentY, size);
                 if (!validPosition)
                 {
-                    if (fuckYou.Count > 0)
+                    if (beaver.Branches.Count > 0)
                     {
-                        fuckYou.RemoveAt(fuckYou.Count - 1);
+                        beaver.Branches.RemoveAt(beaver.Branches.Count - 1);
                     }
+                    command = Console.ReadLine();
+                    continue;
                 }
-                else
+
+
+                char currentPosition = matrix[currentX, currentY];
+                if (IsWood(currentPosition))
                 {
-                    char currentPosition = matrix[currentX, currentY];
-                    if (currentPosition >= 97 && currentPosition <= 122)
-                    {
-                        wood--;
-                        fuckYou.Add(currentPosition);
-                        matrix[beaverX, beaverY] = '-';
-                        beaverX = currentX;
-                        beaverY = currentY;
-                        matrix[beaverX, beaverY] = 'B';
-                    }
-                    else
-                    {
-                        if (currentX != 0 && currentY != 0 && currentX < size && currentY < size)
-                        {
-                            switch (command)
-                            {
-                                case "up":
-                                    matrix[beaverX, beaverY] = '-';
-                                    beaverX = 0;
-                                    beaverY = currentY;
-                                    if (matrix[0, beaverY] >= 97 && matrix[0, beaverY] <= 122)
-                                    {
-                                        fuckYou.Add(currentPosition);
-                                        wood--;
-                                    }
-                                    matrix[beaverX, beaverY] = 'B';
-                                    break;
-                                case "down":
-                                    matrix[beaverX, beaverY] = '-';
-                                    beaverX = size - 1;
-                                    beaverY = currentY;
-                                    if (matrix[size - 1, beaverY] >= 97 && matrix[size - 1, beaverY] <= 122)
-                                    {
-                                        fuckYou.Add(currentPosition);
-                                        wood--;
-                                    }
-                                    matrix[beaverX, beaverY] = 'B';
-                                    break;
-                                case "left":
-                                    matrix[beaverX, beaverY] = '-';
-                                    beaverX = currentX;
-                                    beaverY = 0;
-                                    if (matrix[beaverX, 0] >= 97 && matrix[beaverX, 0] <= 122)
-                                    {
-                                        fuckYou.Add(currentPosition);
-                                        wood--;
-                                    }
-                                    matrix[beaverX, beaverY] = 'B';
-                                    break;
-                                case "right":
-                                    matrix[beaverX, beaverY] = '-';
-                                    beaverX = currentX;
-                                    beaverY = size - 1;
-                                    if (matrix[beaverX, size - 1] >= 97 && matrix[beaverX, size - 1] <= 122)
-                                    {
-                                        fuckYou.Add(currentPosition);
-                                        wood--;
-                                    }
-                                    matrix[beaverX, beaverY] = 'B';
-                                    break;
-                                default:
-                                    break;
-                            }
-                        }
-                        else
-                        {
-                            switch (command)
-                            {
-                                case "down":
-                                    matrix[beaverX, beaverY] = '-';
-                                    beaverX = 0;
-                                    beaverY = currentY;
-                                    if (matrix[0, beaverY] >= 97 && matrix[0, beaverY] <= 122)
-                                    {
-                                        fuckYou.Add(currentPosition);
-                                        wood--;
-                                    }
-                                    matrix[beaverX, beaverY] = 'B';
-                                    break;
-                                case "up":
-                                    matrix[beaverX, beaverY] = '-';
-                                    beaverX = size - 1;
-                                    beaverY = currentY;
-                                    if (matrix[size - 1, beaverY] >= 97 && matrix[size - 1, beaverY] <= 122)
-                                    {
-                                        fuckYou.Add(currentPosition);
-                                        wood--;
-                                    }
-                                    matrix[beaverX, beaverY] = 'B';
-                                    break;
-                                case "right":
-                                    matrix[beaverX, beaverY] = '-';
-                                    beaverX = currentX;
-                                    beaverY = 0;
-                                    if (matrix[beaverX, 0] >= 97 && matrix[beaverX, 0] <= 122)
-                                    {
-                                        fuckYou.Add(currentPosition);
-                                        wood--;
-                                    }
-                                    matrix[beaverX, beaverY] = 'B';
-                                    break;
-                                case "left":
-                                    matrix[beaverX, beaverY] = '-';
-                                    beaverX = currentX;
-                                    beaverY = size - 1;
-                                    if (matrix[beaverX, size - 1] >= 97 && matrix[beaverX, size - 1] <= 122)
-                                    {
-                                        fuckYou.Add(currentPosition);
-                                        wood--;
-                                    }
-                                    matrix[beaverX, beaverY] = 'B';
-                                    break;
-                                default:
-                                    break;
-                            }
-                        }
-                    }
+                    totalWood--;
+                    beaver.Branches.Add(currentPosition);
                 }
+                else if (currentPosition == 'F')
+                {
+                    matrix[currentX, currentY] = '-';
+                    switch (command)
+                    {
+                        case "up":
+                            if (currentX > 0)
+                            {
+                                currentX = 0;
+                            }
+                            else
+                            {
+                                currentX = size - 1;
+                            }
+
+                            break;
+                        case "down":
+                            if (currentX < size - 1)
+                            {
+                                currentX = size - 1;
+                            }
+                            else
+                            {
+                                currentX = 0;
+                            }
+
+                            break;
+                        case "left":
+                            if (currentY > 0)
+                            {
+                                currentY = 0;
+                            }
+                            else
+                            {
+                                currentY = size - 1;
+                            }
+
+                            break;
+                        case "right":
+                            if (currentY < size - 1)
+                            {
+                                currentY = size - 1;
+                            }
+                            else
+                            {
+                                currentY = 0;
+                            }
+
+                            break;
+                    }
+
+                    if (IsWood(matrix[currentX, currentY]))
+                    {
+                        beaver.Branches.Add(matrix[currentX, currentY]);
+                        totalWood--;
+                    }
+                    matrix[currentX, currentY] = '-';
+
+                }
+
+                matrix[currentX, currentY] = '-';
+                beaver.X = currentX;
+                beaver.Y = currentY;
 
                 command = Console.ReadLine();
             }
 
-            if (wood > 0)
+            if (totalWood > 0)
             {
-                Console.WriteLine($"The Beaver failed to collect every wood branch. There are {wood} branches left.");
+                Console.WriteLine($"The Beaver failed to collect every wood branch. There are {totalWood} branches left.");
             }
             else
             {
-                Console.WriteLine($"The Beaver successfully collect {fuckYou.Count} wood branches: {string.Join(", ", fuckYou)}.");
+                Console.WriteLine($"The Beaver successfully collect {beaver.Branches.Count} wood branches: {string.Join(", ", beaver.Branches)}.");
             }
 
-            PrintMatrix(matrix, size);
+            PrintMatrix(matrix, size, beaver);
 
         }
 
-        private static void PrintMatrix(char[,] matrix, int size)
+        private static bool IsWood(char currentPosition) => currentPosition >= 97 && currentPosition <= 122;
+
+        private static void PrintMatrix(char[,] matrix, int size, Beaver beaver)
         {
+            matrix[beaver.X, beaver.Y] = 'B';
             for (int row = 0; row < size; row++)
             {
                 for (int col = 0; col < size; col++)
                 {
-                    Console.Write(matrix[row, col]);
+                    Console.Write(matrix[row, col] + " ");
                 }
                 Console.WriteLine();
             }
@@ -197,7 +153,7 @@ namespace _02.BeaverAtWork
 
         private static bool ValidatePosition(int currentX, int currentY, int size) => currentX >= 0 && currentY >= 0 && currentX < size && currentY < size;
 
-        private static char[,] FillMatrix(int size, ref int wood, ref int beaverX, ref int beaverY)
+        private static char[,] FillMatrix(int size, ref int wood, Beaver beaver)
         {
             char[,] matrix = new char[size, size];
             for (int row = 0; row < size; row++)
@@ -210,11 +166,12 @@ namespace _02.BeaverAtWork
 
                     if (currentElement == 'B')
                     {
-                        beaverX = row;
-                        beaverY = col;
+                        beaver.X = row;
+                        beaver.Y = col;
+                        matrix[row, col] = '-';
                     }
 
-                    if (currentElement >= 97 && currentElement <= 122)
+                    if (IsWood(currentElement))
                     {
                         wood++;
                     }
@@ -223,5 +180,17 @@ namespace _02.BeaverAtWork
 
             return matrix;
         }
+    }
+
+    public class Beaver
+    {
+        public int X { get; set; }
+        public int Y { get; set; }
+        public List<char> Branches { get; set; }
+        public Beaver()
+        {
+            Branches = new List<char>();
+        }
+
     }
 }
