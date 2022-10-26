@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.PlayersAndMonsters", "03
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.NeedForSpeed", "04.NeedForSpeed\04.NeedForSpeed.csproj", "{ACDBEFF2-9D25-41A6-BA45-3609D681D82E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.Restaurant", "05.Restaurant\05.Restaurant.csproj", "{8B11420D-DFF2-48E2-8476-AA56636440C6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{ACDBEFF2-9D25-41A6-BA45-3609D681D82E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ACDBEFF2-9D25-41A6-BA45-3609D681D82E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ACDBEFF2-9D25-41A6-BA45-3609D681D82E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B11420D-DFF2-48E2-8476-AA56636440C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B11420D-DFF2-48E2-8476-AA56636440C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B11420D-DFF2-48E2-8476-AA56636440C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B11420D-DFF2-48E2-8476-AA56636440C6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
