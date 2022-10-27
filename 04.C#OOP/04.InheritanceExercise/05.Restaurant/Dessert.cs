@@ -7,6 +7,6 @@
             Calories = calories;
         }
 
-        public virtual double Calories { get; set; }
+        public double Calories { get; set; }
     }
 }

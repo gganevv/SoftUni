@@ -2,18 +2,13 @@
 {
     public class Coffee : HotBeverage
     {
-        public Coffee(string name, double caffeine, decimal price, double milliliters) : base(name, price, milliliters)
-        {
-            Caffeine = caffeine;
-        }
-
-        public Coffee(string name, double caffeine) : this(name, caffeine, 0, 0)
+        private const double COFFEE_MILLILITERS = 50;
+        private const decimal COFEE_PRICE = 3.5M;
+        public Coffee(string name, double caffeine) : base(name, COFEE_PRICE, COFFEE_MILLILITERS)
         {
             Caffeine = caffeine;
         }
 
         public double Caffeine { get; set; }
-        public override double Milliliters => 50;
-        public override decimal Price => 3.5M;
     }
 }
