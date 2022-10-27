@@ -2,15 +2,15 @@
 {
     public class Vehicle
     {
+        private const double DEFAULT_FUEL_CONSUMPTION = 1.25;
         public Vehicle(int horsePower, double fuel)
         {
             HorsePower = horsePower;
             Fuel = fuel;
-            FuelConsumption = DefaultFuelConsumption;
+            FuelConsumption = DEFAULT_FUEL_CONSUMPTION;
         }
 
         public double FuelConsumption { get; set; }
-        public virtual double DefaultFuelConsumption { get; set; } = 1.25;
         public double Fuel { get; set; }
         public int HorsePower { get; set; }
 
