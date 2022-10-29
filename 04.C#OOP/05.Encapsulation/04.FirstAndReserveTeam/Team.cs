@@ -20,14 +20,14 @@ namespace PersonsInfo
             set => name = value;
         }
 
-        public List<Person> FirstTeam 
+        public IReadOnlyCollection<Person> FirstTeam 
         { 
-            get => firstTeam;
+            get => firstTeam.AsReadOnly();
         }
 
-        public List<Person> ReserveTeam
+        public IReadOnlyCollection<Person> ReserveTeam
         {
-            get => reserveTeam;
+            get => reserveTeam.AsReadOnly();
         }
 
         public void AddPlayer(Person person)
