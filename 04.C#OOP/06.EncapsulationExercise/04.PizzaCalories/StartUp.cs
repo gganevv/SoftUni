@@ -1,6 +1,5 @@
 ﻿namespace _04.PizzaCalories
 {
-    //92/100
     using System;
     public class StartUp
     {
@@ -8,7 +7,7 @@
         {
             try
             {
-                string[] pizzaArgs = Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries);
+                string[] pizzaArgs = Console.ReadLine().Split();
                 Pizza pizza = new Pizza(pizzaArgs[1]);
                 string[] doughtArgs = Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries);
                 pizza.Dough = new Dough(doughtArgs[1], doughtArgs[2], double.Parse(doughtArgs[3]));
