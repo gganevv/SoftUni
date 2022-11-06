@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.InterfaceIPerson", "01.InterfaceIPerson\01.InterfaceIPerson.csproj", "{3F590E44-D327-483A-B971-A67985FBF7A7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01.InterfaceIPerson", "01.InterfaceIPerson\01.InterfaceIPerson.csproj", "{3F590E44-D327-483A-B971-A67985FBF7A7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.MultipleImplementation", "02.MultipleImplementation\02.MultipleImplementation.csproj", "{904477E5-C95B-4756-BA80-31ED2CC077B0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02.MultipleImplementation", "02.MultipleImplementation\02.MultipleImplementation.csproj", "{904477E5-C95B-4756-BA80-31ED2CC077B0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.Telephony", "03.Telephony\03.Telephony.csproj", "{CAB971D3-98CA-4096-BA53-B6EB3B8B644D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03.Telephony", "03.Telephony\03.Telephony.csproj", "{CAB971D3-98CA-4096-BA53-B6EB3B8B644D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.BorderControl", "04.BorderControl\04.BorderControl.csproj", "{5BBBAB0A-245E-4875-968C-638E1B4A3156}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{CAB971D3-98CA-4096-BA53-B6EB3B8B644D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CAB971D3-98CA-4096-BA53-B6EB3B8B644D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CAB971D3-98CA-4096-BA53-B6EB3B8B644D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BBBAB0A-245E-4875-968C-638E1B4A3156}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BBBAB0A-245E-4875-968C-638E1B4A3156}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BBBAB0A-245E-4875-968C-638E1B4A3156}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BBBAB0A-245E-4875-968C-638E1B4A3156}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
