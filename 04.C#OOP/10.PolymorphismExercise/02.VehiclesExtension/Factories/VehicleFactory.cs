@@ -1,6 +1,5 @@
 ﻿namespace Vehicles.Factories
 {
-    using _02._Vehicles_Extension;
     using Vehicles.Factories.Interfaces;
     using Vehicles.Models.Interfaces;
 

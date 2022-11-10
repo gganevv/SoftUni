@@ -1,8 +1,6 @@
-﻿using System;
-
-
-namespace _02._Vehicles_Extension
+﻿namespace Vehicles
 {
+    using System;
     public class Truck : Vehicle
     {
         private const double REFUEL_MODIFIER = 0.95;

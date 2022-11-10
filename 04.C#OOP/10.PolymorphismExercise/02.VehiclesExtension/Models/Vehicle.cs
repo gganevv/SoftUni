@@ -1,8 +1,7 @@
-﻿using System;
-using Vehicles.Models.Interfaces;
-
-namespace _02._Vehicles_Extension
+﻿namespace Vehicles
 {
+    using System;
+    using Models.Interfaces;
     public class Vehicle : IVehicle
     {
 

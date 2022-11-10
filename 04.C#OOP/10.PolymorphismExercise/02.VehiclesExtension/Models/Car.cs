@@ -1,7 +1,4 @@
-﻿using System;
-
-
-namespace _02._Vehicles_Extension
+﻿namespace Vehicles
 {
     public class Car : Vehicle
     {
