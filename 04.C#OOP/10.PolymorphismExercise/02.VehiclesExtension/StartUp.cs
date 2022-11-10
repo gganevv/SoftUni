@@ -1,0 +1,22 @@
+﻿using System;
+using Vehicles.Core;
+using Vehicles.Factories.Interfaces;
+using Vehicles.Factories;
+using Vehicles.IO.Interfaces;
+using Vehicles.IO;
+
+namespace _02._Vehicles_Extension
+{
+    public class StartUp
+    {
+        //50/100 
+        static void Main()
+        {
+            IReader reader = new ConsoleReader();
+            IWriter writer = new ConsoleWriter();
+            IVehicleFactory vehicleFactory = new VehicleFactory();
+            Engine engine = new Engine(reader, writer, vehicleFactory);
+            engine.Run();
+        }
+    }
+}
