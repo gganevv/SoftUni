@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03.Cards", "03.Cards\03.Car
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.SumOfIntegers", "04.SumOfIntegers\04.SumOfIntegers.csproj", "{7B952604-24E8-48BF-A191-3EFBC81E5059}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.PlayCatch", "05.PlayCatch\05.PlayCatch.csproj", "{6E64E371-F221-4B6F-BC08-72F5E1F83DF0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{7B952604-24E8-48BF-A191-3EFBC81E5059}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7B952604-24E8-48BF-A191-3EFBC81E5059}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7B952604-24E8-48BF-A191-3EFBC81E5059}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E64E371-F221-4B6F-BC08-72F5E1F83DF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E64E371-F221-4B6F-BC08-72F5E1F83DF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E64E371-F221-4B6F-BC08-72F5E1F83DF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E64E371-F221-4B6F-BC08-72F5E1F83DF0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
