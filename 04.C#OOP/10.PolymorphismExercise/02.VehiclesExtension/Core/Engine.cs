@@ -75,7 +75,7 @@
             }
             else if (command == "DriveEmpty")
             {
-                ((Bus)vehicle).DriveEmpty(value);
+                writer.WriteLine(((Bus)vehicle).DriveEmpty(value));
             }
         }
     }

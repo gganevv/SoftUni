@@ -8,7 +8,6 @@ namespace Vehicles
 {
     public class StartUp
     {
-        //50/100 
         static void Main()
         {
             IReader reader = new ConsoleReader();

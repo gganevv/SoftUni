@@ -16,9 +16,9 @@
             return drive;
         }
 
-        public void DriveEmpty(double distance)
+        public string DriveEmpty(double distance)
         {
-            base.Drive(distance);
+            return base.Drive(distance);
         }
     }
 }
