@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace DetailPrinter
+﻿namespace DetailPrinter
 {
     public class StartUp
     {
