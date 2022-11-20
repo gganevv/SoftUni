@@ -5,7 +5,9 @@ VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Skeleton", "Skeleton\Skeleton.csproj", "{7D5277A0-AEE7-40EF-8228-80397A69A000}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.TestAxe", "01.TestAxe\01.TestAxe.csproj", "{F60F593C-4F98-488F-ADF4-721ED98088D0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01.TestAxe", "01.TestAxe\01.TestAxe.csproj", "{F60F593C-4F98-488F-ADF4-721ED98088D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.TestDummy", "02.TestDummy\02.TestDummy.csproj", "{A1709286-BD98-4D0E-8287-14BA0D40D9E2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{F60F593C-4F98-488F-ADF4-721ED98088D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F60F593C-4F98-488F-ADF4-721ED98088D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F60F593C-4F98-488F-ADF4-721ED98088D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1709286-BD98-4D0E-8287-14BA0D40D9E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1709286-BD98-4D0E-8287-14BA0D40D9E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1709286-BD98-4D0E-8287-14BA0D40D9E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1709286-BD98-4D0E-8287-14BA0D40D9E2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
