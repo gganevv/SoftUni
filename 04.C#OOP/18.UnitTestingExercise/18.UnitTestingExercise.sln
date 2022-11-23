@@ -5,15 +5,19 @@ VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Database", "Skeleton\Database\Database.csproj", "{61288DA4-E62A-46A3-97A1-5B88E9BCB749}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.Database.Tests", "01.Database.Tests\01.Database.Tests.csproj", "{9FAD6350-72AC-4AAD-A8FE-86CEFCFAE579}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01.Database.Tests", "01.Database.Tests\01.Database.Tests.csproj", "{9FAD6350-72AC-4AAD-A8FE-86CEFCFAE579}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DatabaseExtended", "Skeleton\DatabaseExtended\DatabaseExtended.csproj", "{AF1E971D-0917-4658-B69E-B358255F4E81}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.DatabaseExtended.Tests", "02.DatabaseExtended.Tests\02.DatabaseExtended.Tests.csproj", "{B8247938-F231-4A94-A67C-4E793CE90E99}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02.DatabaseExtended.Tests", "02.DatabaseExtended.Tests\02.DatabaseExtended.Tests.csproj", "{B8247938-F231-4A94-A67C-4E793CE90E99}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarManager", "Skeleton\CarManager\CarManager.csproj", "{5714A529-5AB9-4079-A4EB-2B561BB23FF1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.Carmanager.Tests", "03.Carmanager.Tests\03.Carmanager.Tests.csproj", "{DBF3BBAA-367A-407E-8A36-0683D85A2BAA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03.Carmanager.Tests", "03.Carmanager.Tests\03.Carmanager.Tests.csproj", "{DBF3BBAA-367A-407E-8A36-0683D85A2BAA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FightingArena", "Skeleton\FightingArena\FightingArena.csproj", "{18A7CF6E-6061-4613-9871-56AB70AA599A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.FightingArena.Tests", "04.FightingArena.Tests\04.FightingArena.Tests.csproj", "{606492F1-2F78-413C-BE9C-3547FCD3B448}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +49,14 @@ Global
 		{DBF3BBAA-367A-407E-8A36-0683D85A2BAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DBF3BBAA-367A-407E-8A36-0683D85A2BAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DBF3BBAA-367A-407E-8A36-0683D85A2BAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18A7CF6E-6061-4613-9871-56AB70AA599A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18A7CF6E-6061-4613-9871-56AB70AA599A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18A7CF6E-6061-4613-9871-56AB70AA599A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18A7CF6E-6061-4613-9871-56AB70AA599A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{606492F1-2F78-413C-BE9C-3547FCD3B448}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{606492F1-2F78-413C-BE9C-3547FCD3B448}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{606492F1-2F78-413C-BE9C-3547FCD3B448}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{606492F1-2F78-413C-BE9C-3547FCD3B448}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
