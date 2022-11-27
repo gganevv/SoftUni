@@ -53,11 +53,6 @@
             return transactions;
         }
 
-        public IEnumerable<ITransaction> GetAllInAmountRange(double lo, double hi)
-        {
-            throw new NotImplementedException();
-        }
-
         public IEnumerable<ITransaction> GetAllOrderedByAmountDescendingThenById()
         {
             HashSet<ITransaction> transactions = new HashSet<ITransaction>();
