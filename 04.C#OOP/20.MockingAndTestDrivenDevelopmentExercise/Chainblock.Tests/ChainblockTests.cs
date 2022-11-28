@@ -254,5 +254,117 @@
             chainblock.GetByReceiverOrderedByAmountThenById("Az")
             , "No such transaction exists!");
         }
+
+        [Test]
+        public void GetBySenderAndMinimumAmountDescendingShouldThrowExceptionIfNoTransactions()
+        {
+            var chainblock = new Chainblock();
+            Assert.Throws<InvalidOperationException>(() =>
+            chainblock.GetBySenderAndMinimumAmountDescending("Pesho", 100)
+            , "No such transaction exists!");
+        }
+
+
+        [TestCase(1500, 0)]
+        [TestCase(500, 1)]
+        [TestCase(100, 2)]
+        public void GetBySenderAndMinimumAmountDescendingShouldReturnProperTransactions(decimal outAmount, int rank)
+        {
+            var chainblock = new Chainblock();
+            Transaction tx = new Transaction(1, TransactionStatus.Successfull, "Pesho", "Ivan", 100);
+            Transaction tx2 = new Transaction(2, TransactionStatus.Successfull, "Pesho", "Ivan", 500);
+            Transaction tx3 = new Transaction(3, TransactionStatus.Successfull, "Pesho", "Ivan", 1500);
+            chainblock.Add(tx);
+            chainblock.Add(tx2);
+            chainblock.Add(tx3);
+            var result = chainblock.GetBySenderAndMinimumAmountDescending("Pesho", outAmount).ToArray();
+            Assert.That(result[rank].Amount, Is.EqualTo(outAmount));
+        }
+
+        [Test]
+        public void GetBySenderOrderedByAmountDescendingShouldThrowExceptionIfNoTransactions()
+        {
+            var chainblock = new Chainblock();
+            Assert.Throws<InvalidOperationException>(() =>
+            chainblock.GetBySenderOrderedByAmountDescending("Pesho")
+            , "No such transaction exists!");
+        }
+
+        [TestCase(1500, 0)]
+        [TestCase(500, 1)]
+        [TestCase(100, 2)]
+        public void GetBySenderOrderedByAmountDescendingShouldReturnProperTransactions(decimal outAmount, int rank)
+        {
+            var chainblock = new Chainblock();
+            Transaction tx = new Transaction(1, TransactionStatus.Successfull, "Pesho", "Ivan", 100);
+            Transaction tx2 = new Transaction(2, TransactionStatus.Successfull, "Pesho", "Ivan", 500);
+            Transaction tx3 = new Transaction(3, TransactionStatus.Successfull, "Pesho", "Ivan", 1500);
+            chainblock.Add(tx);
+            chainblock.Add(tx2);
+            chainblock.Add(tx3);
+            var result = chainblock.GetBySenderOrderedByAmountDescending("Pesho").ToArray();
+            Assert.That(result[rank].Amount, Is.EqualTo(outAmount));
+        }
+
+        [Test]
+        public void GetByTransactionStatusShouldThrowExceptionIfNoTransactions()
+        {
+            var chainblock = new Chainblock();
+            Assert.Throws<InvalidOperationException>(() =>
+            chainblock.GetByTransactionStatus(TransactionStatus.Unauthorized)
+            , "No such transaction exists!");
+        }
+
+        [Test]
+        public void GetByTransactionStatusShouldReturnProperTransaction()
+        {
+            var chainblock = new Chainblock();
+            Transaction tx = new Transaction(1, TransactionStatus.Successfull, "Pesho", "Ivan", 100);
+            chainblock.Add(tx);
+            var result = chainblock.GetByTransactionStatus(TransactionStatus.Successfull).ToArray();
+            Assert.That(result[0].Amount, Is.EqualTo(100));
+        }
+
+        [Test]
+        public void GetByTransactionStatusAndMaximumAmountShouldThrowExceptionIfNoTransactions()
+        {
+            var chainblock = new Chainblock();
+            Assert.Throws<InvalidOperationException>(() =>
+            chainblock.GetByTransactionStatusAndMaximumAmount(TransactionStatus.Unauthorized, 100)
+            , "No such transaction exists!");
+        }
+
+        [Test]
+        public void GetByTransactionStatusAndMaximumAmountShouldReturnProperTransaction()
+        {
+            var chainblock = new Chainblock();
+            Transaction tx2 = new Transaction(1, TransactionStatus.Successfull, "Pesho", "Ivan", 1000);
+            Transaction tx = new Transaction(2, TransactionStatus.Successfull, "Pesho", "Ivan", 100);
+            chainblock.Add(tx);
+            chainblock.Add(tx2);
+            var result = chainblock.GetByTransactionStatusAndMaximumAmount(TransactionStatus.Successfull, 500).ToArray();
+            Assert.That(result[0].Amount, Is.EqualTo(100));
+        }
+
+        [Test]
+        public void RemoveTransactionByIdShouldThrowExceptionIfNoSuchTransaction()
+        {
+            var chainblock = new Chainblock();
+            Assert.Throws<InvalidOperationException>(() =>
+            chainblock.RemoveTransactionById(1)
+            , "No such transaction exists!");
+        }
+
+        [Test]
+        public void RemoveTransactionByIdShouldRemoveProperTransaction()
+        {
+            var chainblock = new Chainblock();
+            Transaction tx = new Transaction(1, TransactionStatus.Successfull, "Pesho", "Ivan", 100);
+            chainblock.Add(tx);
+            chainblock.RemoveTransactionById(1);
+            Assert.Throws<InvalidOperationException>(() =>
+            chainblock.RemoveTransactionById(1)
+            , "No such transaction exists!");
+        }
     }
 }

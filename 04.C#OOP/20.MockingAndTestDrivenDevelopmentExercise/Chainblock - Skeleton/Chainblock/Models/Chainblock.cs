@@ -231,7 +231,7 @@
             ITransaction tx = transactions.FirstOrDefault(x => x.Id == id);
             if (tx == null)
             {
-                throw new ArgumentException(ExceptionMessages.NO_SUCH_TRANSACTION_EXISTS);
+                throw new InvalidOperationException(ExceptionMessages.NO_SUCH_TRANSACTION_EXISTS);
             }
             transactions.Remove(tx);
         }
