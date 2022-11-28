@@ -1,9 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-
-namespace _01.Singleton
+﻿namespace _01.Singleton
 {
+    using System;
+    using System.Collections.Generic;
+    using System.IO;
     public class SingletonDataContainer : ISingletonContainer
     {
         private static SingletonDataContainer instance = new SingletonDataContainer();
