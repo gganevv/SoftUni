@@ -1,15 +1,16 @@
-﻿using Formula1.Core.Contracts;
-using Formula1.Models;
-using Formula1.Models.Contracts;
-using Formula1.Repositories;
-using Formula1.Utilities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace Formula1.Core
+﻿namespace Formula1.Core
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+
+    using Contracts;
+    using Models;
+    using Models.Contracts;
+    using Repositories;
+    using Utilities;
+    
     public class Controller : IController
     {
         private PilotRepository pilotRepository;
