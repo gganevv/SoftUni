@@ -6,7 +6,7 @@
     public class Submarine : Vessel, ISubmarine
     {
         private const double DEFAULT_ARMOR_THICKNES = 200;
-        public Submarine(string name, double mainWeaponCaliber, double speed, double armorThickness) : base(name, mainWeaponCaliber, speed, armorThickness)
+        public Submarine(string name, double mainWeaponCaliber, double speed) : base(name, mainWeaponCaliber, speed, DEFAULT_ARMOR_THICKNES)
         {
             SubmergeMode = false;
         }
@@ -36,7 +36,7 @@
 
         public override string ToString()
         {
-            return base.ToString() + Environment.NewLine + $" *Submerge mode: {(SubmergeMode ? "On" : "Off")}";
+            return base.ToString() + Environment.NewLine + $" *Submerge mode: {(SubmergeMode ? "ON" : "OFF")}";
         }
     }
 }

@@ -7,7 +7,7 @@
     {
         private const double DEFAULT_ARMOR_THICKNES = 300;
 
-        public Battleship(string name, double mainWeaponCaliber, double speed, double armorThickness) : base(name, mainWeaponCaliber, speed, armorThickness)
+        public Battleship(string name, double mainWeaponCaliber, double speed) : base(name, mainWeaponCaliber, speed, DEFAULT_ARMOR_THICKNES)
         {
             SonarMode = false;
         }
@@ -37,7 +37,7 @@
 
         public override string ToString()
         {
-            return base.ToString() + Environment.NewLine + $" *Sonar mode: {(SonarMode ? "On" : "Off")}";
+            return base.ToString() + Environment.NewLine + $" *Sonar mode: {(SonarMode ? "ON" : "OFF")}";
         }
     }
 }

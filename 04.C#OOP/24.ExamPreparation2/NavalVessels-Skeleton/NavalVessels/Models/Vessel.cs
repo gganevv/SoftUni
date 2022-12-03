@@ -31,6 +31,7 @@
                 {
                     throw new ArgumentNullException(ExceptionMessages.InvalidVesselName);
                 }
+                name = value;
             }
         }
 
@@ -43,6 +44,7 @@
                 {
                     throw new NullReferenceException(ExceptionMessages.InvalidCaptainToVessel);
                 }
+                captain = value;
             }
         }
         public double ArmorThickness { get; set; }

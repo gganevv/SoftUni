@@ -56,7 +56,7 @@
             {
                 foreach (var vessel in vessels)
                 {
-                    Console.WriteLine(vessel);
+                    sb.AppendLine(vessel.ToString());
                 }
             }
             return sb.ToString().Trim();
