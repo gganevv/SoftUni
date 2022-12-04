@@ -11,8 +11,8 @@
 
     public class Controller : IController
     {
-        private VesselRepository vesselRepository;
-        private List<ICaptain> captains;
+        private readonly VesselRepository vesselRepository;
+        private readonly List<ICaptain> captains;
 
         public Controller()
         {
@@ -22,23 +22,20 @@
 
         public string HireCaptain(string fullName)
         {
-            Captain captain = new Captain(fullName);
             if (captains.FirstOrDefault(x => x.FullName == fullName) == null)
             {
                 captains.Add(new Captain(fullName));
                 return string.Format(OutputMessages.SuccessfullyAddedCaptain, fullName);
             }
-            else
-            {
-                return string.Format(OutputMessages.CaptainIsAlreadyHired, fullName);
-            }
+            return string.Format(OutputMessages.CaptainIsAlreadyHired, fullName);
         }
 
         public string ProduceVessel(string name, string vesselType, double mainWeaponCaliber, double speed)
         {
-            if (vesselRepository.FindByName(name) != null)
+            IVessel existingVessel = vesselRepository.FindByName(name);
+            if (existingVessel != null)
             {
-                return string.Format(OutputMessages.VesselIsAlreadyManufactured, name);
+                return string.Format(OutputMessages.VesselIsAlreadyManufactured, existingVessel.GetType().Name, existingVessel.Name);
             }
 
             if (vesselType == "Submarine")
@@ -53,12 +50,7 @@
                 vesselRepository.Add(vessel);
                 return string.Format(OutputMessages.SuccessfullyCreateVessel, vesselType, name, mainWeaponCaliber, speed);
             }
-            else
-            {
-                return OutputMessages.InvalidVesselType;
-            }
-
-
+            return OutputMessages.InvalidVesselType;
         }
 
         public string AssignCaptain(string selectedCaptainName, string selectedVesselName)
@@ -87,7 +79,6 @@
         }
 
         public string CaptainReport(string captainFullName) => captains.FirstOrDefault(x => x.FullName == captainFullName).Report();
-
 
         public string VesselReport(string vesselName) => vesselRepository.FindByName(vesselName).ToString();
 
@@ -119,10 +110,8 @@
                 vessel.RepairVessel();
                 return string.Format(OutputMessages.SuccessfullyRepairVessel, vesselName);
             }
-            else
-            {
-                return string.Format(OutputMessages.VesselNotFound, vesselName);
-            }
+
+            return string.Format(OutputMessages.VesselNotFound, vesselName);
         }
 
         public string AttackVessels(string attackingVesselName, string defendingVesselName)
