@@ -5,6 +5,10 @@ VisualStudioVersion = 17.4.33122.133
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NavalVessels", "NavalVessels-Skeleton\NavalVessels\NavalVessels.csproj", "{3C76891E-94A2-481E-A913-6F92E5467394}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Book", "BookSkeleton\Book\Book.csproj", "{41E7461A-4151-4105-A937-B96E408D21E8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Book.Tests", "BookSkeleton\Book.Tests\Book.Tests.csproj", "{EF3BB4F4-72CE-4AC1-A198-6827EBBF92B2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{3C76891E-94A2-481E-A913-6F92E5467394}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3C76891E-94A2-481E-A913-6F92E5467394}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3C76891E-94A2-481E-A913-6F92E5467394}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41E7461A-4151-4105-A937-B96E408D21E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41E7461A-4151-4105-A937-B96E408D21E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41E7461A-4151-4105-A937-B96E408D21E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41E7461A-4151-4105-A937-B96E408D21E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF3BB4F4-72CE-4AC1-A198-6827EBBF92B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF3BB4F4-72CE-4AC1-A198-6827EBBF92B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF3BB4F4-72CE-4AC1-A198-6827EBBF92B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF3BB4F4-72CE-4AC1-A198-6827EBBF92B2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
