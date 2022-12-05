@@ -1,13 +1,16 @@
-﻿using BookingApp.Models.Bookings.Contracts;
+﻿using BookingApp.Models.Bookings;
+using BookingApp.Models.Bookings.Contracts;
 using BookingApp.Models.Hotels.Contacts;
+using BookingApp.Models.Rooms;
 using BookingApp.Models.Rooms.Contracts;
 using BookingApp.Repositories.Contracts;
 using BookingApp.Utilities.Messages;
 using System;
+using System.Collections;
 
 namespace BookingApp.Models.Hotels
 {
-    public class Hotel : IHotel
+    public class Hotel : IHotel, IEnumerable
     {
         private string fullName;
         private int category;
@@ -45,11 +48,16 @@ namespace BookingApp.Models.Hotels
                 category = value;
             }
         }
-        //TODO
+
         public double Turnover => throw new System.NotImplementedException();
 
         public IRepository<IRoom> Rooms => rooms;
 
         public IRepository<IBooking> Bookings => bookings;
+
+        public IEnumerator GetEnumerator()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

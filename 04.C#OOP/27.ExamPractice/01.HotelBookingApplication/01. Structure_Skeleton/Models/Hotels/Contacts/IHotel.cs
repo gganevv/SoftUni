@@ -3,7 +3,6 @@
     using BookingApp.Repositories.Contracts;
     using global::BookingApp.Models.Bookings.Contracts;
     using global::BookingApp.Models.Rooms.Contracts;
-    using System.Collections.Generic;
     public interface IHotel
     {
         string FullName { get; }

@@ -1,26 +1,26 @@
 ﻿namespace BookingApp.Repositories
 {
+    using System.Linq;
     using System.Collections.Generic;
   
-    using Repositories.Contracts;
-    using Models.Hotels.Contacts;
-    using System.Linq;
+    using BookingApp.Models.Hotels;
+    using BookingApp.Repositories.Contracts;
 
-    public class HotelRepository : IRepository<IHotel>
+    public class HotelRepository : IRepository<Hotel>
     {
-        private HashSet<IHotel> hotels;
+        private HashSet<Hotel> hotels;
 
         public HotelRepository()
         {
-            hotels = new HashSet<IHotel>();
+            hotels = new HashSet<Hotel>();
         }
-        public void AddNew(IHotel hotel)
+        public void AddNew(Hotel hotel)
         {
             hotels.Add(hotel);
         }
 
-        public IReadOnlyCollection<IHotel> All() => hotels;
+        public IReadOnlyCollection<Hotel> All() => hotels;
 
-        public IHotel Select(string criteria) => hotels.FirstOrDefault(x => x.FullName == criteria);
+        public Hotel Select(string criteria) => hotels.FirstOrDefault(x => x.FullName == criteria);
     }
 }
