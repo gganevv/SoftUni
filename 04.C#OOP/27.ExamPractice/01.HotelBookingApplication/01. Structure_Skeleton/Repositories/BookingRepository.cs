@@ -5,22 +5,23 @@
     
     using Repositories.Contracts;
     using BookingApp.Models.Bookings;
+    using BookingApp.Models.Bookings.Contracts;
 
-    public class BookingRepository : IRepository<Booking>
+    public class BookingRepository : IRepository<IBooking>
     {
-        private HashSet<Booking> bookings;
+        private HashSet<IBooking> bookings;
 
         public BookingRepository()
         {
-            bookings = new HashSet<Booking>();
+            bookings = new HashSet<IBooking>();
         }
-        public void AddNew(Booking booking)
+        public void AddNew(IBooking booking)
         {
             bookings.Add(booking);
         }
 
-        public IReadOnlyCollection<Booking> All() => bookings;
+        public IReadOnlyCollection<IBooking> All() => bookings;
 
-        public Booking Select(string criteria) => bookings.FirstOrDefault(x => x.BookingNumber == int.Parse(criteria));
+        public IBooking Select(string criteria) => bookings.FirstOrDefault(x => x.BookingNumber == int.Parse(criteria));
     }
 }

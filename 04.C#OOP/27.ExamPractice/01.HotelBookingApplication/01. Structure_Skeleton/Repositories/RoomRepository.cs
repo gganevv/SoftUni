@@ -4,24 +4,24 @@
     using System.Collections.Generic;
 
     using Contracts;
-    using BookingApp.Models.Rooms;
+    using BookingApp.Models.Rooms.Contracts;
 
-    public class RoomRepository : IRepository<Room>
+    public class RoomRepository : IRepository<IRoom>
     {
-        private readonly HashSet<Room> rooms;
+        private readonly HashSet<IRoom> rooms;
 
         public RoomRepository()
         {
-            rooms = new HashSet<Room>();
+            rooms = new HashSet<IRoom>();
         }
 
-        public void AddNew(Room room)
+        public void AddNew(IRoom room)
         {
             rooms.Add(room);
         }
 
-        public IReadOnlyCollection<Room> All() => rooms;
+        public IReadOnlyCollection<IRoom> All() => rooms;
 
-        public Room Select(string criteria) => rooms.FirstOrDefault(x => x.GetType().Name == criteria);
+        public IRoom Select(string criteria) => rooms.FirstOrDefault(x => x.GetType().Name == criteria);
     }
 }

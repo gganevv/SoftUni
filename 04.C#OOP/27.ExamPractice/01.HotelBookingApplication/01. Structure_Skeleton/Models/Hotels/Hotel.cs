@@ -1,26 +1,28 @@
-﻿using BookingApp.Models.Bookings;
-using BookingApp.Models.Bookings.Contracts;
-using BookingApp.Models.Hotels.Contacts;
-using BookingApp.Models.Rooms;
-using BookingApp.Models.Rooms.Contracts;
-using BookingApp.Repositories.Contracts;
-using BookingApp.Utilities.Messages;
-using System;
-using System.Collections;
-
-namespace BookingApp.Models.Hotels
+﻿namespace BookingApp.Models.Hotels
 {
-    public class Hotel : IHotel, IEnumerable
+    using System;
+    using System.Linq;
+
+    using Contacts;
+    using Bookings.Contracts;
+    using Rooms.Contracts;
+    using Repositories.Contracts;
+    using Utilities.Messages;
+    using BookingApp.Repositories;
+
+    public class Hotel : IHotel
     {
         private string fullName;
         private int category;
-        private IRepository<IRoom> rooms;
-        private IRepository<IBooking> bookings;
+        private RoomRepository rooms;
+        private BookingRepository bookings;
 
         public Hotel(string fullName, int category)
         {
             FullName = fullName; 
             Category = category;
+            rooms = new RoomRepository();
+            bookings = new BookingRepository();
         }
 
         public string FullName
@@ -49,15 +51,18 @@ namespace BookingApp.Models.Hotels
             }
         }
 
-        public double Turnover => throw new System.NotImplementedException();
-
-        public IRepository<IRoom> Rooms => rooms;
-
-        public IRepository<IBooking> Bookings => bookings;
-
-        public IEnumerator GetEnumerator()
+        public double Turnover
         {
-            throw new NotImplementedException();
+            get
+            {
+                double sum = 0;
+                bookings.All().Sum(x => sum+= (x.ResidenceDuration * x.Room.PricePerNight));
+                return sum;
+            }
         }
+
+        public IRepository<IRoom> Rooms => (IRepository<IRoom>)rooms;
+
+        public IRepository<IBooking> Bookings => (IRepository<IBooking>)bookings;
     }
 }
