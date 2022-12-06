@@ -3,6 +3,7 @@
     using System;
     using System.Collections.Generic;
     using System.Linq;
+    using System.Text;
     using PlanetWars.Core.Contracts;
     using PlanetWars.Models.MilitaryUnits;
     using PlanetWars.Models.MilitaryUnits.Contracts;
@@ -121,14 +122,75 @@
             return string.Format(OutputMessages.ForcesUpgraded, planetName);
         }
 
-        public string ForcesReport()
-        {
-            throw new NotImplementedException();
-        }
-
         public string SpaceCombat(string planetOne, string planetTwo)
         {
-            throw new NotImplementedException();
+            Planet planet1 = planets.FirstOrDefault(x => x.Name == planetOne);
+            Planet planet2 = planets.FirstOrDefault(x => x.Name == planetTwo);
+
+            bool planet1hasNuclearWeapon = planet1.Weapons.FirstOrDefault(x => x.GetType().Name == "NuclearWeapon") != null;
+            bool planet2hasNuclearWeapon = planet2.Weapons.FirstOrDefault(x => x.GetType().Name == "NuclearWeapon") != null;
+            string result = string.Empty;
+
+            if (planet1.MilitaryPower == planet2.MilitaryPower)
+            {
+                if ((planet1hasNuclearWeapon && planet2hasNuclearWeapon) || (!planet1hasNuclearWeapon && !planet2hasNuclearWeapon))
+                {
+                    planet1.Spend(planet1.Budget / 2);
+                    planet2.Spend(planet2.Budget / 2);
+                    result = OutputMessages.NoWinner;
+                }
+                else if (planet1hasNuclearWeapon)
+                {
+                    planet1.Spend(planet1.Budget / 2);
+                    planet1.Profit(planet2.Budget / 2);
+                    planet1.Profit(planet2.Army.Sum(x => x.Cost));
+                    planet1.Profit(planet2.Weapons.Sum(x => x.Price));
+                    result = string.Format(OutputMessages.WinnigTheWar, planet1.Name, planet2.Name);
+                    planets.Remove(planet2);
+                }
+                else if (planet2hasNuclearWeapon)
+                {
+                    planet2.Spend(planet2.Budget / 2);
+                    planet2.Profit(planet1.Budget / 2);
+                    planet2.Profit(planet1.Army.Sum(x => x.Cost));
+                    planet2.Profit(planet1.Weapons.Sum(x => x.Price));
+                    result = string.Format(OutputMessages.WinnigTheWar, planet2.Name, planet1.Name);
+                    planets.Remove(planet1);
+                }
+            }
+            else if (planet1.MilitaryPower > planet2.MilitaryPower)
+            {
+                planet1.Spend(planet1.Budget / 2);
+                planet1.Profit(planet2.Budget / 2);
+                planet1.Profit(planet2.Army.Sum(x => x.Cost));
+                planet1.Profit(planet2.Weapons.Sum(x => x.Price));
+                result = string.Format(OutputMessages.WinnigTheWar, planet1.Name, planet2.Name);
+                planets.Remove(planet2);
+            }
+            else if (planet2.MilitaryPower > planet1.MilitaryPower)
+            {
+                planet2.Spend(planet2.Budget / 2);
+                planet2.Profit(planet1.Budget / 2);
+                planet2.Profit(planet1.Army.Sum(x => x.Cost));
+                planet2.Profit(planet1.Weapons.Sum(x => x.Price));
+                result = string.Format(OutputMessages.WinnigTheWar, planet2.Name, planet1.Name);
+                planets.Remove(planet1);
+            }
+
+            return result;
+        }
+
+        public string ForcesReport()
+        {
+            StringBuilder sb = new StringBuilder();
+
+            sb.AppendLine("***UNIVERSE PLANET MILITARY REPORT***");
+            foreach (var planet in planets.OrderByDescending(x => x.MilitaryPower).ThenBy(x => x.Name).ToList())
+            {
+                sb.AppendLine(planet.PlanetInfo());
+            }
+
+            return sb.ToString().Trim();
         }
     }
 }

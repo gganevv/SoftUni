@@ -1,10 +1,12 @@
-﻿using PlanetWars.Models.MilitaryUnits.Contracts;
+﻿using PlanetWars.Models.MilitaryUnits;
+using PlanetWars.Models.MilitaryUnits.Contracts;
 using PlanetWars.Models.Planets.Contracts;
 using PlanetWars.Models.Weapons.Contracts;
 using PlanetWars.Repositories;
 using PlanetWars.Utilities.Messages;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace PlanetWars.Models.Planets
@@ -20,6 +22,8 @@ namespace PlanetWars.Models.Planets
         {
             Name = name;
             Budget = budget;
+            units = new UnitRepository();
+            weapons = new WeaponRepository();
         }
 
         public string Name
@@ -53,7 +57,22 @@ namespace PlanetWars.Models.Planets
         public IReadOnlyCollection<IMilitaryUnit> Army => units.Models;
         public IReadOnlyCollection<IWeapon> Weapons => weapons.Models;
 
-        public double MilitaryPower => throw new NotImplementedException();
+        public double MilitaryPower => CalculateMilitaryPower();
+
+        public double CalculateMilitaryPower()
+        {
+            double totalAmount = Army.Sum(x => x.EnduranceLevel) + Weapons.Sum(x => x.DestructionLevel);
+            if (Army.FirstOrDefault(x => x.GetType().Name == "AnonymousImpactUnit") != null)
+            {
+                totalAmount *= 1.3;
+            }
+            if (Weapons.FirstOrDefault(x => x.GetType().Name == "NuclearWeapon") != null)
+            {
+                totalAmount *= 1.45;
+            }
+
+            return Math.Round(totalAmount, 3);
+        }
 
         public void AddUnit(IMilitaryUnit unit)
         {
@@ -93,8 +112,8 @@ namespace PlanetWars.Models.Planets
             StringBuilder sb = new StringBuilder();
             sb.AppendLine($"Planet: {Name}");
             sb.AppendLine($"--Budget: {Budget} billion QUID");
-            sb.AppendLine($"--Forces: {(Army.Count > 0 ? string.Join(", ", Army) : "No units")}");
-            sb.AppendLine($"--Combat equipment: {(Weapons.Count > 0 ? string.Join(", ", Weapons) : "No weapons")}");
+            sb.AppendLine($"--Forces: {(Army.Count > 0 ? string.Join(", ", Army.Select(x => x.GetType().Name)) : "No units")}");
+            sb.AppendLine($"--Combat equipment: {(Weapons.Count > 0 ? string.Join(", ", Weapons.Select(x => x.GetType().Name)) : "No weapons")}");
             sb.AppendLine($"--Military Power: {MilitaryPower}");
 
             return sb.ToString().Trim();
