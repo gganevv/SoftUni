@@ -5,6 +5,10 @@ VisualStudioVersion = 17.4.33122.133
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlanetWars", "01. Structure_Skeleton\PlanetWars.csproj", "{D9DD0D36-6D39-4EC4-AE69-51AC1C5DA341}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlanetWars.Tests", "03. Unit Tests_Skeleton\PlanetWars.Tests\PlanetWars.Tests.csproj", "{4795ADA5-0688-4154-9C2E-0264FB1333C3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlanetWars2", "03. Unit Tests_Skeleton\PlanetWars\PlanetWars2.csproj", "{23DF965E-C7DB-4798-BED8-4DA8082ABFCB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{D9DD0D36-6D39-4EC4-AE69-51AC1C5DA341}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D9DD0D36-6D39-4EC4-AE69-51AC1C5DA341}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D9DD0D36-6D39-4EC4-AE69-51AC1C5DA341}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4795ADA5-0688-4154-9C2E-0264FB1333C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4795ADA5-0688-4154-9C2E-0264FB1333C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4795ADA5-0688-4154-9C2E-0264FB1333C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4795ADA5-0688-4154-9C2E-0264FB1333C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23DF965E-C7DB-4798-BED8-4DA8082ABFCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23DF965E-C7DB-4798-BED8-4DA8082ABFCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23DF965E-C7DB-4798-BED8-4DA8082ABFCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23DF965E-C7DB-4798-BED8-4DA8082ABFCB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
