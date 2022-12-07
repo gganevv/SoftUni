@@ -40,6 +40,13 @@ namespace Heroes.Models.Map
                         barbarian.TakeDamage(knight.Weapon.DoDamage());
                     }
                 }
+                foreach (var barbarian in barbarians.Where(x => x.IsAlive))
+                {
+                    foreach (var knight in knights.Where(x => x.IsAlive))
+                    {
+                        knight.TakeDamage(barbarian.Weapon.DoDamage());
+                    }
+                }
             }
 
             if (barbarians.Any(x => x.IsAlive))
@@ -52,7 +59,7 @@ namespace Heroes.Models.Map
                         aliveBarbarians++;
                     }
                 }
-                return string.Format(OutputMessages.BARBARIANS_WIN, aliveBarbarians);
+                return string.Format(OutputMessages.BARBARIANS_WIN, barbarians.Count - aliveBarbarians);
             }
             else
             {
@@ -64,7 +71,7 @@ namespace Heroes.Models.Map
                         aliveknights++;
                     }
                 }
-                return string.Format(OutputMessages.KNIGHTS_WIN, aliveknights);
+                return string.Format(OutputMessages.KNIGHTS_WIN, knights.Count - aliveknights);
             }
         }
     }

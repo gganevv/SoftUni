@@ -1,6 +1,7 @@
 ﻿namespace Heroes.Models.Heroes
 {
     using System;
+    using System.Text;
 
     using Contracts;
     using Utilities;
@@ -97,6 +98,17 @@
             {
                 Health -= points;
             }
+        }
+
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine($"{this.GetType().Name}: {Name}");
+            sb.AppendLine($"--Health: {Health}");
+            sb.AppendLine($"--Armour: {Armour}");
+            sb.AppendLine($"--Weapon: {(Weapon != null ? $"{Weapon.Name}" : "Unarmed")}");
+
+            return sb.ToString().Trim();
         }
     }
 }
