@@ -173,7 +173,7 @@ namespace PlanetWars.Tests
                 planet2.AddWeapon(new Weapon("Annihilator", 2, 2));
 
                 string result = planet2.DestructOpponent(planet);
-                Assert.AreEqual("Asdromer is destructed!", result);
+                Assert.AreEqual($"{planet.Name} is destructed!", result);
             }
 
             [Test]
