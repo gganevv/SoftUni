@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33122.133
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Formula1", "01. Structure_Skeleton - 3.1\Formula1\Formula1\Formula1.csproj", "{7BDD7911-F6E5-485A-87D6-E4C7DFBCB28F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartphoneShop", "SmartphoneShop\SmartphoneShop\SmartphoneShop.csproj", "{4709DC8F-D7CD-4C84-9CB4-41752AD70659}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartphoneShop.Tests", "SmartphoneShop\SmartphoneShop.Tests\SmartphoneShop.Tests.csproj", "{FA0112FE-87E1-4698-8283-89CDD0701A90}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7BDD7911-F6E5-485A-87D6-E4C7DFBCB28F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BDD7911-F6E5-485A-87D6-E4C7DFBCB28F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BDD7911-F6E5-485A-87D6-E4C7DFBCB28F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BDD7911-F6E5-485A-87D6-E4C7DFBCB28F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4709DC8F-D7CD-4C84-9CB4-41752AD70659}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4709DC8F-D7CD-4C84-9CB4-41752AD70659}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4709DC8F-D7CD-4C84-9CB4-41752AD70659}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4709DC8F-D7CD-4C84-9CB4-41752AD70659}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA0112FE-87E1-4698-8283-89CDD0701A90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA0112FE-87E1-4698-8283-89CDD0701A90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA0112FE-87E1-4698-8283-89CDD0701A90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA0112FE-87E1-4698-8283-89CDD0701A90}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E4444F5F-4B78-4015-BEF5-5782FAF56127}
+	EndGlobalSection
+EndGlobal
