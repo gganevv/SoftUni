@@ -5,6 +5,10 @@ VisualStudioVersion = 17.4.33122.133
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gym", "Skeleton\Gym\Gym.csproj", "{3DE2E462-A255-47AD-8315-CF54DD621783}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gyms", "UnitTests-Skeleton\Gyms\Gyms.csproj", "{F4AAAC2D-2746-4AC4-B3CA-5FED98640B83}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gyms.Tests", "UnitTests-Skeleton\Gyms.Tests\Gyms.Tests.csproj", "{7A2FB354-6CC4-425C-A859-F670F14F7E7E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{3DE2E462-A255-47AD-8315-CF54DD621783}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3DE2E462-A255-47AD-8315-CF54DD621783}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3DE2E462-A255-47AD-8315-CF54DD621783}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4AAAC2D-2746-4AC4-B3CA-5FED98640B83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4AAAC2D-2746-4AC4-B3CA-5FED98640B83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4AAAC2D-2746-4AC4-B3CA-5FED98640B83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4AAAC2D-2746-4AC4-B3CA-5FED98640B83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A2FB354-6CC4-425C-A859-F670F14F7E7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A2FB354-6CC4-425C-A859-F670F14F7E7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A2FB354-6CC4-425C-A859-F670F14F7E7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A2FB354-6CC4-425C-A859-F670F14F7E7E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
