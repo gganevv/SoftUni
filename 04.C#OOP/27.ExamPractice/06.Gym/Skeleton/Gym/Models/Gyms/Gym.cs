@@ -51,14 +51,14 @@
             {
                 throw new InvalidOperationException(ExceptionMessages.NotEnoughSize);
             }
-            Athletes.Add(athlete);
+            athletes.Add(athlete);
         }
 
         public bool RemoveAthlete(IAthlete athlete) => Athletes.Remove(athlete);
 
         public void AddEquipment(IEquipment equipment)
         {
-            Equipment.Add(equipment);
+            this.equipment.Add(equipment);
         }
 
         public void Exercise()
@@ -75,7 +75,7 @@
             sb.AppendLine($"{Name} is a {GetType().Name}:");
             sb.AppendLine($"Athletes: {(Athletes.Any() ? string.Join(", ", Athletes.Select(x => x.FullName).ToList()) : "No athletes")}");
             sb.AppendLine($"Equipment total count: {Equipment.Count}");
-            sb.AppendLine($"Equipment total weight: {EquipmentWeight} grams");
+            sb.AppendLine($"Equipment total weight: {EquipmentWeight:f2} grams");
 
             return sb.ToString().TrimEnd();
         }
