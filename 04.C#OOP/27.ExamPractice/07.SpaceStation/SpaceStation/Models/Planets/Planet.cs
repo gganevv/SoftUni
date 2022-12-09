@@ -8,11 +8,12 @@
     public class Planet : IPlanet
     {
         private string name;
+        private List<string> items;
 
-        public Planet(string name)
+        public Planet(string name, List<string> items)
         {
             Name = name;
-            Items = new List<string>();
+            this.items = items;
         }
         public string Name
         {
@@ -28,6 +29,6 @@
             }
         }
 
-        public ICollection<string> Items { get; set; }
+        public ICollection<string> Items => items;
     }
 }

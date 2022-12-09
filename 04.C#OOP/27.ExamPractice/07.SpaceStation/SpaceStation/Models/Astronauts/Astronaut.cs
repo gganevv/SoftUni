@@ -11,12 +11,13 @@
     {
         private string name;
         protected double oxygen;
+        private IBag bag;
 
         public Astronaut(string name, double oxygen)
         {
             Name = name;
             Oxygen = oxygen;
-            Bag = new Backpack();
+            bag = new Backpack();
         }
 
         public string Name
@@ -49,7 +50,7 @@
 
         public bool CanBreath => oxygen > 0;
 
-        public IBag Bag { get; set; }
+        public IBag Bag => bag;
 
         public virtual void Breath()
         {

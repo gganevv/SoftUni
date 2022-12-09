@@ -9,7 +9,7 @@
 
         public override void Breath()
         {
-            oxygen -= 10;
+            oxygen -= 5;
             if (oxygen < 0)
             {
                 oxygen = 0;

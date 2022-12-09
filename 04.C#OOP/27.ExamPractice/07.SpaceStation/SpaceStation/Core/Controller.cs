@@ -51,8 +51,7 @@
 
         public string AddPlanet(string planetName, params string[] items)
         {
-            Planet planet = new Planet(planetName);
-            planet.Items = items;
+            Planet planet = new Planet(planetName, items.ToList());
             planetRepository.Add(planet);
 
             return string.Format(OutputMessages.PlanetAdded, planetName);
@@ -82,7 +81,7 @@
             mission.Explore(planet, astronauts);
 
             ExploredPlanets++;
-            return string.Format(OutputMessages.PlanetExplored, astronauts.Where(x => x.CanBreath == false).Count());
+            return string.Format(OutputMessages.PlanetExplored, planetName, astronauts.Where(x => x.CanBreath == false).Count());
         }
 
         public string Report()
