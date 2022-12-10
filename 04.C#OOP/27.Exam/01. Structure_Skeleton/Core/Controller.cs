@@ -97,21 +97,21 @@
         public string TryOrder(int boothId, string order)
         {
             IBooth booth = booths.Models.FirstOrDefault(x => x.BoothId == boothId);
+
             string[] orderArgs = order.Split("/", System.StringSplitOptions.RemoveEmptyEntries);
             string itemTypeName = orderArgs[0];
             string itemName = orderArgs[1];
             int countOfOrderedPieces = int.Parse(orderArgs[2]);
-            if (itemTypeName != "Gingerbread" && itemTypeName != "Stolen" && itemTypeName != "Hibernation" && itemTypeName != "MulledWine")
-            {
-                return string.Format(OutputMessages.NotRecognizedType, itemTypeName);
-            }
 
             if (itemTypeName == "Gingerbread" || itemTypeName == "Stolen")
             {
-                if (booth.DelicacyMenu.Models.FirstOrDefault(x => x.Name == itemName) == null)
+                IDelicacy delicacy = booth.DelicacyMenu.Models.FirstOrDefault(x => x.Name == itemName);
+                if (delicacy == null)
                 {
                     return string.Format(OutputMessages.NotRecognizedItemName, itemTypeName, itemName);
                 }
+                booth.UpdateCurrentBill(delicacy.Price * countOfOrderedPieces);
+                return string.Format(OutputMessages.SuccessfullyOrdered, booth.BoothId, countOfOrderedPieces, itemName);
             }
             else if (itemTypeName == "Hibernation" || itemTypeName == "MulledWine")
             {
@@ -119,10 +119,6 @@
                 {
                     return string.Format(OutputMessages.NotRecognizedItemName, itemTypeName, itemName);
                 }
-            }
-
-            if (itemTypeName == "Hibernation" || itemTypeName == "MulledWine")
-            {
                 string size = orderArgs[3];
                 ICocktail cocktail = booth.CocktailMenu.Models.FirstOrDefault(x => x.Name == itemName && x.Size == size);
                 if (cocktail == null)
@@ -134,13 +130,7 @@
             }
             else
             {
-                IDelicacy delicacy = booth.DelicacyMenu.Models.FirstOrDefault(x => x.Name == itemName);
-                if (delicacy == null)
-                {
-                    return string.Format(OutputMessages.NotRecognizedItemName, itemTypeName, itemName);
-                }
-                booth.UpdateCurrentBill(delicacy.Price * countOfOrderedPieces);
-                return string.Format(OutputMessages.SuccessfullyOrdered, booth.BoothId, countOfOrderedPieces, itemName);
+                return string.Format(OutputMessages.NotRecognizedType, itemTypeName);
             }
         }
 
