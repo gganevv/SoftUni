@@ -22,7 +22,9 @@ namespace SimpleSnake.GameObjects
             food = new Food[3];
             foodIndex = RandomFoodNumber;
             GetFoods();
-            CreateSnake();
+            CreateSnake(); 
+            foodIndex = RandomFoodNumber;
+            food[foodIndex].SetRandomPosition(snakeElements);
         }
         private int RandomFoodNumber => new Random().Next(0, food.Length);
 
@@ -73,10 +75,9 @@ namespace SimpleSnake.GameObjects
             if (food[foodIndex].IsFoodpoint(snakeNewHead))
             {
                 Eat(direction, currentSnakeHead);
+                foodIndex = RandomFoodNumber;
+                food[foodIndex].SetRandomPosition(snakeElements);
             }
-
-            foodIndex = RandomFoodNumber;
-            food[foodIndex].SetRandomPosition(snakeElements);
 
             Point snakeTail = snakeElements.Dequeue();
             snakeTail.Draw(emptySpace);
