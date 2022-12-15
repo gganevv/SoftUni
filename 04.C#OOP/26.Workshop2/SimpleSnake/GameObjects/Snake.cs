@@ -27,6 +27,7 @@ namespace SimpleSnake.GameObjects
             food[foodIndex].SetRandomPosition(snakeElements);
         }
         private int RandomFoodNumber => new Random().Next(0, food.Length);
+        public int Points { get; set; }
 
         private void CreateSnake()
         {
@@ -88,6 +89,7 @@ namespace SimpleSnake.GameObjects
         private void Eat(Point direction, Point currentSnakeHead)
         {
             int length = food[foodIndex].FoodPoints;
+            Points += food[foodIndex].FoodPoints;
 
             for (int i = 0; i < length; i++)
             {

@@ -26,6 +26,8 @@ namespace SimpleSnake.Core
             CreateDirections();
             while (true)
             {
+                Console.SetCursorPosition(wall.LeftX + 3, 4);
+                Console.Write("Points: " + snake.Points);
                 if (Console.KeyAvailable)
                 {
                     GetNextDirection();
