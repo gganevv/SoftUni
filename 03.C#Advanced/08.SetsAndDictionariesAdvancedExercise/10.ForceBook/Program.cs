@@ -4,9 +4,8 @@ using System.Linq;
 
 namespace _10.ForceBook
 {
-    internal class Program
+    public class Program
     {
-        //90/100
         static void Main(string[] args)
         {
             HashSet<Side> sides = new HashSet<Side>();
@@ -43,7 +42,8 @@ namespace _10.ForceBook
 
                     if (UserExist(user, sides))
                     {
-                        sides.FirstOrDefault(x => x.Name != forceSide).Memebers.Remove(user);
+                        Side oldSide = sides.FirstOrDefault(x => x.Memebers.Contains(user));
+                        oldSide.Memebers.Remove(user);
                         side.Memebers.Add(user);
                     }
                     else
@@ -84,17 +84,5 @@ namespace _10.ForceBook
 
             return false;
         }
-    }
-
-    internal class Side
-    {
-        public Side(string name)
-        {
-            Name = name;
-            Memebers = new List<string>();
-        }
-
-        public string Name { get; set; }
-        public List<String> Memebers { get; set; }
     }
 }
