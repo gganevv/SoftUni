@@ -25,6 +25,9 @@
                WHERE mv.VillainId = @Id
                ORDER BY m.Name";
 
-
+        public const string GetTownByName =
+            @"SELECT Id 
+                FROM Towns 
+               WHERE Name = @townName";
     }
 }
