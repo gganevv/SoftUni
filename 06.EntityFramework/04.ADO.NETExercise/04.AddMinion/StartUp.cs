@@ -20,8 +20,8 @@ namespace _04.AddMinion
             string townName = minionArgs[3];
             string villainName = villainArgs[1];
             
-            int? villainId = GetVillianId(connection, villainName);
             int? townId = GetTownId(connection, townName);
+            int? villainId = GetVillianId(connection, villainName);
 
             int? minionId = GetMinionId(connection, minionName, minionAge, townId);
 
