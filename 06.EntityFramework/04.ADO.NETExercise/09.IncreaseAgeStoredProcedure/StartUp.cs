@@ -22,6 +22,7 @@ public class StartUp
 
         string name = string.Empty;
         int age = 0;
+
         SqlDataReader reader = printMinionInfo.ExecuteReader();
         while (reader.Read())
         {
