@@ -94,5 +94,13 @@
         public const string SelectMinionsNameAndAge =
             @"SELECT Name, Age 
                 FROM Minions";
+
+        public const string SelectMinionNameAgeById =
+            @"SELECT Name, Age 
+                FROM Minions 
+               WHERE Id = @Id";
+
+        public const string ExecuteSP =
+            @"EXEC usp_GetOlder @Id";
     }
 }
