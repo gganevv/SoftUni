@@ -1,8 +1,10 @@
 --01. 
 CREATE DATABASE MinionsDB
+GO
 
 --02.  
 USE MinionsDB
+GO
 
 --03.  
 CREATE TABLE Countries (Id INT PRIMARY KEY IDENTITY,Name VARCHAR(50))
