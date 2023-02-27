@@ -1,10 +1,8 @@
-﻿namespace Util
-{
-    public class Util
-    {
-        static void Main()
-        {
+﻿namespace Util;
 
-        }
+public class Util
+{
+    static void Main()
+    {
     }
 }
