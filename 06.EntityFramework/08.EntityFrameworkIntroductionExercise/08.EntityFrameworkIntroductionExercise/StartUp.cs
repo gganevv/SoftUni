@@ -36,7 +36,10 @@ public class StartUp
         //string result = GetDepartmentsWithMoreThan5Employees(dBcontext);
 
         //Problem 11 Find Latest 10 Projects
-        string result = GetLatestProjects(dBcontext);
+        //string result = GetLatestProjects(dBcontext);
+
+        //Problem 12 Increase Salaries
+        string result = IncreaseSalaries(dBcontext);
 
         Console.WriteLine(result);
     }
@@ -288,6 +291,35 @@ public class StartUp
             sb.AppendLine($"{p.Name}");
             sb.AppendLine($"{p.Description}");
             sb.AppendLine($"{p.StartDate.ToString("M/d/yyyy h:mm:ss tt", CultureInfo.InvariantCulture)}");
+        }
+
+        return sb.ToString().TrimEnd();
+    }
+
+    //Problem 12 Increase Salaries
+    public static string IncreaseSalaries(SoftUniContext context)
+    {
+        StringBuilder sb = new StringBuilder();
+
+        var employees = context.Employees
+            .Where(e => e.Department.Name == "Engineering"
+            || e.Department.Name == "Tool Design"
+            || e.Department.Name == "Marketing"
+            || e.Department.Name == "Information Services")
+            .OrderBy(e => e.FirstName)
+            .ThenBy(e => e.LastName)
+            .ToArray();
+
+        foreach (var e in employees)
+        {
+            e.Salary *= 1.12M;
+        }
+
+        context.SaveChanges();
+
+        foreach (var e in employees)
+        {
+            sb.AppendLine($"{e.FirstName} {e.LastName} (${e.Salary:f2})");
         }
 
         return sb.ToString().TrimEnd();
