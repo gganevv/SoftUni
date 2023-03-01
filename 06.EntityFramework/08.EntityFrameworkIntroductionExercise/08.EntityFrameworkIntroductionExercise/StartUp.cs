@@ -33,7 +33,10 @@ public class StartUp
         //string result = GetEmployee147(dBcontext);
 
         //Problem 10 Departments with More Than 5 Employees
-        string result = GetDepartmentsWithMoreThan5Employees(dBcontext);
+        //string result = GetDepartmentsWithMoreThan5Employees(dBcontext);
+
+        //Problem 11 Find Latest 10 Projects
+        string result = GetLatestProjects(dBcontext);
 
         Console.WriteLine(result);
     }
@@ -264,6 +267,27 @@ public class StartUp
             {
                 sb.AppendLine($"{e.FirstName} {e.LastName} - {e.JobTitle}");
             }
+        }
+
+        return sb.ToString().TrimEnd();
+    }
+
+    //Problem 11 Find Latest 10 Projects
+    public static string GetLatestProjects(SoftUniContext context)
+    {
+        StringBuilder sb = new StringBuilder();
+
+        var projects = context.Projects
+            .OrderByDescending(e => e.StartDate)
+            .Take(10)
+            .OrderBy(e => e.Name)
+            .ToList();
+
+        foreach (var p in projects)
+        {
+            sb.AppendLine($"{p.Name}");
+            sb.AppendLine($"{p.Description}");
+            sb.AppendLine($"{p.StartDate.ToString("M/d/yyyy h:mm:ss tt", CultureInfo.InvariantCulture)}");
         }
 
         return sb.ToString().TrimEnd();
