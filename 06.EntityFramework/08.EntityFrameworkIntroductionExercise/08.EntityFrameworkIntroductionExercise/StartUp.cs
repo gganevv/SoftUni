@@ -42,7 +42,10 @@ public class StartUp
         //string result = IncreaseSalaries(dBcontext);
 
         //Problem 13 Find Employees By First Name Starting with "Sa"
-        string result = GetEmployeesByFirstNameStartingWithSa(dBcontext);
+        //string result = GetEmployeesByFirstNameStartingWithSa(dBcontext);
+
+        //Problem 14 Delete Project by Id
+        string result = DeleteProjectById(dBcontext);
 
         Console.WriteLine(result);
     }
@@ -348,6 +351,36 @@ public class StartUp
         foreach (var e in employees)
         {
             sb.AppendLine($"{e.FirstName} {e.LastName} - {e.JobTitle} - (${e.Salary:f2})");
+        }
+
+        return sb.ToString().TrimEnd();
+    }
+
+    //Problem 14 Delete Project by Id
+    public static string DeleteProjectById(SoftUniContext context)
+    {
+        StringBuilder sb = new StringBuilder();
+
+        var project = context.Projects.Find(2);
+        var employeeProjects = context.EmployeesProjects
+            .Where(ep => ep.ProjectId == 2);
+
+        context.EmployeesProjects.RemoveRange(employeeProjects);
+        context.Projects.Remove(project);
+
+        context.SaveChanges();
+
+        var projects = context.Projects
+            .Select(p => new
+            {
+                p.Name
+            })
+            .Take(10)
+            .ToArray();
+
+        foreach (var p in projects)
+        {
+            sb.AppendLine($"{p.Name}");
         }
 
         return sb.ToString().TrimEnd();
