@@ -45,7 +45,10 @@ public class StartUp
         //string result = GetEmployeesByFirstNameStartingWithSa(dBcontext);
 
         //Problem 14 Delete Project by Id
-        string result = DeleteProjectById(dBcontext);
+        //string result = DeleteProjectById(dBcontext);
+
+        //Problem 15 Remove Town
+        string result = RemoveTown(dBcontext);
 
         Console.WriteLine(result);
     }
@@ -331,6 +334,7 @@ public class StartUp
         return sb.ToString().TrimEnd();
     }
 
+    //Problem 13 Get Employees By First Name Staring With Sa
     public static string GetEmployeesByFirstNameStartingWithSa(SoftUniContext context)
     {
         StringBuilder sb = new StringBuilder();
@@ -384,5 +388,31 @@ public class StartUp
         }
 
         return sb.ToString().TrimEnd();
+    }
+
+    //Problem 15 Remove Town
+    public static string RemoveTown(SoftUniContext context)
+    {
+        var employees = context.Employees
+            .Where(e => e.Address.Town.Name == "Seattle")
+            .ToList();
+
+        foreach (var e in employees)
+        {
+            e.Address = null;
+        }
+
+        var addresses = context.Addresses
+            .Where(a => a.Town.Name == "Seattle")
+            .ToList();
+
+        context.Addresses.RemoveRange(addresses);
+
+        var town = context.Towns.FirstOrDefault(t => t.Name == "Seattle");
+        context.Towns.Remove(town);
+
+        context.SaveChanges();
+
+        return $"{addresses.Count} addresses in Seattle were deleted";
     }
 }
