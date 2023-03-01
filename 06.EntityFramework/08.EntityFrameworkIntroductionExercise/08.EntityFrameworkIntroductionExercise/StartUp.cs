@@ -1,5 +1,6 @@
 ﻿using SoftUni.Data;
 using System.Text;
+using SoftUni.Models;
 
 namespace SoftUni;
 
@@ -16,7 +17,10 @@ public class StartUp
         //string result = GetEmployeesWithSalaryOver50000(dBcontext);
 
         //Problem 05 Employees from Research and Development
-        string result = GetEmployeesFromResearchAndDevelopment(dBcontext);
+        //string result = GetEmployeesFromResearchAndDevelopment(dBcontext);
+
+        //Problem 06 Adding a New Address and Updating Employee
+        string result = AddNewAddressToEmployee(dBcontext);
 
         Console.WriteLine(result);
     }
@@ -89,6 +93,38 @@ public class StartUp
         foreach (var e in empleyees)
         {
             sb.AppendLine($"{e.FirstName} {e.LastName} from {e.Department} - ${e.Salary:f2}");
+        }
+
+        return sb.ToString().TrimEnd();
+    }
+
+    //Problem 06 Adding a New Address and Updating Employee
+    public static string AddNewAddressToEmployee(SoftUniContext context)
+    {
+        StringBuilder sb = new StringBuilder();
+
+        Address address = new Address()
+        {
+            AddressText = "Vitoshka 15",
+            TownId = 4
+        };
+
+        Employee employee = context.Employees
+            .FirstOrDefault(e => e.LastName == "Nakov")!;
+        
+        employee.Address = address;
+
+        context.SaveChanges();
+
+        var employees = context.Employees
+            .OrderByDescending(e => e.AddressId)
+            .Take(10)
+            .Select(e => e.Address.AddressText)
+            .ToArray();
+
+        foreach (var e in employees)
+        {
+            sb.AppendLine(e);
         }
 
         return sb.ToString().TrimEnd();
