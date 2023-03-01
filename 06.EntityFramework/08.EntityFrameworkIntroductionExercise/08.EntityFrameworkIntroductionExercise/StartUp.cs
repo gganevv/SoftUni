@@ -30,7 +30,10 @@ public class StartUp
         //string result = GetAddressesByTown(dBcontext);
 
         //Problem 09 Employee 147
-        string result = GetEmployee147(dBcontext);
+        //string result = GetEmployee147(dBcontext);
+
+        //Problem 10 Departments with More Than 5 Employees
+        string result = GetDepartmentsWithMoreThan5Employees(dBcontext);
 
         Console.WriteLine(result);
     }
@@ -231,6 +234,36 @@ public class StartUp
         foreach (var p in employee[0].Projects.OrderBy(p => p.Name))
         {
             sb.AppendLine($"{p.Name}");
+        }
+
+        return sb.ToString().TrimEnd();
+    }
+
+    //Problem 10 Departments with More Than 5 Employees
+    public static string GetDepartmentsWithMoreThan5Employees(SoftUniContext context)
+    {
+        StringBuilder sb = new StringBuilder();
+
+        var departments = context.Departments
+            .Select(d => new
+            {
+                d.Name,
+                d.Manager,
+                d.Employees.Count,
+                d.Employees
+            })
+            .Where(d => d.Count > 5)
+            .OrderBy(e => e.Count)
+            .ThenBy(e => e.Name)
+            .ToArray();
+
+        foreach (var d in departments)
+        {
+            sb.AppendLine($"{d.Name} - {d.Manager.FirstName} {d.Manager.LastName}");
+            foreach (var e in d.Employees.OrderBy(e => e.FirstName).ThenBy(e => e.LastName))
+            {
+                sb.AppendLine($"{e.FirstName} {e.LastName} - {e.JobTitle}");
+            }
         }
 
         return sb.ToString().TrimEnd();
