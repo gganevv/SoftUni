@@ -24,7 +24,10 @@ public class StartUp
         //string result = AddNewAddressToEmployee(dBcontext);
 
         //Problem 07 Get Employees In Period
-        string result = GetEmployeesInPeriod(dBcontext);
+        //string result = GetEmployeesInPeriod(dBcontext);
+
+        //Problem 08 Addresses by Town
+        string result = GetAddressesByTown(dBcontext);
 
         Console.WriteLine(result);
     }
@@ -134,6 +137,7 @@ public class StartUp
         return sb.ToString().TrimEnd();
     }
 
+    //Problem 07 Get Employees In Period
     public static string GetEmployeesInPeriod(SoftUniContext context)
     {
         StringBuilder sb = new StringBuilder();
@@ -168,6 +172,32 @@ public class StartUp
             {
                 sb.AppendLine($"--{p.ProjectName} - {p.StartDate} - {p.EndDate}");
             }
+        }
+
+        return sb.ToString().TrimEnd();
+    }
+
+    //Problem 09 Adresses By Town
+    public static string GetAddressesByTown(SoftUniContext context)
+    {
+        StringBuilder sb = new StringBuilder();
+
+        var adresses = context.Addresses
+            .Select(a => new 
+            {
+                a.AddressText,
+                TownName = a.Town.Name,
+                EmployeesCount = a.Employees.Count
+            })
+            .OrderByDescending(a => a.EmployeesCount)
+            .ThenBy(a => a.TownName)
+            .ThenBy(a => a.AddressText)
+            .Take(10)
+            .ToArray();
+
+        foreach (var a in adresses)
+        {
+            sb.AppendLine($"{a.AddressText}, {a.TownName} - {a.EmployeesCount} employees");
         }
 
         return sb.ToString().TrimEnd();
