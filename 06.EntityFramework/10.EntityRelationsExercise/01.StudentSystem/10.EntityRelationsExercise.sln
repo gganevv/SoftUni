@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P01_StudentSystem.Data.Comm
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P01_StudentSystem", "P01_StudentSystem\P01_StudentSystem.csproj", "{FB2AA3A7-3E2B-49B1-B71D-D7EEED0088EB}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01.StudentSystem", "01.StudentSystem", "{7F488C82-DB16-4380-A4C8-2F7C4B53EBED}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,6 +38,12 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{ECC34E40-A597-44BC-B026-86F5A3DE0B4F} = {7F488C82-DB16-4380-A4C8-2F7C4B53EBED}
+		{3CA85A96-70C8-4267-B805-929BA401FA51} = {7F488C82-DB16-4380-A4C8-2F7C4B53EBED}
+		{98180D24-B35F-4719-BCB0-C8C90710D05C} = {7F488C82-DB16-4380-A4C8-2F7C4B53EBED}
+		{FB2AA3A7-3E2B-49B1-B71D-D7EEED0088EB} = {7F488C82-DB16-4380-A4C8-2F7C4B53EBED}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5F95B4AD-E813-4964-9506-F382735161EF}
