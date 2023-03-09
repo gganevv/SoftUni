@@ -24,8 +24,12 @@ public class StartUp
         //Console.WriteLine(GetBooksByPrice(db));
 
         //05. Not released In
-        int year = int.Parse(Console.ReadLine());
-        Console.WriteLine(GetBooksNotReleasedIn(db, year));
+        //int year = int.Parse(Console.ReadLine());
+        //Console.WriteLine(GetBooksNotReleasedIn(db, year));
+
+        //06. Book Titles by Category
+        string categories = Console.ReadLine();
+        Console.WriteLine(GetBooksByCategory(db, categories));
     }
 
     //02. Books by Age Restriction
@@ -97,5 +101,26 @@ public class StartUp
 
 
         return string.Join(Environment.NewLine, books);
+    }
+
+    //06. Book Titles by Category
+    public static string GetBooksByCategory(BookShopContext context, string input)
+    {
+        StringBuilder sb = new StringBuilder();
+        string[] catogories = input.ToLower().Split();
+
+        var bookCategories = context
+            .BooksCategories
+            .Where(bc => catogories.Contains(bc.Category.Name.ToLower()))
+            .Select(b => b.Book.Title)
+            .OrderBy(bc => bc)
+            .ToArray();
+
+        foreach (var book in bookCategories)
+        {
+            sb.AppendLine(book);
+        }
+
+        return sb.ToString().TrimEnd();
     }
 }
