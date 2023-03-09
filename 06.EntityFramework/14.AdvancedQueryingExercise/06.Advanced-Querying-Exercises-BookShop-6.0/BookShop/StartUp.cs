@@ -14,8 +14,11 @@ public class StartUp
         //DbInitializer.ResetDatabase(db);
 
         //02. Age Restriction
-        string input = Console.ReadLine();
-        Console.WriteLine(GetBooksByAgeRestriction(db, input));
+        //string input = Console.ReadLine();
+        //Console.WriteLine(GetBooksByAgeRestriction(db, input));
+
+        //03. Golden Books
+        Console.WriteLine(GetGoldenBooks(db));
 
     }
 
@@ -33,12 +36,22 @@ public class StartUp
             .ToList();
         }
 
-        
-
         foreach (var book in bookTitles)
         {
             sb.AppendLine(book);
         }
         return sb.ToString().TrimEnd();
+    }
+
+    public static string GetGoldenBooks(BookShopContext context)
+    {
+
+        var books = context.Books
+            .Where(b => b.EditionType == EditionType.Gold && b.Copies < 5000)
+            .OrderBy(b => b.BookId)
+            .Select(b => b.Title)
+            .ToList();
+
+        return (string.Join(Environment.NewLine, books));
     }
 }
