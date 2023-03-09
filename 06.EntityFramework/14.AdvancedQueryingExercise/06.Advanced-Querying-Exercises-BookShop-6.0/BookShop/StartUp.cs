@@ -21,7 +21,11 @@ public class StartUp
         //Console.WriteLine(GetGoldenBooks(db));
 
         //04. Books by Price
-        Console.WriteLine(GetBooksByPrice(db));
+        //Console.WriteLine(GetBooksByPrice(db));
+
+        //05. Not released In
+        int year = int.Parse(Console.ReadLine());
+        Console.WriteLine(GetBooksNotReleasedIn(db, year));
     }
 
     //02. Books by Age Restriction
@@ -79,5 +83,19 @@ public class StartUp
         }
 
         return sb.ToString().TrimEnd();
+    }
+
+    //05. Not Released In
+    public static string GetBooksNotReleasedIn(BookShopContext context, int year)
+    {
+        StringBuilder sb = new StringBuilder();
+
+        var books = context.Books
+            .Where(b => b.ReleaseDate.Value.Year != year)
+            .OrderBy(b => b.BookId)
+            .Select(b => b.Title);
+
+
+        return string.Join(Environment.NewLine, books);
     }
 }
