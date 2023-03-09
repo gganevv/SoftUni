@@ -32,8 +32,12 @@ public class StartUp
         //Console.WriteLine(GetBooksByCategory(db, categories));
 
         //07. Released Before Date
-        string date = Console.ReadLine();
-        Console.WriteLine(GetBooksReleasedBefore(db, date));
+        //string date = Console.ReadLine();
+        //Console.WriteLine(GetBooksReleasedBefore(db, date));
+
+        //08. Author Search
+        string input = Console.ReadLine();
+        Console.WriteLine(GetAuthorNamesEndingIn(db, input));
     }
 
     //02. Books by Age Restriction
@@ -151,5 +155,17 @@ public class StartUp
         }
 
         return sb.ToString().TrimEnd();
+    }
+
+    //08. Author Search
+    public static string GetAuthorNamesEndingIn(BookShopContext context, string input)
+    {
+        var authors = context.Authors
+            .Where(a => a.FirstName.EndsWith(input))
+            .Select(a => a.FirstName + " " + a.LastName)
+            .OrderBy(a => a)
+            .ToList();
+
+        return string.Join(Environment.NewLine, authors);
     }
 }
