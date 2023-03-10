@@ -1,5 +1,6 @@
 ﻿namespace BookShop;
 
+using BookShop.Models;
 using BookShop.Models.Enums;
 using Data;
 using Initializer;
@@ -52,7 +53,10 @@ public class StartUp
         //Console.WriteLine(CountBooks(db, length));
 
         //12. Total Book Copies
-        Console.WriteLine(CountCopiesByAuthor(db));
+        //Console.WriteLine(CountCopiesByAuthor(db));
+
+        //13. Profit by Category
+        Console.WriteLine(GetTotalProfitByCategory(db));
     }
 
     //02. Books by Age Restriction
@@ -247,6 +251,27 @@ public class StartUp
         foreach (var author in authors)
         {
             sb.AppendLine($"{author.FullName} - {author.TotalCopies}");
+        }
+
+        return sb.ToString().TrimEnd();
+    }
+
+    //13. Profit by Category
+    public static string GetTotalProfitByCategory(BookShopContext context)
+    {
+        StringBuilder sb = new StringBuilder();
+
+        var categories = context.Categories
+            .Select(c => new
+            {
+                c.Name,
+                TotalProfit = c.CategoryBooks.Sum(b => b.Book.Price * b.Book.Copies)
+            })
+            .OrderByDescending(c => c.TotalProfit);
+
+        foreach (var category in categories)
+        {
+            sb.AppendLine($"{category.Name} ${category.TotalProfit:f2}");
         }
 
         return sb.ToString().TrimEnd();
