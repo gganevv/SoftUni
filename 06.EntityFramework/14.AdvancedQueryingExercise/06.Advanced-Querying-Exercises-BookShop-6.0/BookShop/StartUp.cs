@@ -12,7 +12,7 @@ public class StartUp
     public static void Main()
     {
         using var db = new BookShopContext();
-        //DbInitializer.ResetDatabase(db);
+        DbInitializer.ResetDatabase(db);
 
         //02. Books by Age Restriction
         //string input = Console.ReadLine();
@@ -62,7 +62,10 @@ public class StartUp
         //Console.WriteLine(GetMostRecentBooks(db));
 
         //15. Increase Prices
-        IncreasePrices(db);
+        //IncreasePrices(db);
+
+        //16. Remove Books
+        //Console.WriteLine(RemoveBooks(db));
     }
 
     //02. Books by Age Restriction
@@ -328,5 +331,18 @@ public class StartUp
         }
 
         context.SaveChanges();
+    }
+
+    //16. Remove Books
+    public static int RemoveBooks(BookShopContext context)
+    {
+        var books = context.Books
+            .Where(b => b.Copies < 4200)
+            .ToArray();
+
+        context.RemoveRange(books);
+        context.SaveChanges();
+
+        return books.Count();
     }
 }
