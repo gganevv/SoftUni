@@ -59,7 +59,10 @@ public class StartUp
         //Console.WriteLine(GetTotalProfitByCategory(db));
 
         //14. Most Recent Books
-        Console.WriteLine(GetMostRecentBooks(db));
+        //Console.WriteLine(GetMostRecentBooks(db));
+
+        //15. Increase Prices
+        IncreasePrices(db);
     }
 
     //02. Books by Age Restriction
@@ -310,7 +313,20 @@ public class StartUp
             }
         }
 
-
         return sb.ToString().TrimEnd();
+    }
+
+    //15. Increase Prices
+    public static void IncreasePrices(BookShopContext context)
+    {
+        var books = context.Books
+            .Where(b => b.ReleaseDate.Value.Year < 2010);
+
+        foreach (var book in books)
+        {
+            book.Price += 5;
+        }
+
+        context.SaveChanges();
     }
 }
