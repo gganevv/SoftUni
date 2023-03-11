@@ -6,27 +6,35 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 using Enums;
+using FastFood.Common.EntityConfiguration;
 
 public class Order
 {
-    public int Id { get; set; }
+    public Order()
+    {
+        this.Id = Guid.NewGuid().ToString();
+        this.OrderItems = new HashSet<OrderItem>();
+    }
 
-    [Required]
+    [Key]
+    [MaxLength(ValidationConstants.GuidMaxLength)]
+    public string Id { get; set; }
+
     public string Customer { get; set; } = null!;
 
-    [Required]
     public DateTime DateTime { get; set; }
 
-    [Required]
     public OrderType Type { get; set; }
 
     [NotMapped]
     public decimal TotalPrice { get; set; }
 
-    public int EmployeeId { get; set; }
+    [MaxLength(ValidationConstants.GuidMaxLength)]
+    [ForeignKey(nameof(Employee))]
+    public string EmployeeId { get; set; } = null!;
 
     [Required]
-    public Employee Employee { get; set; } = null!;
+    public virtual Employee Employee { get; set; } = null!;
 
-    public ICollection<OrderItem>? OrderItems { get; set; } = new List<OrderItem>();
+    public virtual ICollection<OrderItem>? OrderItems { get; set; }
 }

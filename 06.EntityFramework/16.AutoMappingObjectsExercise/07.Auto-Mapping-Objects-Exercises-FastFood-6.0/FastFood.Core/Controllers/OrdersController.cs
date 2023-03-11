@@ -20,13 +20,13 @@ public class OrdersController : Controller
 
     public IActionResult Create()
     {
-        var viewOrder = new CreateOrderViewModel
-        {
-            Items = this.context.Items.Select(x => x.Id).ToList(),
-            Employees = this.context.Employees.Select(x => x.Id).ToList(),
-        };
+        //var viewOrder = new CreateOrderViewModel
+        //{
+        //    Items = this.context.Items.Select(x => x.Id).ToList(),
+        //    Employees = this.context.Employees.Select(x => x.Id).ToList(),
+        //};
 
-        return View(viewOrder);
+        return View();
     }
 
     [HttpPost]
