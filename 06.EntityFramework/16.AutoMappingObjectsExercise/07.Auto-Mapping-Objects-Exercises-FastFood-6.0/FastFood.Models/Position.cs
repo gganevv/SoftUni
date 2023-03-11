@@ -1,16 +1,15 @@
-﻿namespace FastFood.Models
+﻿namespace FastFood.Models;
+
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+
+public class Position
 {
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
+    public int Id { get; set; }
 
-    public class Position
-    {
-        public int Id { get; set; }
+    [Required]
+    [StringLength(30, MinimumLength = 3)]
+    public string Name { get; set; } = null!;
 
-        [Required]
-        [StringLength(30, MinimumLength = 3)]
-        public string Name { get; set; } = null!;
-
-        public ICollection<Employee> Employees { get; set; } = new List<Employee>();
-    }
+    public ICollection<Employee> Employees { get; set; } = new List<Employee>();
 }

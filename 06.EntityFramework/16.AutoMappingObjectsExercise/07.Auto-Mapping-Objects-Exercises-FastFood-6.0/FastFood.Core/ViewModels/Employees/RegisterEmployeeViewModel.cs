@@ -1,7 +1,6 @@
-﻿namespace FastFood.Core.ViewModels.Employees
+﻿namespace FastFood.Core.ViewModels.Employees;
+
+public class RegisterEmployeeViewModel
 {
-    public class RegisterEmployeeViewModel
-    {
-        public int PositionId { get; set; }
-    }
+    public int PositionId { get; set; }
 }

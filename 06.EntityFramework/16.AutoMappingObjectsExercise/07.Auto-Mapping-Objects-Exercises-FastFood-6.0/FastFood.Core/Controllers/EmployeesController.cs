@@ -1,36 +1,35 @@
-﻿namespace FastFood.Core.Controllers
+﻿namespace FastFood.Core.Controllers;
+
+using System;
+using AutoMapper;
+using Data;
+using Microsoft.AspNetCore.Mvc;
+using ViewModels.Employees;
+
+public class EmployeesController : Controller
 {
-    using System;
-    using AutoMapper;
-    using Data;
-    using Microsoft.AspNetCore.Mvc;
-    using ViewModels.Employees;
+    private readonly FastFoodContext context;
+    private readonly IMapper mapper;
 
-    public class EmployeesController : Controller
+    public EmployeesController(FastFoodContext context, IMapper mapper)
     {
-        private readonly FastFoodContext _context;
-        private readonly IMapper _mapper;
+        this.context = context;
+        this.mapper = mapper;
+    }
 
-        public EmployeesController(FastFoodContext context, IMapper mapper)
-        {
-            _context = context;
-            _mapper = mapper;
-        }
+    public IActionResult Register()
+    {
+        throw new NotImplementedException();
+    }
 
-        public IActionResult Register()
-        {
-            throw new NotImplementedException();
-        }
+    [HttpPost]
+    public IActionResult Register(RegisterEmployeeInputModel model)
+    {
+        throw new NotImplementedException();
+    }
 
-        [HttpPost]
-        public IActionResult Register(RegisterEmployeeInputModel model)
-        {
-            throw new NotImplementedException();
-        }
-
-        public IActionResult All()
-        {
-            throw new NotImplementedException();
-        }
+    public IActionResult All()
+    {
+        throw new NotImplementedException();
     }
 }

@@ -1,7 +1,6 @@
-﻿namespace FastFood.Core.ViewModels.Positions
+﻿namespace FastFood.Core.ViewModels.Positions;
+
+public class CreatePositionInputModel
 {
-    public class CreatePositionInputModel
-    {
-        public string PositionName { get; set; }
-    }
+    public string PositionName { get; set; }
 }

@@ -10,13 +10,13 @@
 
     public class PositionsController : Controller
     {
-        private readonly FastFoodContext _context;
-        private readonly IMapper _mapper;
+        private readonly FastFoodContext context;
+        private readonly IMapper mapper;
 
         public PositionsController(FastFoodContext context, IMapper mapper)
         {
-            _context = context;
-            _mapper = mapper;
+            this.context = context;
+            this.mapper = mapper;
         }
 
         public IActionResult Create()
@@ -32,19 +32,19 @@
                 return RedirectToAction("Error", "Home");
             }
 
-            var position = _mapper.Map<Position>(model);
+            var position = this.mapper.Map<Position>(model);
 
-            _context.Positions.Add(position);
+            this.context.Positions.Add(position);
 
-            _context.SaveChanges();
+            this.context.SaveChanges();
 
             return RedirectToAction("All", "Positions");
         }
 
         public IActionResult All()
         {
-            var positions = _context.Positions
-                .ProjectTo<PositionsAllViewModel>(_mapper.ConfigurationProvider)
+            var positions = this.context.Positions
+                .ProjectTo<PositionsAllViewModel>(this.mapper.ConfigurationProvider)
                 .ToList();
 
             return View(positions);

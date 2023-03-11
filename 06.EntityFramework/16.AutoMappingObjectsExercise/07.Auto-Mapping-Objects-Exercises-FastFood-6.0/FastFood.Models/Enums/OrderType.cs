@@ -1,8 +1,7 @@
-﻿namespace FastFood.Models.Enums
+﻿namespace FastFood.Models.Enums;
+
+public enum OrderType
 {
-    public enum OrderType
-    {
-        ForHere,
-        ToGo
-    }
+    ForHere = 0,
+    ToGo = 1
 }

@@ -1,7 +1,6 @@
-﻿namespace FastFood.Core.ViewModels.Categories
+﻿namespace FastFood.Core.ViewModels.Categories;
+
+public class CreateCategoryInputModel
 {
-    public class CreateCategoryInputModel
-    {
-        public string CategoryName { get; set; }
-    }
+    public string CategoryName { get; set; }
 }

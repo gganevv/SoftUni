@@ -1,36 +1,35 @@
-﻿namespace FastFood.Core.Controllers
+﻿namespace FastFood.Core.Controllers;
+
+using System;
+using AutoMapper;
+using Data;
+using Microsoft.AspNetCore.Mvc;
+using ViewModels.Categories;
+
+public class CategoriesController : Controller
 {
-    using System;
-    using AutoMapper;
-    using Data;
-    using Microsoft.AspNetCore.Mvc;
-    using ViewModels.Categories;
+    private readonly FastFoodContext context;
+    private readonly IMapper mapper;
 
-    public class CategoriesController : Controller
+    public CategoriesController(FastFoodContext context, IMapper mapper)
     {
-        private readonly FastFoodContext _context;
-        private readonly IMapper _mapper;
+        this.context = context;
+        this.mapper = mapper;
+    }
 
-        public CategoriesController(FastFoodContext context, IMapper mapper)
-        {
-            _context = context;
-            _mapper = mapper;
-        }
+    public IActionResult Create()
+    {
+        return View();
+    }
 
-        public IActionResult Create()
-        {
-            return View();
-        }
+    [HttpPost]
+    public IActionResult Create(CreateCategoryInputModel model)
+    {
+        throw new NotImplementedException();
+    }
 
-        [HttpPost]
-        public IActionResult Create(CreateCategoryInputModel model)
-        {
-            throw new NotImplementedException();
-        }
-
-        public IActionResult All()
-        {
-            throw new NotImplementedException();
-        }
+    public IActionResult All()
+    {
+        throw new NotImplementedException();
     }
 }

@@ -1,43 +1,42 @@
-﻿namespace FastFood.Core.Controllers
+﻿namespace FastFood.Core.Controllers;
+
+using System;
+using System.Linq;
+using AutoMapper;
+using Data;
+using Microsoft.AspNetCore.Mvc;
+using ViewModels.Orders;
+
+public class OrdersController : Controller
 {
-    using System;
-    using System.Linq;
-    using AutoMapper;
-    using Data;
-    using Microsoft.AspNetCore.Mvc;
-    using ViewModels.Orders;
+    private readonly FastFoodContext context;
+    private readonly IMapper mapper;
 
-    public class OrdersController : Controller
+    public OrdersController(FastFoodContext context, IMapper mapper)
     {
-        private readonly FastFoodContext _context;
-        private readonly IMapper _mapper;
+        this.context = context;
+        this.mapper = mapper;
+    }
 
-        public OrdersController(FastFoodContext context, IMapper mapper)
+    public IActionResult Create()
+    {
+        var viewOrder = new CreateOrderViewModel
         {
-            _context = context;
-            _mapper = mapper;
-        }
+            Items = this.context.Items.Select(x => x.Id).ToList(),
+            Employees = this.context.Employees.Select(x => x.Id).ToList(),
+        };
 
-        public IActionResult Create()
-        {
-            var viewOrder = new CreateOrderViewModel
-            {
-                Items = _context.Items.Select(x => x.Id).ToList(),
-                Employees = _context.Employees.Select(x => x.Id).ToList(),
-            };
+        return View(viewOrder);
+    }
 
-            return View(viewOrder);
-        }
+    [HttpPost]
+    public IActionResult Create(CreateOrderInputModel model)
+    {
+        return RedirectToAction("All", "Orders");
+    }
 
-        [HttpPost]
-        public IActionResult Create(CreateOrderInputModel model)
-        {
-            return RedirectToAction("All", "Orders");
-        }
-
-        public IActionResult All()
-        {
-            throw new NotImplementedException();
-        }
+    public IActionResult All()
+    {
+        throw new NotImplementedException();
     }
 }
