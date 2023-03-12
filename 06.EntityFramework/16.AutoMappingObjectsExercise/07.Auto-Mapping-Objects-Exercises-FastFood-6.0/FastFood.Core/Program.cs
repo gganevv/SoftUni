@@ -1,5 +1,5 @@
-using FastFood.Core.MappingConfiguration;
 using FastFood.Data;
+using FastFood.Services.Mapping;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);

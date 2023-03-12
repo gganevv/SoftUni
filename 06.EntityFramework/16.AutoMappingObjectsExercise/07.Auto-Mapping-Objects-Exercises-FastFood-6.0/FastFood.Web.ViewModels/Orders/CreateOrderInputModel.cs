@@ -1,4 +1,4 @@
-﻿namespace FastFood.Core.ViewModels.Orders;
+﻿namespace FastFood.Web.ViewModels.Orders;
 
 public class CreateOrderInputModel
 {
