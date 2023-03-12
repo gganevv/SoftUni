@@ -4,16 +4,23 @@ using AutoMapper;
 
 using Models;
 using FastFood.Web.ViewModels.Positions;
+using FastFood.Web.ViewModels.Categories;
 
 public class FastFoodProfile : Profile
 {
     public FastFoodProfile()
     {
         //Positions
-        CreateMap<CreatePositionInputModel, Position>()
+        this.CreateMap<CreatePositionInputModel, Position>()
             .ForMember(x => x.Name, y => y.MapFrom(s => s.PositionName));
 
-        CreateMap<Position, PositionsAllViewModel>()
+        this.CreateMap<Position, PositionsAllViewModel>()
             .ForMember(x => x.Name, y => y.MapFrom(s => s.Name));
+
+        //Categories
+        this.CreateMap<CreateCategoryInputModel, Category>()
+            .ForMember(x => x.Name, y => y.MapFrom(s => s.CategoryName));
+
+        this.CreateMap<Category, CategoryAllViewModel>();
     }
 }

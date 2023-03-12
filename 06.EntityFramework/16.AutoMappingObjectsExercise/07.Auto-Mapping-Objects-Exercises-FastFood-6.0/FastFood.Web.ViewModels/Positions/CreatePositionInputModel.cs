@@ -6,6 +6,7 @@ using FastFood.Common.EntityConfiguration;
 
 public class CreatePositionInputModel
 {
-    [StringLength(ViewModelsValidation.PositionNameMaxLength, MinimumLength = ViewModelsValidation.PositionNameMinLength)]
+    [MinLength(ViewModelsValidation.PositionNameMinLength)]
+    [MaxLength(ViewModelsValidation.PositionNameMaxLength)]
     public string PositionName { get; set; } = null!;
 }
