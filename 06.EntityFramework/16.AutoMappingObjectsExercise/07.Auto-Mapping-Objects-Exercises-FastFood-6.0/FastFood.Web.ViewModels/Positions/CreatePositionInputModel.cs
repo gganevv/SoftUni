@@ -2,5 +2,5 @@
 
 public class CreatePositionInputModel
 {
-    public string PositionName { get; set; }
+    public string PositionName { get; set; } = null!;
 }
