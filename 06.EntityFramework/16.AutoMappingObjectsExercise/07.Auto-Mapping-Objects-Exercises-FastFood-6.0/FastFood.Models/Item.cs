@@ -15,10 +15,10 @@ public class Item
     }
 
     [Key]
-    [MaxLength(ValidationConstants.GuidMaxLength)]
+    [MaxLength(EntitiesValidation.GuidMaxLength)]
     public string Id { get; set; }
 
-    [StringLength(ValidationConstants.ItemNameMaxLength, MinimumLength = 3)]
+    [StringLength(EntitiesValidation.ItemNameMaxLength, MinimumLength = 3)]
     public string? Name { get; set; }
 
     [ForeignKey(nameof(Category))]

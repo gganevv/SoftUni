@@ -7,13 +7,13 @@ using FastFood.Common.EntityConfiguration;
 
 public class OrderItem
 {
-    [MaxLength(ValidationConstants.GuidMaxLength)]
+    [MaxLength(EntitiesValidation.GuidMaxLength)]
     [ForeignKey(nameof(Order))]
     public string OrderId { get; set; } = null!;
 
     public virtual Order Order { get; set; } = null!;
 
-    [MaxLength(ValidationConstants.GuidMaxLength)]
+    [MaxLength(EntitiesValidation.GuidMaxLength)]
     [ForeignKey(nameof(Item))]
     public string ItemId { get; set; } = null!;
 

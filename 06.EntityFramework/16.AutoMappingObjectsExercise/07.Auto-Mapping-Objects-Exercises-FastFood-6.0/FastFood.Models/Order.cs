@@ -17,7 +17,7 @@ public class Order
     }
 
     [Key]
-    [MaxLength(ValidationConstants.GuidMaxLength)]
+    [MaxLength(EntitiesValidation.GuidMaxLength)]
     public string Id { get; set; }
 
     public string Customer { get; set; } = null!;
@@ -29,7 +29,7 @@ public class Order
     [NotMapped]
     public decimal TotalPrice { get; set; }
 
-    [MaxLength(ValidationConstants.GuidMaxLength)]
+    [MaxLength(EntitiesValidation.GuidMaxLength)]
     [ForeignKey(nameof(Employee))]
     public string EmployeeId { get; set; } = null!;
 

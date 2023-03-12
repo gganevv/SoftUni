@@ -1,4 +1,5 @@
 using FastFood.Data;
+using FastFood.Services.Data;
 using FastFood.Services.Mapping;
 using Microsoft.EntityFrameworkCore;
 
@@ -15,6 +16,9 @@ builder.Services.AddAutoMapper(cfg =>
 {
     cfg.AddProfile<FastFoodProfile>();
 });
+
+//Register services (DI)
+builder.Services.AddTransient<IPositionsService, PositionsService>();
 
 var app = builder.Build();
 
