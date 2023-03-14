@@ -8,7 +8,5 @@ public class RegisterEmployeeInputModel
 
     public int PositionId { get; set; }
 
-    public string PositionName { get; set; } = null!;
-
     public string Address { get; set; } = null!;
 }
