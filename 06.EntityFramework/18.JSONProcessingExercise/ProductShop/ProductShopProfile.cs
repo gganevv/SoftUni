@@ -1,11 +1,14 @@
-﻿using AutoMapper;
+﻿namespace ProductShop;
 
-namespace ProductShop
+using AutoMapper;
+
+using ProductShop.DTOs.Import;
+using ProductShop.Models;
+
+public class ProductShopProfile : Profile
 {
-    public class ProductShopProfile : Profile
+    public ProductShopProfile() 
     {
-        public ProductShopProfile() 
-        {
-        }
+        this.CreateMap<ImportUserDto, User>();
     }
 }
