@@ -15,8 +15,12 @@ public class StartUp
         ProductShopContext context = new ProductShopContext();
 
         //01. Import Users
-        string imputJson = File.ReadAllText(@"../../../Datasets/users.json");
-        Console.WriteLine(ImportUsers(context, imputJson));
+        //string imputJson = File.ReadAllText(@"../../../Datasets/users.json");
+        //Console.WriteLine(ImportUsers(context, imputJson));
+
+        //02. Import Products
+        string imputJson = File.ReadAllText(@"../../../Datasets/products.json");
+        Console.WriteLine(ImportProducts(context, imputJson));
     }
 
     //01. Import Users
@@ -37,6 +41,27 @@ public class StartUp
         context.SaveChanges();
 
         return $"Successfully imported {users.Count}";
+    }
+
+    //02. Import Products
+    public static string ImportProducts(ProductShopContext context, string inputJson)
+    {
+        IMapper mapper = CrateMapper();
+        HashSet<Product> products = new HashSet<Product>();
+
+        ImportProductDto[] productDtos = JsonConvert.DeserializeObject<ImportProductDto[]>(inputJson);
+        foreach (ImportProductDto dto in productDtos)
+        {
+            Product product = mapper.Map<Product>(dto);
+
+            products.Add(product);
+        }
+
+        context.Products.AddRange(products);
+
+        context.SaveChanges();
+
+        return $"Successfully imported {products.Count}";
     }
 
     private static IMapper CrateMapper()
