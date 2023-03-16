@@ -36,7 +36,10 @@ public class StartUp
         //Console.WriteLine(GetProductsInRange(context));
 
         //06. Export Sold Products
-        Console.WriteLine(GetSoldProducts(context));
+        //Console.WriteLine(GetSoldProducts(context));
+
+        //07. Export Categories by Products Count
+        Console.WriteLine(GetCategoriesByProductsCount(context));
     }
 
     //01. Import Users
@@ -168,6 +171,22 @@ public class StartUp
         return JsonConvert.SerializeObject(usersWithSoldProducts,
             Formatting.Indented,
             CamelCaseNamingStrategy());
+    }
+
+    //07. Export Categories by Products Count
+    public static string GetCategoriesByProductsCount(ProductShopContext context)
+    {
+        var categories = context.Categories
+            .OrderByDescending(c => c.CategoriesProducts.Count())
+            .Select(c => new
+            {
+                Category = c.Name,
+                ProductsCount = c.CategoriesProducts.Count(),
+                AveragePrice = c.CategoriesProducts.Select(p => p.Product.Price).Average().ToString("f2"),
+                TotalRevenue = c.CategoriesProducts.Select(p => p.Product.Price).Sum().ToString("f2")
+            })
+            .ToArray();
+        return JsonConvert.SerializeObject(categories, Formatting.Indented, CamelCaseNamingStrategy());
     }
 
     private static IMapper CreateMapper()
