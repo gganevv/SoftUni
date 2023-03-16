@@ -39,7 +39,10 @@ public class StartUp
         //Console.WriteLine(GetSoldProducts(context));
 
         //07. Export Categories by Products Count
-        Console.WriteLine(GetCategoriesByProductsCount(context));
+        //Console.WriteLine(GetCategoriesByProductsCount(context));
+
+        //08. Export Users and Products
+        Console.WriteLine(GetUsersWithProducts(context));
     }
 
     //01. Import Users
@@ -187,6 +190,46 @@ public class StartUp
             })
             .ToArray();
         return JsonConvert.SerializeObject(categories, Formatting.Indented, CamelCaseNamingStrategy());
+    }
+
+    //08. Export Users and Products
+    public static string GetUsersWithProducts(ProductShopContext context)
+    {
+        var users = context.Users
+            .Where(u => u.ProductsSold.Any(p => p.Buyer != null))
+            .Select(u => new
+            {
+                u.FirstName,
+                u.LastName,
+                u.Age,
+                SoldProducts = new
+                {
+                    Count = u.ProductsSold.Count(p => p.Buyer != null),
+                    Products = u.ProductsSold
+                        .Where(p => p.Buyer != null)
+                        .Select(p => new
+                        {
+                            p.Name,
+                            p.Price
+                        })
+                }
+            })
+            .OrderByDescending(u => u.SoldProducts.Count)
+            .ToArray();
+
+        var usersWrapper = new
+        {
+            UsersCount = users.Count(),
+            Users = users
+        };
+
+        return JsonConvert.SerializeObject(usersWrapper,
+               Formatting.Indented,
+               new JsonSerializerSettings()
+               {
+                   ContractResolver = new CamelCasePropertyNamesContractResolver(),
+                   NullValueHandling = NullValueHandling.Ignore
+               });
     }
 
     private static IMapper CreateMapper()
