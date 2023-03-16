@@ -4,12 +4,11 @@ using AutoMapper;
 using AutoMapper.QueryableExtensions;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
-
+using Newtonsoft.Json.Serialization;
 using ProductShop.Data;
 using ProductShop.DTOs.Export;
 using ProductShop.DTOs.Import;
 using ProductShop.Models;
-using System.Runtime.CompilerServices;
 
 public class StartUp
 {
@@ -34,7 +33,10 @@ public class StartUp
         //Console.WriteLine(ImportCategoryProducts(context, inputJson));
 
         //05. Export Products in Range
-        Console.WriteLine(GetProductsInRange(context));
+        //Console.WriteLine(GetProductsInRange(context));
+
+        //06. Export Sold Products
+        Console.WriteLine(GetSoldProducts(context));
     }
 
     //01. Import Users
@@ -138,11 +140,49 @@ public class StartUp
         return JsonConvert.SerializeObject(prodcts, Formatting.Indented);
     }
 
+    //06. Export Sold Products
+    public static string GetSoldProducts(ProductShopContext context)
+    {
+        var usersWithSoldProducts = context.Users
+            .Where(u => u.ProductsSold.Any(p => p.Buyer != null))
+            .OrderBy(u => u.LastName)
+            .ThenBy(u => u.FirstName)
+            .Select(u => new
+            {
+                u.FirstName,
+                u.LastName,
+                SoldProducts = u.ProductsSold
+                .Where(p => p.Buyer != null)
+                .Select(p => new
+                {
+                    p.Name,
+                    p.Price,
+                    BuyerFirstName = p.Buyer.FirstName,
+                    BuyerLastName = p.Buyer.LastName
+                })
+                .ToArray()
+            })
+            .AsNoTracking()
+            .ToArray();
+
+        return JsonConvert.SerializeObject(usersWithSoldProducts,
+            Formatting.Indented,
+            CamelCaseNamingStrategy());
+    }
+
     private static IMapper CreateMapper()
     {
         return new Mapper(new MapperConfiguration(cfg =>
         {
             cfg.AddProfile<ProductShopProfile>();
         }));
+    }
+
+    private static JsonSerializerSettings CamelCaseNamingStrategy()
+    {
+        return new JsonSerializerSettings()
+        {
+            ContractResolver = new CamelCasePropertyNamesContractResolver()
+        };
     }
 }
