@@ -24,8 +24,12 @@ public class StartUp
         //Console.WriteLine(ImportProducts(context, imputJson));
 
         //03. Import Categories
-        string inputJson = File.ReadAllText("../../../Datasets/categories.json");
-        Console.WriteLine(ImportCategories(context, inputJson));
+        //string inputJson = File.ReadAllText("../../../Datasets/categories.json");
+        //Console.WriteLine(ImportCategories(context, inputJson));
+
+        //04. Import Categories and Products
+        string inputJson = File.ReadAllText("../../../Datasets/categories-products.json");
+        Console.WriteLine(ImportCategoryProducts(context, inputJson));
     }
 
     //01. Import Users
@@ -91,6 +95,27 @@ public class StartUp
         context.SaveChanges();
 
         return $"Successfully imported {categories.Count}";
+    }
+
+    //04. Import Categories and Products
+    public static string ImportCategoryProducts(ProductShopContext context, string inputJson)
+    {
+        IMapper mapper = CreateMapper();
+
+        HashSet<CategoryProduct> categoryProducts = new HashSet<CategoryProduct>();
+
+        ImportCategoryProductDto[] categoryProductsDtos = JsonConvert.DeserializeObject<ImportCategoryProductDto[]>(inputJson);
+
+        foreach (var categoryProductDto in categoryProductsDtos)
+        {
+            CategoryProduct categoryProduct = mapper.Map<CategoryProduct>(categoryProductDto);
+            categoryProducts.Add(categoryProduct);
+        }
+
+        context.AddRange(categoryProducts);
+        context.SaveChanges();
+
+        return $"Successfully imported {categoryProducts.Count}";
     }
 
     private static IMapper CreateMapper()
