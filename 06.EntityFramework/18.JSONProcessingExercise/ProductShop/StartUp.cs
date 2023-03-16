@@ -1,10 +1,12 @@
 ﻿namespace ProductShop;
 
 using AutoMapper;
+using AutoMapper.QueryableExtensions;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 
 using ProductShop.Data;
+using ProductShop.DTOs.Export;
 using ProductShop.DTOs.Import;
 using ProductShop.Models;
 using System.Runtime.CompilerServices;
@@ -28,8 +30,11 @@ public class StartUp
         //Console.WriteLine(ImportCategories(context, inputJson));
 
         //04. Import Categories and Products
-        string inputJson = File.ReadAllText("../../../Datasets/categories-products.json");
-        Console.WriteLine(ImportCategoryProducts(context, inputJson));
+        //string inputJson = File.ReadAllText("../../../Datasets/categories-products.json");
+        //Console.WriteLine(ImportCategoryProducts(context, inputJson));
+
+        //05. Export Products in Range
+        Console.WriteLine(GetProductsInRange(context));
     }
 
     //01. Import Users
@@ -116,6 +121,21 @@ public class StartUp
         context.SaveChanges();
 
         return $"Successfully imported {categoryProducts.Count}";
+    }
+
+    //05. Export products in Range
+    public static string GetProductsInRange(ProductShopContext context)
+    {
+        IMapper mapper = CreateMapper();
+
+        ExportProductInRangeDto[] prodcts = context
+            .Products
+            .Where(p => p.Price >= 500 && p.Price <= 1000)
+            .OrderBy(p => p.Price)
+            .ProjectTo<ExportProductInRangeDto>(mapper.ConfigurationProvider)
+            .ToArray();
+
+        return JsonConvert.SerializeObject(prodcts, Formatting.Indented);
     }
 
     private static IMapper CreateMapper()
