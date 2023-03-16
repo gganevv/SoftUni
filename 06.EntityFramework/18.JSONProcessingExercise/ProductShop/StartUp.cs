@@ -7,6 +7,7 @@ using Newtonsoft.Json;
 using ProductShop.Data;
 using ProductShop.DTOs.Import;
 using ProductShop.Models;
+using System.Runtime.CompilerServices;
 
 public class StartUp
 {
@@ -19,14 +20,18 @@ public class StartUp
         //Console.WriteLine(ImportUsers(context, imputJson));
 
         //02. Import Products
-        string imputJson = File.ReadAllText(@"../../../Datasets/products.json");
-        Console.WriteLine(ImportProducts(context, imputJson));
+        //string imputJson = File.ReadAllText(@"../../../Datasets/products.json");
+        //Console.WriteLine(ImportProducts(context, imputJson));
+
+        //03. Import Categories
+        string inputJson = File.ReadAllText("../../../Datasets/categories.json");
+        Console.WriteLine(ImportCategories(context, inputJson));
     }
 
     //01. Import Users
     public static string ImportUsers(ProductShopContext context, string inputJson)
     {
-        IMapper mapper = CrateMapper();
+        IMapper mapper = CreateMapper();
 
         ImportUserDto[] userDtos = JsonConvert.DeserializeObject<ImportUserDto[]>(inputJson);
 
@@ -46,7 +51,7 @@ public class StartUp
     //02. Import Products
     public static string ImportProducts(ProductShopContext context, string inputJson)
     {
-        IMapper mapper = CrateMapper();
+        IMapper mapper = CreateMapper();
         HashSet<Product> products = new HashSet<Product>();
 
         ImportProductDto[] productDtos = JsonConvert.DeserializeObject<ImportProductDto[]>(inputJson);
@@ -64,7 +69,31 @@ public class StartUp
         return $"Successfully imported {products.Count}";
     }
 
-    private static IMapper CrateMapper()
+    //03. Import Categories
+    public static string ImportCategories(ProductShopContext context, string inputJson)
+    {
+        IMapper mapper = CreateMapper();
+        HashSet<Category> categories = new HashSet<Category>();
+
+        
+        ImportCategoryDto[] categoryDtos = JsonConvert.DeserializeObject<ImportCategoryDto[]>(inputJson);
+        foreach (var categoryDto in categoryDtos)
+        {
+            Category category = mapper.Map<Category>(categoryDto);
+            if (string.IsNullOrEmpty(category.Name))
+            {
+                continue;
+            }
+            categories.Add(category);
+        }
+
+        context.AddRange(categories);
+        context.SaveChanges();
+
+        return $"Successfully imported {categories.Count}";
+    }
+
+    private static IMapper CreateMapper()
     {
         return new Mapper(new MapperConfiguration(cfg =>
         {
