@@ -1,4 +1,6 @@
-﻿namespace CarDealer.Models;
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace CarDealer.Models;
 
 public class Customer
 {
@@ -7,6 +9,7 @@ public class Customer
         this.Sales = new HashSet<Sale>();
     }
 
+    [Key]
     public int Id { get; set; }
 
     public string Name { get; set; } = null!;

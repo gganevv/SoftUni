@@ -1,5 +1,7 @@
 ﻿namespace CarDealer.Models;
 
+using System.ComponentModel.DataAnnotations;
+
 public class Car
 {
     public Car()
@@ -8,6 +10,7 @@ public class Car
         this.PartsCars = new HashSet<PartCar>();
     }
 
+    [Key]
     public int Id { get; set; }
 
     public string Make { get; set; } = null!;

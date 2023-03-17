@@ -1,5 +1,8 @@
 ﻿namespace CarDealer.Models;
 
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
 public class Part
 {
     public Part()
@@ -7,6 +10,7 @@ public class Part
         this.PartsCars = new HashSet<PartCar>();
     }
 
+    [Key]
     public int Id { get; set; }
 
     public string Name { get; set; } = null!; 
@@ -15,6 +19,7 @@ public class Part
 
     public int Quantity { get; set; }
 
+    [ForeignKey(nameof(Supplier))]
     public virtual int SupplierId { get; set; }
 
     public virtual Supplier Supplier { get; set; } = null!;
