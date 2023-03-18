@@ -43,7 +43,10 @@ public class StartUp
         //Console.WriteLine(GetCarsFromMakeToyota(context));
 
         //16. Export Local Suppliers
-        Console.WriteLine(GetLocalSuppliers(context));
+        //Console.WriteLine(GetLocalSuppliers(context));
+
+        //17. Export Cars with Their List of Parts
+        Console.WriteLine(GetCarsWithTheirListOfParts(context));
     }
 
     //09. Import Suppliers
@@ -210,6 +213,30 @@ public class StartUp
             .ToArray();
 
         return JsonConvert.SerializeObject(suppliers, Formatting.Indented);
+    }
+
+    //17. Export Cars with Their List of Parts
+    public static string GetCarsWithTheirListOfParts(CarDealerContext context)
+    {
+        var cars = context.Cars
+            .Select(c => new
+            {
+                car = new
+                {
+                    c.Make,
+                    c.Model,
+                    c.TravelledDistance
+                },
+                parts = c.PartsCars
+                .Select(c => new
+                {
+                    c.Part.Name,
+                    Price = $"{c.Part.Price:f2}"
+                })
+            })
+            .ToList();
+
+        return JsonConvert.SerializeObject(cars, Formatting.Indented);
     }
 
     private static IMapper CreateMapper()
