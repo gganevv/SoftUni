@@ -38,7 +38,10 @@ public class StartUp
         //Console.WriteLine(ImportSales(context, inputJson));
 
         //14. Export Ordered Customers
-        Console.WriteLine(GetOrderedCustomers(context));
+        //Console.WriteLine(GetOrderedCustomers(context));
+
+        //15. Export Cars from Make Toyota
+        Console.WriteLine(GetCarsFromMakeToyota(context));
     }
 
     //09. Import Suppliers
@@ -170,6 +173,25 @@ public class StartUp
             .ToList();
 
         return JsonConvert.SerializeObject(customers, Formatting.Indented);
+    }
+
+    //15. Export Cars from Make Toyota
+    public static string GetCarsFromMakeToyota(CarDealerContext context)
+    {
+        var carsFromMakeToyota = context.Cars
+            .Where(c => c.Make == "Toyota")
+            .OrderBy(c => c.Model)
+            .ThenByDescending(c => c.TravelledDistance)
+            .Select(c => new
+            {
+                Id = c.Id,
+                Make = c.Make,
+                Model = c.Model,
+                TraveledDistance = c.TravelledDistance
+            })
+            .ToArray();
+
+        return JsonConvert.SerializeObject(carsFromMakeToyota, Formatting.Indented);
     }
 
     private static IMapper CreateMapper()

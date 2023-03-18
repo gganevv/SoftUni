@@ -2,7 +2,7 @@
   {
     "make": "Opel",
     "model": "Omega",
-    "traveledDistance": 176664996,
+    "travelledDistance": 176664996,
     "partsId": [
       38,
       102,
@@ -20,7 +20,7 @@
   {
     "make": "Opel",
     "model": "Astra",
-    "traveledDistance": 516628215,
+    "travelledDistance": 516628215,
     "partsId": [
       39,
       62,
@@ -30,7 +30,7 @@
   {
     "make": "Opel",
     "model": "Astra",
-    "traveledDistance": 156191509,
+    "travelledDistance": 156191509,
     "partsId": [
       48,
       44,
@@ -40,7 +40,7 @@
   {
     "make": "Opel",
     "model": "Corsa",
-    "traveledDistance": 347259126,
+    "travelledDistance": 347259126,
     "partsId": [
       36,
       114,
@@ -58,7 +58,7 @@
   {
     "make": "Opel",
     "model": "Kadet",
-    "traveledDistance": 31737446,
+    "travelledDistance": 31737446,
     "partsId": [
       65,
       95,
@@ -68,7 +68,7 @@
   {
     "make": "Opel",
     "model": "Vectra",
-    "traveledDistance": 238042093,
+    "travelledDistance": 238042093,
     "partsId": [
       40,
       29,
@@ -81,7 +81,7 @@
   {
     "make": "Opel",
     "model": "Insignia",
-    "traveledDistance": 225253817,
+    "travelledDistance": 225253817,
     "partsId": [
       108,
       8,
@@ -99,7 +99,7 @@
   {
     "make": "Opel",
     "model": "Astra",
-    "traveledDistance": 31468479,
+    "travelledDistance": 31468479,
     "partsId": [
       102,
       54,
@@ -109,7 +109,7 @@
   {
     "make": "Opel",
     "model": "Corsa",
-    "traveledDistance": 282499542,
+    "travelledDistance": 282499542,
     "partsId": [
       46,
       58,
@@ -119,7 +119,7 @@
   {
     "make": "Opel",
     "model": "Omega",
-    "traveledDistance": 111313670,
+    "travelledDistance": 111313670,
     "partsId": [
       22,
       52,
@@ -137,7 +137,7 @@
   {
     "make": "Opel",
     "model": "Insignia",
-    "traveledDistance": 168539389,
+    "travelledDistance": 168539389,
     "partsId": [
       42,
       96,
@@ -150,7 +150,7 @@
   {
     "make": "Opel",
     "model": "Vectra",
-    "traveledDistance": 433351992,
+    "travelledDistance": 433351992,
     "partsId": [
       90,
       113,
@@ -160,7 +160,7 @@
   {
     "make": "Opel",
     "model": "Astra",
-    "traveledDistance": 349837452,
+    "travelledDistance": 349837452,
     "partsId": [
       117,
       61,
@@ -178,7 +178,7 @@
   {
     "make": "Opel",
     "model": "Omega",
-    "traveledDistance": 109910837,
+    "travelledDistance": 109910837,
     "partsId": [
       12,
       68,
@@ -188,7 +188,7 @@
   {
     "make": "Opel",
     "model": "Corsa",
-    "traveledDistance": 241891505,
+    "travelledDistance": 241891505,
     "partsId": [
       49,
       107,
@@ -198,7 +198,7 @@
   {
     "make": "Opel",
     "model": "Insignia",
-    "traveledDistance": 339785118,
+    "travelledDistance": 339785118,
     "partsId": [
       34,
       67,
@@ -216,7 +216,7 @@
   {
     "make": "Opel",
     "model": "Omega",
-    "traveledDistance": 254808828,
+    "travelledDistance": 254808828,
     "partsId": [
       47,
       5,
@@ -226,7 +226,7 @@
   {
     "make": "Opel",
     "model": "Corsa",
-    "traveledDistance": 267253567,
+    "travelledDistance": 267253567,
     "partsId": [
       10,
       19,
@@ -236,7 +236,7 @@
   {
     "make": "Opel",
     "model": "Omega",
-    "traveledDistance": 277250812,
+    "travelledDistance": 277250812,
     "partsId": [
       97,
       46,
@@ -254,7 +254,7 @@
   {
     "make": "BMW",
     "model": "F20",
-    "traveledDistance": 401291910,
+    "travelledDistance": 401291910,
     "partsId": [
       100,
       60,
@@ -264,7 +264,7 @@
   {
     "make": "BMW",
     "model": "F25",
-    "traveledDistance": 476132712,
+    "travelledDistance": 476132712,
     "partsId": [
       82,
       63,
@@ -277,7 +277,7 @@
   {
     "make": "BMW",
     "model": "M5 F10",
-    "traveledDistance": 140799461,
+    "travelledDistance": 140799461,
     "partsId": [
       96,
       109,
@@ -295,7 +295,7 @@
   {
     "make": "BMW",
     "model": "F04",
-    "traveledDistance": 418839575,
+    "travelledDistance": 418839575,
     "partsId": [
       6,
       79,
@@ -305,7 +305,7 @@
   {
     "make": "BMW",
     "model": "E88",
-    "traveledDistance": 27453411,
+    "travelledDistance": 27453411,
     "partsId": [
       91,
       88,
@@ -315,7 +315,7 @@
   {
     "make": "BMW",
     "model": "M Roadster E85",
-    "traveledDistance": 475685374,
+    "travelledDistance": 475685374,
     "partsId": [
       28,
       40,
@@ -333,7 +333,7 @@
   {
     "make": "BMW",
     "model": "1M Coupe",
-    "traveledDistance": 39826890,
+    "travelledDistance": 39826890,
     "partsId": [
       115,
       69,
@@ -346,7 +346,7 @@
   {
     "make": "BMW",
     "model": "X6 M",
-    "traveledDistance": 322292247,
+    "travelledDistance": 322292247,
     "partsId": [
       36,
       74,
@@ -356,7 +356,7 @@
   {
     "make": "BMW",
     "model": "E67",
-    "traveledDistance": 476830509,
+    "travelledDistance": 476830509,
     "partsId": [
       84,
       84,
@@ -374,7 +374,7 @@
   {
     "make": "BMW",
     "model": "M6 E63",
-    "traveledDistance": 57189891,
+    "travelledDistance": 57189891,
     "partsId": [
       72,
       79,
@@ -384,7 +384,7 @@
   {
     "make": "BMW",
     "model": "M6 E63",
-    "traveledDistance": 69863204,
+    "travelledDistance": 69863204,
     "partsId": [
       114,
       103,
@@ -394,7 +394,7 @@
   {
     "make": "BMW",
     "model": "F20",
-    "traveledDistance": 487897422,
+    "travelledDistance": 487897422,
     "partsId": [
       48,
       99,
@@ -412,7 +412,7 @@
   {
     "make": "BMW",
     "model": "F04",
-    "traveledDistance": 443756363,
+    "travelledDistance": 443756363,
     "partsId": [
       89,
       104,
@@ -422,7 +422,7 @@
   {
     "make": "BMW",
     "model": "M5 F10",
-    "traveledDistance": 435603343,
+    "travelledDistance": 435603343,
     "partsId": [
       40,
       103,
@@ -432,7 +432,7 @@
   {
     "make": "BMW",
     "model": "X6 M",
-    "traveledDistance": 227443571,
+    "travelledDistance": 227443571,
     "partsId": [
       18,
       29,
@@ -450,7 +450,7 @@
   {
     "make": "BMW",
     "model": "F20",
-    "traveledDistance": 284809463,
+    "travelledDistance": 284809463,
     "partsId": [
       78,
       5,
@@ -460,7 +460,7 @@
   {
     "make": "BMW",
     "model": "X6 M",
-    "traveledDistance": 183346013,
+    "travelledDistance": 183346013,
     "partsId": [
       5,
       27,
@@ -473,7 +473,7 @@
   {
     "make": "BMW",
     "model": "F04",
-    "traveledDistance": 265166885,
+    "travelledDistance": 265166885,
     "partsId": [
       109,
       113,
@@ -491,7 +491,7 @@
   {
     "make": "BMW",
     "model": "F20",
-    "traveledDistance": 171765152,
+    "travelledDistance": 171765152,
     "partsId": [
       84,
       54,
@@ -501,7 +501,7 @@
   {
     "make": "BMW",
     "model": "M6 E63",
-    "traveledDistance": 243205800,
+    "travelledDistance": 243205800,
     "partsId": [
       83,
       53,
@@ -511,7 +511,7 @@
   {
     "make": "Fiat",
     "model": "Panda",
-    "traveledDistance": 1591174,
+    "travelledDistance": 1591174,
     "partsId": [
       94,
       35,
@@ -529,7 +529,7 @@
   {
     "make": "Fiat",
     "model": "Panda 4x4 Antarctica",
-    "traveledDistance": 501838637,
+    "travelledDistance": 501838637,
     "partsId": [
       88,
       31,
@@ -542,7 +542,7 @@
   {
     "make": "Fiat",
     "model": "500 (2007) Abarth 695 Tributo Maserati",
-    "traveledDistance": 73917184,
+    "travelledDistance": 73917184,
     "partsId": [
       65,
       108,
@@ -552,7 +552,7 @@
   {
     "make": "Fiat",
     "model": "Panda 4x4 Antarctica",
-    "traveledDistance": 388951228,
+    "travelledDistance": 388951228,
     "partsId": [
       90,
       94,
@@ -570,7 +570,7 @@
   {
     "make": "Fiat",
     "model": "Panda 4x4",
-    "traveledDistance": 94291695,
+    "travelledDistance": 94291695,
     "partsId": [
       25,
       37,
@@ -580,7 +580,7 @@
   {
     "make": "Fiat",
     "model": "Panda",
-    "traveledDistance": 271974888,
+    "travelledDistance": 271974888,
     "partsId": [
       21,
       92,
@@ -590,7 +590,7 @@
   {
     "make": "Fiat",
     "model": "Freemont",
-    "traveledDistance": 291375480,
+    "travelledDistance": 291375480,
     "partsId": [
       44,
       52,
@@ -608,7 +608,7 @@
   {
     "make": "Fiat",
     "model": "500L",
-    "traveledDistance": 363056661,
+    "travelledDistance": 363056661,
     "partsId": [
       30,
       65,
@@ -618,7 +618,7 @@
   {
     "make": "Fiat",
     "model": "Panda",
-    "traveledDistance": 356486400,
+    "travelledDistance": 356486400,
     "partsId": [
       96,
       61,
@@ -628,7 +628,7 @@
   {
     "make": "Fiat",
     "model": "Freemont",
-    "traveledDistance": 46079092,
+    "travelledDistance": 46079092,
     "partsId": [
       67,
       85,
@@ -646,7 +646,7 @@
   {
     "make": "Fiat",
     "model": "Panda 4x4",
-    "traveledDistance": 506281363,
+    "travelledDistance": 506281363,
     "partsId": [
       37,
       19,
@@ -656,7 +656,7 @@
   {
     "make": "Fiat",
     "model": "Panda 4x4 Antarctica",
-    "traveledDistance": 147310005,
+    "travelledDistance": 147310005,
     "partsId": [
       108,
       80,
@@ -669,7 +669,7 @@
   {
     "make": "Fiat",
     "model": "500L",
-    "traveledDistance": 450106773,
+    "travelledDistance": 450106773,
     "partsId": [
       7,
       97,
@@ -687,7 +687,7 @@
   {
     "make": "Fiat",
     "model": "500L",
-    "traveledDistance": 418573870,
+    "travelledDistance": 418573870,
     "partsId": [
       4,
       50,
@@ -697,7 +697,7 @@
   {
     "make": "Fiat",
     "model": "500 (2007) Abarth 695 Tributo Maserati",
-    "traveledDistance": 255814652,
+    "travelledDistance": 255814652,
     "partsId": [
       58,
       22,
@@ -707,7 +707,7 @@
   {
     "make": "Fiat",
     "model": "Panda",
-    "traveledDistance": 165915677,
+    "travelledDistance": 165915677,
     "partsId": [
       89,
       53,
@@ -725,7 +725,7 @@
   {
     "make": "Fiat",
     "model": "500L",
-    "traveledDistance": 414493068,
+    "travelledDistance": 414493068,
     "partsId": [
       61,
       35,
@@ -738,7 +738,7 @@
   {
     "make": "Fiat",
     "model": "Freemont",
-    "traveledDistance": 476416173,
+    "travelledDistance": 476416173,
     "partsId": [
       64,
       56,
@@ -748,7 +748,7 @@
   {
     "make": "Fiat",
     "model": "Panda 4x4",
-    "traveledDistance": 507365630,
+    "travelledDistance": 507365630,
     "partsId": [
       7,
       24,
@@ -766,7 +766,7 @@
   {
     "make": "Fiat",
     "model": "500 (2007) Abarth 695 Tributo Maserati",
-    "traveledDistance": 250201285,
+    "travelledDistance": 250201285,
     "partsId": [
       104,
       54,
@@ -776,7 +776,7 @@
   {
     "make": "Fiat",
     "model": "Freemont",
-    "traveledDistance": 370538088,
+    "travelledDistance": 370538088,
     "partsId": [
       25,
       27,
@@ -786,7 +786,7 @@
   {
     "make": "Fiat",
     "model": "500L",
-    "traveledDistance": 294377378,
+    "travelledDistance": 294377378,
     "partsId": [
       45,
       83,
@@ -804,7 +804,7 @@
   {
     "make": "Mercedes",
     "model": "A 140",
-    "traveledDistance": 127050841,
+    "travelledDistance": 127050841,
     "partsId": [
       50,
       7,
@@ -814,7 +814,7 @@
   {
     "make": "Mercedes",
     "model": "W212",
-    "traveledDistance": 352906120,
+    "travelledDistance": 352906120,
     "partsId": [
       41,
       87,
@@ -824,7 +824,7 @@
   {
     "make": "Mercedes",
     "model": "A 160",
-    "traveledDistance": 69932764,
+    "travelledDistance": 69932764,
     "partsId": [
       88,
       33,
@@ -842,7 +842,7 @@
   {
     "make": "Mercedes",
     "model": "A 160 CDI",
-    "traveledDistance": 2043780,
+    "travelledDistance": 2043780,
     "partsId": [
       77,
       92,
@@ -852,7 +852,7 @@
   {
     "make": "Mercedes",
     "model": "W212",
-    "traveledDistance": 103410558,
+    "travelledDistance": 103410558,
     "partsId": [
       66,
       102,
@@ -865,7 +865,7 @@
   {
     "make": "Mercedes",
     "model": "W202",
-    "traveledDistance": 376376181,
+    "travelledDistance": 376376181,
     "partsId": [
       9,
       92,
@@ -883,7 +883,7 @@
   {
     "make": "Mercedes",
     "model": "W211",
-    "traveledDistance": 501021413,
+    "travelledDistance": 501021413,
     "partsId": [
       13,
       103,
@@ -893,7 +893,7 @@
   {
     "make": "Mercedes",
     "model": "A 170 CDI",
-    "traveledDistance": 203728907,
+    "travelledDistance": 203728907,
     "partsId": [
       37,
       77,
@@ -903,7 +903,7 @@
   {
     "make": "Mercedes",
     "model": "W212",
-    "traveledDistance": 437173024,
+    "travelledDistance": 437173024,
     "partsId": [
       97,
       99,
@@ -921,7 +921,7 @@
   {
     "make": "Mercedes",
     "model": "W124",
-    "traveledDistance": 453245765,
+    "travelledDistance": 453245765,
     "partsId": [
       73,
       33,
@@ -934,7 +934,7 @@
   {
     "make": "Mercedes",
     "model": "W210",
-    "traveledDistance": 461671208,
+    "travelledDistance": 461671208,
     "partsId": [
       114,
       82,
@@ -944,7 +944,7 @@
   {
     "make": "Mercedes",
     "model": "W202",
-    "traveledDistance": 402675300,
+    "travelledDistance": 402675300,
     "partsId": [
       18,
       53,
@@ -962,7 +962,7 @@
   {
     "make": "Mercedes",
     "model": "W211",
-    "traveledDistance": 132956063,
+    "travelledDistance": 132956063,
     "partsId": [
       13,
       74,
@@ -972,7 +972,7 @@
   {
     "make": "Mercedes",
     "model": "W212",
-    "traveledDistance": 278080805,
+    "travelledDistance": 278080805,
     "partsId": [
       57,
       32,
@@ -982,7 +982,7 @@
   {
     "make": "Mercedes",
     "model": "W203",
-    "traveledDistance": 259511953,
+    "travelledDistance": 259511953,
     "partsId": [
       64,
       19,
@@ -1000,7 +1000,7 @@
   {
     "make": "Mercedes",
     "model": "W211",
-    "traveledDistance": 130475765,
+    "travelledDistance": 130475765,
     "partsId": [
       60,
       39,
@@ -1010,7 +1010,7 @@
   {
     "make": "Mercedes",
     "model": "W210",
-    "traveledDistance": 181844305,
+    "travelledDistance": 181844305,
     "partsId": [
       74,
       40,
@@ -1020,7 +1020,7 @@
   {
     "make": "Mercedes",
     "model": "W204",
-    "traveledDistance": 134106055,
+    "travelledDistance": 134106055,
     "partsId": [
       65,
       13,
@@ -1038,7 +1038,7 @@
   {
     "make": "Mercedes",
     "model": "W124",
-    "traveledDistance": 41606319,
+    "travelledDistance": 41606319,
     "partsId": [
       12,
       84,
@@ -1048,7 +1048,7 @@
   {
     "make": "Mercedes",
     "model": "W212",
-    "traveledDistance": 55397761,
+    "travelledDistance": 55397761,
     "partsId": [
       52,
       107,
@@ -1061,7 +1061,7 @@
   {
     "make": "Ford",
     "model": "Fiesta",
-    "traveledDistance": 344433379,
+    "travelledDistance": 344433379,
     "partsId": [
       90,
       16,
@@ -1079,7 +1079,7 @@
   {
     "make": "Ford",
     "model": "Pinto",
-    "traveledDistance": 288047842,
+    "travelledDistance": 288047842,
     "partsId": [
       87,
       59,
@@ -1089,7 +1089,7 @@
   {
     "make": "Ford",
     "model": "Torino",
-    "traveledDistance": 450867168,
+    "travelledDistance": 450867168,
     "partsId": [
       93,
       13,
@@ -1099,7 +1099,7 @@
   {
     "make": "Ford",
     "model": "Fiesta",
-    "traveledDistance": 301180732,
+    "travelledDistance": 301180732,
     "partsId": [
       110,
       86,
@@ -1117,7 +1117,7 @@
   {
     "make": "Ford",
     "model": "Pinto",
-    "traveledDistance": 416418181,
+    "travelledDistance": 416418181,
     "partsId": [
       33,
       39,
@@ -1130,7 +1130,7 @@
   {
     "make": "Ford",
     "model": "Taurus",
-    "traveledDistance": 403810025,
+    "travelledDistance": 403810025,
     "partsId": [
       103,
       18,
@@ -1140,7 +1140,7 @@
   {
     "make": "Ford",
     "model": "Fiesta",
-    "traveledDistance": 37085116,
+    "travelledDistance": 37085116,
     "partsId": [
       38,
       50,
@@ -1158,7 +1158,7 @@
   {
     "make": "Ford",
     "model": "Torino",
-    "traveledDistance": 440155426,
+    "travelledDistance": 440155426,
     "partsId": [
       38,
       8,
@@ -1168,7 +1168,7 @@
   {
     "make": "Ford",
     "model": "Pinto",
-    "traveledDistance": 248943927,
+    "travelledDistance": 248943927,
     "partsId": [
       81,
       86,
@@ -1178,7 +1178,7 @@
   {
     "make": "Ford",
     "model": "GT40",
-    "traveledDistance": 85557373,
+    "travelledDistance": 85557373,
     "partsId": [
       3,
       10,
@@ -1196,7 +1196,7 @@
   {
     "make": "Ford",
     "model": "Pinto",
-    "traveledDistance": 136428787,
+    "travelledDistance": 136428787,
     "partsId": [
       102,
       77,
@@ -1206,7 +1206,7 @@
   {
     "make": "Ford",
     "model": "GT40",
-    "traveledDistance": 300191400,
+    "travelledDistance": 300191400,
     "partsId": [
       36,
       44,
@@ -1216,7 +1216,7 @@
   {
     "make": "Ford",
     "model": "Fiesta",
-    "traveledDistance": 251295244,
+    "travelledDistance": 251295244,
     "partsId": [
       78,
       28,
@@ -1234,7 +1234,7 @@
   {
     "make": "Ford",
     "model": "Torino",
-    "traveledDistance": 85841328,
+    "travelledDistance": 85841328,
     "partsId": [
       28,
       111,
@@ -1244,7 +1244,7 @@
   {
     "make": "Ford",
     "model": "Fiesta",
-    "traveledDistance": 232084221,
+    "travelledDistance": 232084221,
     "partsId": [
       23,
       6,
@@ -1257,7 +1257,7 @@
   {
     "make": "Ford",
     "model": "Pinto",
-    "traveledDistance": 99638597,
+    "travelledDistance": 99638597,
     "partsId": [
       42,
       83,
@@ -1275,7 +1275,7 @@
   {
     "make": "Ford",
     "model": "Taurus",
-    "traveledDistance": 176314890,
+    "travelledDistance": 176314890,
     "partsId": [
       49,
       79,
@@ -1285,7 +1285,7 @@
   {
     "make": "Ford",
     "model": "Fiesta",
-    "traveledDistance": 470875447,
+    "travelledDistance": 470875447,
     "partsId": [
       53,
       22,
@@ -1295,7 +1295,7 @@
   {
     "make": "Ford",
     "model": "Torino",
-    "traveledDistance": 25860756,
+    "travelledDistance": 25860756,
     "partsId": [
       3,
       9,
@@ -1313,7 +1313,7 @@
   {
     "make": "Ford",
     "model": "Ranger",
-    "traveledDistance": 293626832,
+    "travelledDistance": 293626832,
     "partsId": [
       78,
       64,
@@ -1326,7 +1326,7 @@
   {
     "make": "Ford",
     "model": "Pinto",
-    "traveledDistance": 240662780,
+    "travelledDistance": 240662780,
     "partsId": [
       32,
       80,
@@ -1336,7 +1336,7 @@
   {
     "make": "Ford",
     "model": "Ranger",
-    "traveledDistance": 10053919,
+    "travelledDistance": 10053919,
     "partsId": [
       95,
       91,
@@ -1354,7 +1354,7 @@
   {
     "make": "Toyota",
     "model": "Prius",
-    "traveledDistance": 508864707,
+    "travelledDistance": 508864707,
     "partsId": [
       111,
       87,
@@ -1364,7 +1364,7 @@
   {
     "make": "Toyota",
     "model": "Tacoma",
-    "traveledDistance": 431663130,
+    "travelledDistance": 431663130,
     "partsId": [
       61,
       63,
@@ -1374,7 +1374,7 @@
   {
     "make": "Toyota",
     "model": "Prius",
-    "traveledDistance": 64266329,
+    "travelledDistance": 64266329,
     "partsId": [
       79,
       100,
@@ -1392,7 +1392,7 @@
   {
     "make": "Toyota",
     "model": "Tacoma",
-    "traveledDistance": 426059006,
+    "travelledDistance": 426059006,
     "partsId": [
       100,
       75,
@@ -1402,7 +1402,7 @@
   {
     "make": "Toyota",
     "model": "Prius",
-    "traveledDistance": 142914233,
+    "travelledDistance": 142914233,
     "partsId": [
       42,
       59,
@@ -1412,7 +1412,7 @@
   {
     "make": "Toyota",
     "model": "Corolla",
-    "traveledDistance": 356361379,
+    "travelledDistance": 356361379,
     "partsId": [
       75,
       115,
@@ -1430,7 +1430,7 @@
   {
     "make": "Toyota",
     "model": "Yaris",
-    "traveledDistance": 285031257,
+    "travelledDistance": 285031257,
     "partsId": [
       28,
       76,
@@ -1440,7 +1440,7 @@
   {
     "make": "Toyota",
     "model": "Prius",
-    "traveledDistance": 141313729,
+    "travelledDistance": 141313729,
     "partsId": [
       92,
       10,
@@ -1453,7 +1453,7 @@
   {
     "make": "Toyota",
     "model": "Camry Hybrid",
-    "traveledDistance": 151868293,
+    "travelledDistance": 151868293,
     "partsId": [
       50,
       57,
@@ -1471,7 +1471,7 @@
   {
     "make": "Toyota",
     "model": "Corolla",
-    "traveledDistance": 230556000,
+    "travelledDistance": 230556000,
     "partsId": [
       18,
       21,
@@ -1481,7 +1481,7 @@
   {
     "make": "Toyota",
     "model": "Prius",
-    "traveledDistance": 65891391,
+    "travelledDistance": 65891391,
     "partsId": [
       17,
       31,
@@ -1491,7 +1491,7 @@
   {
     "make": "Toyota",
     "model": "Corolla",
-    "traveledDistance": 172436753,
+    "travelledDistance": 172436753,
     "partsId": [
       62,
       106,
@@ -1509,7 +1509,7 @@
   {
     "make": "Toyota",
     "model": "Tacoma",
-    "traveledDistance": 328571532,
+    "travelledDistance": 328571532,
     "partsId": [
       89,
       58,
@@ -1522,7 +1522,7 @@
   {
     "make": "Toyota",
     "model": "Camry Hybrid",
-    "traveledDistance": 217630531,
+    "travelledDistance": 217630531,
     "partsId": [
       88,
       103,
@@ -1532,7 +1532,7 @@
   {
     "make": "Toyota",
     "model": "Prius",
-    "traveledDistance": 280666484,
+    "travelledDistance": 280666484,
     "partsId": [
       27,
       89,
@@ -1550,7 +1550,7 @@
   {
     "make": "Toyota",
     "model": "Tacoma",
-    "traveledDistance": 147379564,
+    "travelledDistance": 147379564,
     "partsId": [
       95,
       29,
@@ -1560,7 +1560,7 @@
   {
     "make": "Toyota",
     "model": "Corolla",
-    "traveledDistance": 485584239,
+    "travelledDistance": 485584239,
     "partsId": [
       41,
       71,
@@ -1570,7 +1570,7 @@
   {
     "make": "Toyota",
     "model": "Prius",
-    "traveledDistance": 78228066,
+    "travelledDistance": 78228066,
     "partsId": [
       75,
       27,
@@ -1588,7 +1588,7 @@
   {
     "make": "Toyota",
     "model": "Corolla",
-    "traveledDistance": 196587490,
+    "travelledDistance": 196587490,
     "partsId": [
       54,
       111,
@@ -1598,7 +1598,7 @@
   {
     "make": "Toyota",
     "model": "Yaris",
-    "traveledDistance": 439493520,
+    "travelledDistance": 439493520,
     "partsId": [
       117,
       116,
@@ -1608,7 +1608,7 @@
   {
     "make": "Toyota",
     "model": "Corolla",
-    "traveledDistance": 333412512,
+    "travelledDistance": 333412512,
     "partsId": [
       24,
       58,
@@ -1626,7 +1626,7 @@
   {
     "make": "Toyota",
     "model": "Prius",
-    "traveledDistance": 208912076,
+    "travelledDistance": 208912076,
     "partsId": [
       83,
       28,
@@ -1636,7 +1636,7 @@
   {
     "make": "Toyota",
     "model": "Tacoma",
-    "traveledDistance": 174113404,
+    "travelledDistance": 174113404,
     "partsId": [
       70,
       86,
@@ -1649,7 +1649,7 @@
   {
     "make": "Toyota",
     "model": "Yaris",
-    "traveledDistance": 18776234,
+    "travelledDistance": 18776234,
     "partsId": [
       93,
       100,
@@ -1667,7 +1667,7 @@
   {
     "make": "Toyota",
     "model": "Prius",
-    "traveledDistance": 8676482,
+    "travelledDistance": 8676482,
     "partsId": [
       11,
       65,
@@ -1677,7 +1677,7 @@
   {
     "make": "Toyota",
     "model": "Tacoma",
-    "traveledDistance": 425742267,
+    "travelledDistance": 425742267,
     "partsId": [
       74,
       68,
@@ -1687,7 +1687,7 @@
   {
     "make": "Toyota",
     "model": "Prius",
-    "traveledDistance": 424624116,
+    "travelledDistance": 424624116,
     "partsId": [
       23,
       66,
@@ -1705,7 +1705,7 @@
   {
     "make": "Toyota",
     "model": "Yaris",
-    "traveledDistance": 17169781,
+    "travelledDistance": 17169781,
     "partsId": [
       31,
       53,
@@ -1718,7 +1718,7 @@
   {
     "make": "Toyota",
     "model": "Prius",
-    "traveledDistance": 332788407,
+    "travelledDistance": 332788407,
     "partsId": [
       28,
       10,
@@ -1728,7 +1728,7 @@
   {
     "make": "Toyota",
     "model": "Tacoma",
-    "traveledDistance": 89596390,
+    "travelledDistance": 89596390,
     "partsId": [
       30,
       93,
@@ -1746,7 +1746,7 @@
   {
     "make": "Toyota",
     "model": "Camry Hybrid",
-    "traveledDistance": 486872832,
+    "travelledDistance": 486872832,
     "partsId": [
       25,
       87,
@@ -1756,7 +1756,7 @@
   {
     "make": "Toyota",
     "model": "Prius",
-    "traveledDistance": 126607020,
+    "travelledDistance": 126607020,
     "partsId": [
       42,
       16,
@@ -1766,7 +1766,7 @@
   {
     "make": "Toyota",
     "model": "Camry Hybrid",
-    "traveledDistance": 193362513,
+    "travelledDistance": 193362513,
     "partsId": [
       3,
       66,
@@ -1784,7 +1784,7 @@
   {
     "make": "Toyota",
     "model": "Prius",
-    "traveledDistance": 191675886,
+    "travelledDistance": 191675886,
     "partsId": [
       48,
       41,
@@ -1794,7 +1794,7 @@
   {
     "make": "Toyota",
     "model": "Tacoma",
-    "traveledDistance": 157810668,
+    "travelledDistance": 157810668,
     "partsId": [
       19,
       33,
@@ -1804,7 +1804,7 @@
   {
     "make": "Toyota",
     "model": "Camry Hybrid",
-    "traveledDistance": 397831570,
+    "travelledDistance": 397831570,
     "partsId": [
       111,
       15,
@@ -1822,7 +1822,7 @@
   {
     "make": "Nissan",
     "model": "GT-R",
-    "traveledDistance": 94210828,
+    "travelledDistance": 94210828,
     "partsId": [
       102,
       30,
@@ -1832,7 +1832,7 @@
   {
     "make": "Nissan",
     "model": "Altima",
-    "traveledDistance": 368986707,
+    "travelledDistance": 368986707,
     "partsId": [
       26,
       47,
@@ -1845,7 +1845,7 @@
   {
     "make": "Nissan",
     "model": "GT-R",
-    "traveledDistance": 118192217,
+    "travelledDistance": 118192217,
     "partsId": [
       92,
       49,
@@ -1863,7 +1863,7 @@
   {
     "make": "Nissan",
     "model": "370Z",
-    "traveledDistance": 59351269,
+    "travelledDistance": 59351269,
     "partsId": [
       101,
       77,
@@ -1873,7 +1873,7 @@
   {
     "make": "Nissan",
     "model": "GT-R",
-    "traveledDistance": 12420594,
+    "travelledDistance": 12420594,
     "partsId": [
       91,
       113,
@@ -1883,7 +1883,7 @@
   {
     "make": "Nissan",
     "model": "Altima",
-    "traveledDistance": 486257730,
+    "travelledDistance": 486257730,
     "partsId": [
       73,
       56,
@@ -1901,7 +1901,7 @@
   {
     "make": "Nissan",
     "model": "GT-R",
-    "traveledDistance": 312316612,
+    "travelledDistance": 312316612,
     "partsId": [
       81,
       86,
@@ -1914,7 +1914,7 @@
   {
     "make": "Nissan",
     "model": "370Z",
-    "traveledDistance": 284500319,
+    "travelledDistance": 284500319,
     "partsId": [
       11,
       31,
@@ -1924,7 +1924,7 @@
   {
     "make": "Nissan",
     "model": "370Z",
-    "traveledDistance": 91596434,
+    "travelledDistance": 91596434,
     "partsId": [
       15,
       40,
@@ -1942,7 +1942,7 @@
   {
     "make": "Nissan",
     "model": "Altima",
-    "traveledDistance": 457486023,
+    "travelledDistance": 457486023,
     "partsId": [
       17,
       115,
@@ -1952,7 +1952,7 @@
   {
     "make": "Nissan",
     "model": "370Z",
-    "traveledDistance": 135897329,
+    "travelledDistance": 135897329,
     "partsId": [
       48,
       4,
@@ -1962,7 +1962,7 @@
   {
     "make": "Nissan",
     "model": "Altima",
-    "traveledDistance": 393081223,
+    "travelledDistance": 393081223,
     "partsId": [
       101,
       39,
@@ -1980,7 +1980,7 @@
   {
     "make": "Nissan",
     "model": "GT-R",
-    "traveledDistance": 197599645,
+    "travelledDistance": 197599645,
     "partsId": [
       112,
       13,
@@ -1990,7 +1990,7 @@
   {
     "make": "Nissan",
     "model": "Altima",
-    "traveledDistance": 407562858,
+    "travelledDistance": 407562858,
     "partsId": [
       113,
       29,
@@ -2000,7 +2000,7 @@
   {
     "make": "Nissan",
     "model": "370Z",
-    "traveledDistance": 363918741,
+    "travelledDistance": 363918741,
     "partsId": [
       31,
       2,
@@ -2018,7 +2018,7 @@
   {
     "make": "Nissan",
     "model": "GT-R",
-    "traveledDistance": 326260222,
+    "travelledDistance": 326260222,
     "partsId": [
       15,
       52,
@@ -2028,7 +2028,7 @@
   {
     "make": "Nissan",
     "model": "Versa",
-    "traveledDistance": 475666874,
+    "travelledDistance": 475666874,
     "partsId": [
       11,
       102,
@@ -2041,7 +2041,7 @@
   {
     "make": "Nissan",
     "model": "Altima",
-    "traveledDistance": 179796793,
+    "travelledDistance": 179796793,
     "partsId": [
       50,
       57,
@@ -2059,7 +2059,7 @@
   {
     "make": "Nissan",
     "model": "370Z",
-    "traveledDistance": 55268939,
+    "travelledDistance": 55268939,
     "partsId": [
       50,
       74,
@@ -2069,7 +2069,7 @@
   {
     "make": "Nissan",
     "model": "GT-R",
-    "traveledDistance": 157249056,
+    "travelledDistance": 157249056,
     "partsId": [
       110,
       14,
@@ -2079,7 +2079,7 @@
   {
     "make": "Nissan",
     "model": "Rogue",
-    "traveledDistance": 114846152,
+    "travelledDistance": 114846152,
     "partsId": [
       10,
       2,
@@ -2097,7 +2097,7 @@
   {
     "make": "Nissan",
     "model": "Altima",
-    "traveledDistance": 424117627,
+    "travelledDistance": 424117627,
     "partsId": [
       117,
       95,
@@ -2110,7 +2110,7 @@
   {
     "make": "Nissan",
     "model": "GT-R",
-    "traveledDistance": 274678949,
+    "travelledDistance": 274678949,
     "partsId": [
       55,
       60,
@@ -2120,7 +2120,7 @@
   {
     "make": "Nissan",
     "model": "Altima",
-    "traveledDistance": 95799498,
+    "travelledDistance": 95799498,
     "partsId": [
       20,
       21,
@@ -2138,7 +2138,7 @@
   {
     "make": "Nissan",
     "model": "Rogue",
-    "traveledDistance": 310364796,
+    "travelledDistance": 310364796,
     "partsId": [
       92,
       82,
@@ -2148,7 +2148,7 @@
   {
     "make": "Nissan",
     "model": "GT-R",
-    "traveledDistance": 125157902,
+    "travelledDistance": 125157902,
     "partsId": [
       82,
       50,
@@ -2158,7 +2158,7 @@
   {
     "make": "Nissan",
     "model": "Altima",
-    "traveledDistance": 187152855,
+    "travelledDistance": 187152855,
     "partsId": [
       20,
       64,
@@ -2176,7 +2176,7 @@
   {
     "make": "Nissan",
     "model": "Versa",
-    "traveledDistance": 440899435,
+    "travelledDistance": 440899435,
     "partsId": [
       34,
       111,
@@ -2186,7 +2186,7 @@
   {
     "make": "Nissan",
     "model": "GT-R",
-    "traveledDistance": 122310701,
+    "travelledDistance": 122310701,
     "partsId": [
       94,
       18,
@@ -2196,7 +2196,7 @@
   {
     "make": "Nissan",
     "model": "Versa",
-    "traveledDistance": 317911903,
+    "travelledDistance": 317911903,
     "partsId": [
       36,
       75,
@@ -2214,7 +2214,7 @@
   {
     "make": "Great Wall",
     "model": "H2",
-    "traveledDistance": 357701772,
+    "travelledDistance": 357701772,
     "partsId": [
       85,
       3,
@@ -2224,7 +2224,7 @@
   {
     "make": "Great Wall",
     "model": "Haval M4",
-    "traveledDistance": 515523178,
+    "travelledDistance": 515523178,
     "partsId": [
       95,
       102,
@@ -2237,7 +2237,7 @@
   {
     "make": "Great Wall",
     "model": "H2",
-    "traveledDistance": 438447396,
+    "travelledDistance": 438447396,
     "partsId": [
       101,
       46,
@@ -2255,7 +2255,7 @@
   {
     "make": "Great Wall",
     "model": "H8",
-    "traveledDistance": 261462447,
+    "travelledDistance": 261462447,
     "partsId": [
       66,
       43,
@@ -2265,7 +2265,7 @@
   {
     "make": "Great Wall",
     "model": "Steed 3",
-    "traveledDistance": 431796268,
+    "travelledDistance": 431796268,
     "partsId": [
       32,
       92,
@@ -2275,7 +2275,7 @@
   {
     "make": "Great Wall",
     "model": "Wingle 5",
-    "traveledDistance": 495225064,
+    "travelledDistance": 495225064,
     "partsId": [
       65,
       94,
@@ -2293,7 +2293,7 @@
   {
     "make": "Great Wall",
     "model": "Haval M4",
-    "traveledDistance": 338663381,
+    "travelledDistance": 338663381,
     "partsId": [
       109,
       18,
@@ -2306,7 +2306,7 @@
   {
     "make": "Great Wall",
     "model": "Haval H6",
-    "traveledDistance": 515863753,
+    "travelledDistance": 515863753,
     "partsId": [
       110,
       75,
@@ -2316,7 +2316,7 @@
   {
     "make": "Renault",
     "model": "Alaskan",
-    "traveledDistance": 284369351,
+    "travelledDistance": 284369351,
     "partsId": [
       80,
       66,
@@ -2334,7 +2334,7 @@
   {
     "make": "Renault",
     "model": "Clio IV",
-    "traveledDistance": 225782314,
+    "travelledDistance": 225782314,
     "partsId": [
       18,
       88,
@@ -2344,7 +2344,7 @@
   {
     "make": "Renault",
     "model": "Duster",
-    "traveledDistance": 275222997,
+    "travelledDistance": 275222997,
     "partsId": [
       44,
       61,
@@ -2354,7 +2354,7 @@
   {
     "make": "Renault",
     "model": "Alaskan",
-    "traveledDistance": 268240617,
+    "travelledDistance": 268240617,
     "partsId": [
       53,
       67,
@@ -2372,7 +2372,7 @@
   {
     "make": "Renault",
     "model": "Alaskan",
-    "traveledDistance": 305807332,
+    "travelledDistance": 305807332,
     "partsId": [
       106,
       49,
@@ -2382,7 +2382,7 @@
   {
     "make": "Renault",
     "model": "Duster",
-    "traveledDistance": 451149098,
+    "travelledDistance": 451149098,
     "partsId": [
       18,
       42,
@@ -2392,7 +2392,7 @@
   {
     "make": "Renault",
     "model": "Alaskan",
-    "traveledDistance": 147141364,
+    "travelledDistance": 147141364,
     "partsId": [
       88,
       84,
@@ -2410,7 +2410,7 @@
   {
     "make": "Renault",
     "model": "Clio IV",
-    "traveledDistance": 410170426,
+    "travelledDistance": 410170426,
     "partsId": [
       39,
       107,
@@ -2420,7 +2420,7 @@
   {
     "make": "Renault",
     "model": "Duster",
-    "traveledDistance": 198197668,
+    "travelledDistance": 198197668,
     "partsId": [
       98,
       77,
@@ -2433,7 +2433,7 @@
   {
     "make": "Renault",
     "model": "Alaskan",
-    "traveledDistance": 303853081,
+    "travelledDistance": 303853081,
     "partsId": [
       47,
       18,
@@ -2451,7 +2451,7 @@
   {
     "make": "Renault",
     "model": "Captur",
-    "traveledDistance": 104305182,
+    "travelledDistance": 104305182,
     "partsId": [
       113,
       61,
@@ -2461,7 +2461,7 @@
   {
     "make": "Renault",
     "model": "Alaskan",
-    "traveledDistance": 17909035,
+    "travelledDistance": 17909035,
     "partsId": [
       102,
       45,
@@ -2471,7 +2471,7 @@
   {
     "make": "Renault",
     "model": "Espace",
-    "traveledDistance": 29567678,
+    "travelledDistance": 29567678,
     "partsId": [
       9,
       83,
@@ -2489,7 +2489,7 @@
   {
     "make": "Renault",
     "model": "Alaskan",
-    "traveledDistance": 392193253,
+    "travelledDistance": 392193253,
     "partsId": [
       59,
       114,
@@ -2502,7 +2502,7 @@
   {
     "make": "Renault",
     "model": "Captur",
-    "traveledDistance": 515034479,
+    "travelledDistance": 515034479,
     "partsId": [
       25,
       39,
@@ -2512,7 +2512,7 @@
   {
     "make": "Renault",
     "model": "Espace",
-    "traveledDistance": 379189144,
+    "travelledDistance": 379189144,
     "partsId": [
       115,
       94,
@@ -2530,7 +2530,7 @@
   {
     "make": "Chevy",
     "model": "Camaro",
-    "traveledDistance": 140281843,
+    "travelledDistance": 140281843,
     "partsId": [
       99,
       21,
@@ -2540,7 +2540,7 @@
   {
     "make": "Chevy",
     "model": "Caprice",
-    "traveledDistance": 48720733,
+    "travelledDistance": 48720733,
     "partsId": [
       79,
       59,
@@ -2550,7 +2550,7 @@
   {
     "make": "Chevy",
     "model": "Camaro",
-    "traveledDistance": 472935290,
+    "travelledDistance": 472935290,
     "partsId": [
       41,
       15,
@@ -2568,7 +2568,7 @@
   {
     "make": "Chevy",
     "model": "Caprice",
-    "traveledDistance": 401020251,
+    "travelledDistance": 401020251,
     "partsId": [
       59,
       106,
@@ -2578,7 +2578,7 @@
   {
     "make": "Chevy",
     "model": "Malibu",
-    "traveledDistance": 127614006,
+    "travelledDistance": 127614006,
     "partsId": [
       15,
       32,
@@ -2588,7 +2588,7 @@
   {
     "make": "Chevy",
     "model": "Camaro",
-    "traveledDistance": 265890224,
+    "travelledDistance": 265890224,
     "partsId": [
       7,
       1,
@@ -2606,7 +2606,7 @@
   {
     "make": "Chevy",
     "model": "Impala",
-    "traveledDistance": 156401301,
+    "travelledDistance": 156401301,
     "partsId": [
       5,
       7,
@@ -2616,7 +2616,7 @@
   {
     "make": "Chevy",
     "model": "Malibu",
-    "traveledDistance": 250044709,
+    "travelledDistance": 250044709,
     "partsId": [
       21,
       45,
@@ -2629,7 +2629,7 @@
   {
     "make": "Chevy",
     "model": "Impala",
-    "traveledDistance": 19486044,
+    "travelledDistance": 19486044,
     "partsId": [
       70,
       114,
@@ -2647,7 +2647,7 @@
   {
     "make": "Chevy",
     "model": "Camaro",
-    "traveledDistance": 152312063,
+    "travelledDistance": 152312063,
     "partsId": [
       75,
       36,
@@ -2657,7 +2657,7 @@
   {
     "make": "Chevy",
     "model": "Camaro",
-    "traveledDistance": 478411784,
+    "travelledDistance": 478411784,
     "partsId": [
       88,
       47,
@@ -2667,7 +2667,7 @@
   {
     "make": "Chevy",
     "model": "Corvette",
-    "traveledDistance": 520332790,
+    "travelledDistance": 520332790,
     "partsId": [
       104,
       49,
@@ -2685,7 +2685,7 @@
   {
     "make": "Chevy",
     "model": "Cruze",
-    "traveledDistance": 333261359,
+    "travelledDistance": 333261359,
     "partsId": [
       110,
       99,
@@ -2698,7 +2698,7 @@
   {
     "make": "Chevy",
     "model": "Corvette",
-    "traveledDistance": 314764731,
+    "travelledDistance": 314764731,
     "partsId": [
       27,
       95,
@@ -2708,7 +2708,7 @@
   {
     "make": "Chevy",
     "model": "Camaro",
-    "traveledDistance": 354394122,
+    "travelledDistance": 354394122,
     "partsId": [
       50,
       40,
@@ -2726,7 +2726,7 @@
   {
     "make": "Chevy",
     "model": "Caprice",
-    "traveledDistance": 247321209,
+    "travelledDistance": 247321209,
     "partsId": [
       71,
       60,
@@ -2736,7 +2736,7 @@
   {
     "make": "Chevy",
     "model": "Cruze",
-    "traveledDistance": 366224374,
+    "travelledDistance": 366224374,
     "partsId": [
       40,
       30,
@@ -2746,7 +2746,7 @@
   {
     "make": "Chevy",
     "model": "Caprice",
-    "traveledDistance": 338430654,
+    "travelledDistance": 338430654,
     "partsId": [
       20,
       94,
@@ -2764,7 +2764,7 @@
   {
     "make": "Chevy",
     "model": "Matiz",
-    "traveledDistance": 274054974,
+    "travelledDistance": 274054974,
     "partsId": [
       99,
       38,
@@ -2774,7 +2774,7 @@
   {
     "make": "Rolls-Royce",
     "model": "Phantom",
-    "traveledDistance": 208114157,
+    "travelledDistance": 208114157,
     "partsId": [
       36,
       78,
@@ -2784,7 +2784,7 @@
   {
     "make": "Rolls-Royce",
     "model": "Phantom Drophead Coupé",
-    "traveledDistance": 260653592,
+    "travelledDistance": 260653592,
     "partsId": [
       109,
       32,
@@ -2802,7 +2802,7 @@
   {
     "make": "Rolls-Royce",
     "model": "Phantom",
-    "traveledDistance": 225233067,
+    "travelledDistance": 225233067,
     "partsId": [
       40,
       18,
@@ -2812,7 +2812,7 @@
   {
     "make": "Rolls-Royce",
     "model": "Ghost",
-    "traveledDistance": 496937828,
+    "travelledDistance": 496937828,
     "partsId": [
       62,
       110,
@@ -2825,7 +2825,7 @@
   {
     "make": "Rolls-Royce",
     "model": "Dawn",
-    "traveledDistance": 202157384,
+    "travelledDistance": 202157384,
     "partsId": [
       89,
       96,
@@ -2843,7 +2843,7 @@
   {
     "make": "Rolls-Royce",
     "model": "Phantom",
-    "traveledDistance": 327285667,
+    "travelledDistance": 327285667,
     "partsId": [
       47,
       78,
@@ -2853,7 +2853,7 @@
   {
     "make": "Rolls-Royce",
     "model": "Ghost",
-    "traveledDistance": 278821902,
+    "travelledDistance": 278821902,
     "partsId": [
       32,
       93,
@@ -2863,7 +2863,7 @@
   {
     "make": "Rolls-Royce",
     "model": "Wraith",
-    "traveledDistance": 305587766,
+    "travelledDistance": 305587766,
     "partsId": [
       93,
       27,
@@ -2881,7 +2881,7 @@
   {
     "make": "Rolls-Royce",
     "model": "Phantom Drophead Coupé",
-    "traveledDistance": 261927306,
+    "travelledDistance": 261927306,
     "partsId": [
       6,
       74,
@@ -2894,7 +2894,7 @@
   {
     "make": "Rolls-Royce",
     "model": "Wraith",
-    "traveledDistance": 193890679,
+    "travelledDistance": 193890679,
     "partsId": [
       34,
       98,
@@ -2904,7 +2904,7 @@
   {
     "make": "Rolls-Royce",
     "model": "Phantom Drophead Coupé",
-    "traveledDistance": 483029198,
+    "travelledDistance": 483029198,
     "partsId": [
       96,
       95,
@@ -2922,7 +2922,7 @@
   {
     "make": "Lamborghini",
     "model": "Gallardo",
-    "traveledDistance": 145640651,
+    "travelledDistance": 145640651,
     "partsId": [
       65,
       54,
@@ -2932,7 +2932,7 @@
   {
     "make": "Lamborghini",
     "model": "Murciélago",
-    "traveledDistance": 344136052,
+    "travelledDistance": 344136052,
     "partsId": [
       44,
       13,
@@ -2942,7 +2942,7 @@
   {
     "make": "Lamborghini",
     "model": "Diablo",
-    "traveledDistance": 379116231,
+    "travelledDistance": 379116231,
     "partsId": [
       97,
       113,
@@ -2960,7 +2960,7 @@
   {
     "make": "Lamborghini",
     "model": "Gallardo",
-    "traveledDistance": 437885784,
+    "travelledDistance": 437885784,
     "partsId": [
       101,
       29,
@@ -2970,7 +2970,7 @@
   {
     "make": "Lamborghini",
     "model": "Murciélago",
-    "traveledDistance": 499808136,
+    "travelledDistance": 499808136,
     "partsId": [
       43,
       20,
@@ -2980,7 +2980,7 @@
   {
     "make": "Lamborghini",
     "model": "Gallardo",
-    "traveledDistance": 240371960,
+    "travelledDistance": 240371960,
     "partsId": [
       14,
       84,
@@ -2998,7 +2998,7 @@
   {
     "make": "Lamborghini",
     "model": "Diablo",
-    "traveledDistance": 400917306,
+    "travelledDistance": 400917306,
     "partsId": [
       36,
       37,
@@ -3008,7 +3008,7 @@
   {
     "make": "Ferrari",
     "model": "Daytona",
-    "traveledDistance": 316270662,
+    "travelledDistance": 316270662,
     "partsId": [
       113,
       83,
@@ -3021,7 +3021,7 @@
   {
     "make": "Ferrari",
     "model": "250 GTO",
-    "traveledDistance": 245546172,
+    "travelledDistance": 245546172,
     "partsId": [
       117,
       24,
@@ -3039,7 +3039,7 @@
   {
     "make": "Ferrari",
     "model": "F430",
-    "traveledDistance": 397106659,
+    "travelledDistance": 397106659,
     "partsId": [
       38,
       14,
@@ -3049,7 +3049,7 @@
   {
     "make": "Ferrari",
     "model": "275",
-    "traveledDistance": 448008546,
+    "travelledDistance": 448008546,
     "partsId": [
       7,
       45,
@@ -3059,7 +3059,7 @@
   {
     "make": "Ferrari",
     "model": "F430",
-    "traveledDistance": 403805820,
+    "travelledDistance": 403805820,
     "partsId": [
       27,
       88,
@@ -3077,7 +3077,7 @@
   {
     "make": "Ferrari",
     "model": "F40",
-    "traveledDistance": 106050998,
+    "travelledDistance": 106050998,
     "partsId": [
       59,
       103,
@@ -3090,7 +3090,7 @@
   {
     "make": "Ferrari",
     "model": "250 GTO",
-    "traveledDistance": 10791694,
+    "travelledDistance": 10791694,
     "partsId": [
       20,
       76,
@@ -3100,7 +3100,7 @@
   {
     "make": "Ferrari",
     "model": "Daytona",
-    "traveledDistance": 351364846,
+    "travelledDistance": 351364846,
     "partsId": [
       1,
       16,
@@ -3118,7 +3118,7 @@
   {
     "make": "Ferrari",
     "model": "275",
-    "traveledDistance": 5436105,
+    "travelledDistance": 5436105,
     "partsId": [
       68,
       36,
@@ -3128,7 +3128,7 @@
   {
     "make": "Ferrari",
     "model": "250 GTO",
-    "traveledDistance": 455536599,
+    "travelledDistance": 455536599,
     "partsId": [
       113,
       112,
@@ -3138,7 +3138,7 @@
   {
     "make": "Ferrari",
     "model": "F40",
-    "traveledDistance": 262060470,
+    "travelledDistance": 262060470,
     "partsId": [
       5,
       15,
@@ -3156,7 +3156,7 @@
   {
     "make": "Ferrari",
     "model": "250 GTO",
-    "traveledDistance": 328086491,
+    "travelledDistance": 328086491,
     "partsId": [
       56,
       2,
@@ -3166,7 +3166,7 @@
   {
     "make": "Ferrari",
     "model": "F430",
-    "traveledDistance": 235611505,
+    "travelledDistance": 235611505,
     "partsId": [
       37,
       17,
@@ -3176,7 +3176,7 @@
   {
     "make": "Ferrari",
     "model": "Daytona",
-    "traveledDistance": 30312194,
+    "travelledDistance": 30312194,
     "partsId": [
       2,
       96,
@@ -3194,7 +3194,7 @@
   {
     "make": "Ferrari",
     "model": "F40",
-    "traveledDistance": 69764556,
+    "travelledDistance": 69764556,
     "partsId": [
       66,
       108,
@@ -3204,7 +3204,7 @@
   {
     "make": "Ferrari",
     "model": "250 GTO",
-    "traveledDistance": 496765811,
+    "travelledDistance": 496765811,
     "partsId": [
       32,
       98,
@@ -3217,7 +3217,7 @@
   {
     "make": "Ferrari",
     "model": "275",
-    "traveledDistance": 164216748,
+    "travelledDistance": 164216748,
     "partsId": [
       13,
       79,
@@ -3235,7 +3235,7 @@
   {
     "make": "Ferrari",
     "model": "Enzo",
-    "traveledDistance": 497163085,
+    "travelledDistance": 497163085,
     "partsId": [
       82,
       19,
@@ -3245,7 +3245,7 @@
   {
     "make": "Ferrari",
     "model": "Daytona",
-    "traveledDistance": 293676308,
+    "travelledDistance": 293676308,
     "partsId": [
       101,
       102,
@@ -3255,7 +3255,7 @@
   {
     "make": "Alfa Romeo",
     "model": "Giulia",
-    "traveledDistance": 451741545,
+    "travelledDistance": 451741545,
     "partsId": [
       101,
       113,
@@ -3273,7 +3273,7 @@
   {
     "make": "Alfa Romeo",
     "model": "Giulietta",
-    "traveledDistance": 128074332,
+    "travelledDistance": 128074332,
     "partsId": [
       67,
       43,
@@ -3286,7 +3286,7 @@
   {
     "make": "Alfa Romeo",
     "model": "AR51",
-    "traveledDistance": 452362116,
+    "travelledDistance": 452362116,
     "partsId": [
       60,
       9,
@@ -3296,7 +3296,7 @@
   {
     "make": "Alfa Romeo",
     "model": "Alfetta",
-    "traveledDistance": 227419636,
+    "travelledDistance": 227419636,
     "partsId": [
       35,
       30,
@@ -3314,7 +3314,7 @@
   {
     "make": "Alfa Romeo",
     "model": "75",
-    "traveledDistance": 338929990,
+    "travelledDistance": 338929990,
     "partsId": [
       38,
       15,
@@ -3324,7 +3324,7 @@
   {
     "make": "Alfa Romeo",
     "model": "AR51",
-    "traveledDistance": 273101528,
+    "travelledDistance": 273101528,
     "partsId": [
       60,
       8,
@@ -3334,7 +3334,7 @@
   {
     "make": "Alfa Romeo",
     "model": "156",
-    "traveledDistance": 434781563,
+    "travelledDistance": 434781563,
     "partsId": [
       14,
       30,
@@ -3352,7 +3352,7 @@
   {
     "make": "Alfa Romeo",
     "model": "Giulietta",
-    "traveledDistance": 436415485,
+    "travelledDistance": 436415485,
     "partsId": [
       60,
       18,
@@ -3362,7 +3362,7 @@
   {
     "make": "Alfa Romeo",
     "model": "164",
-    "traveledDistance": 385298945,
+    "travelledDistance": 385298945,
     "partsId": [
       43,
       61,
@@ -3372,7 +3372,7 @@
   {
     "make": "Alfa Romeo",
     "model": "75",
-    "traveledDistance": 512903265,
+    "travelledDistance": 512903265,
     "partsId": [
       37,
       40,
@@ -3390,7 +3390,7 @@
   {
     "make": "Alfa Romeo",
     "model": "Giulietta",
-    "traveledDistance": 519844092,
+    "travelledDistance": 519844092,
     "partsId": [
       115,
       20,
@@ -3400,7 +3400,7 @@
   {
     "make": "Alfa Romeo",
     "model": "156",
-    "traveledDistance": 274003107,
+    "travelledDistance": 274003107,
     "partsId": [
       37,
       36,
@@ -3413,7 +3413,7 @@
   {
     "make": "Alfa Romeo",
     "model": "Giulietta",
-    "traveledDistance": 193584127,
+    "travelledDistance": 193584127,
     "partsId": [
       85,
       9,
@@ -3431,7 +3431,7 @@
   {
     "make": "Alfa Romeo",
     "model": "75",
-    "traveledDistance": 492649694,
+    "travelledDistance": 492649694,
     "partsId": [
       102,
       63,
@@ -3441,7 +3441,7 @@
   {
     "make": "Peugeot",
     "model": "206",
-    "traveledDistance": 225031436,
+    "travelledDistance": 225031436,
     "partsId": [
       12,
       105,
@@ -3451,7 +3451,7 @@
   {
     "make": "Peugeot",
     "model": "405",
-    "traveledDistance": 428581244,
+    "travelledDistance": 428581244,
     "partsId": [
       19,
       57,
@@ -3469,7 +3469,7 @@
   {
     "make": "Peugeot",
     "model": "206",
-    "traveledDistance": 471512014,
+    "travelledDistance": 471512014,
     "partsId": [
       94,
       110,
@@ -3482,7 +3482,7 @@
   {
     "make": "Peugeot",
     "model": "405",
-    "traveledDistance": 255575847,
+    "travelledDistance": 255575847,
     "partsId": [
       80,
       113,
@@ -3492,7 +3492,7 @@
   {
     "make": "Peugeot",
     "model": "306",
-    "traveledDistance": 138733144,
+    "travelledDistance": 138733144,
     "partsId": [
       98,
       108,
@@ -3510,7 +3510,7 @@
   {
     "make": "Peugeot",
     "model": "308",
-    "traveledDistance": 235475304,
+    "travelledDistance": 235475304,
     "partsId": [
       4,
       18,
@@ -3520,7 +3520,7 @@
   {
     "make": "Peugeot",
     "model": "407",
-    "traveledDistance": 497809602,
+    "travelledDistance": 497809602,
     "partsId": [
       98,
       70,
@@ -3530,7 +3530,7 @@
   {
     "make": "Peugeot",
     "model": "306",
-    "traveledDistance": 343442559,
+    "travelledDistance": 343442559,
     "partsId": [
       73,
       11,
@@ -3548,7 +3548,7 @@
   {
     "make": "Peugeot",
     "model": "308",
-    "traveledDistance": 229420070,
+    "travelledDistance": 229420070,
     "partsId": [
       106,
       59,
@@ -3558,7 +3558,7 @@
   {
     "make": "Peugeot",
     "model": "405",
-    "traveledDistance": 179145987,
+    "travelledDistance": 179145987,
     "partsId": [
       26,
       101,
@@ -3568,7 +3568,7 @@
   {
     "make": "Peugeot",
     "model": "306",
-    "traveledDistance": 201912836,
+    "travelledDistance": 201912836,
     "partsId": [
       7,
       113,
@@ -3586,7 +3586,7 @@
   {
     "make": "Peugeot",
     "model": "407",
-    "traveledDistance": 422154829,
+    "travelledDistance": 422154829,
     "partsId": [
       55,
       45,
@@ -3596,7 +3596,7 @@
   {
     "make": "Peugeot",
     "model": "206",
-    "traveledDistance": 312468347,
+    "travelledDistance": 312468347,
     "partsId": [
       59,
       78,
@@ -3609,7 +3609,7 @@
   {
     "make": "Peugeot",
     "model": "407",
-    "traveledDistance": 336906707,
+    "travelledDistance": 336906707,
     "partsId": [
       53,
       15,
@@ -3627,7 +3627,7 @@
   {
     "make": "Peugeot",
     "model": "206",
-    "traveledDistance": 310013429,
+    "travelledDistance": 310013429,
     "partsId": [
       26,
       106,
@@ -3637,7 +3637,7 @@
   {
     "make": "Peugeot",
     "model": "308",
-    "traveledDistance": 454503627,
+    "travelledDistance": 454503627,
     "partsId": [
       64,
       70,
@@ -3647,7 +3647,7 @@
   {
     "make": "Peugeot",
     "model": "405",
-    "traveledDistance": 225997773,
+    "travelledDistance": 225997773,
     "partsId": [
       76,
       4,
@@ -3665,7 +3665,7 @@
   {
     "make": "Peugeot",
     "model": "306",
-    "traveledDistance": 72195908,
+    "travelledDistance": 72195908,
     "partsId": [
       97,
       114,
@@ -3678,7 +3678,7 @@
   {
     "make": "Peugeot",
     "model": "405",
-    "traveledDistance": 319350232,
+    "travelledDistance": 319350232,
     "partsId": [
       55,
       78,
@@ -3688,7 +3688,7 @@
   {
     "make": "Peugeot",
     "model": "308",
-    "traveledDistance": 63428253,
+    "travelledDistance": 63428253,
     "partsId": [
       95,
       97,
@@ -3706,7 +3706,7 @@
   {
     "make": "Peugeot",
     "model": "206",
-    "traveledDistance": 167257947,
+    "travelledDistance": 167257947,
     "partsId": [
       115,
       74,
@@ -3716,7 +3716,7 @@
   {
     "make": "Peugeot",
     "model": "206",
-    "traveledDistance": 130139399,
+    "travelledDistance": 130139399,
     "partsId": [
       58,
       58,
@@ -3726,7 +3726,7 @@
   {
     "make": "Citroen",
     "model": "Berlingo",
-    "traveledDistance": 242536078,
+    "travelledDistance": 242536078,
     "partsId": [
       19,
       75,
@@ -3744,7 +3744,7 @@
   {
     "make": "Citroen",
     "model": "C1",
-    "traveledDistance": 396754068,
+    "travelledDistance": 396754068,
     "partsId": [
       65,
       38,
@@ -3754,7 +3754,7 @@
   {
     "make": "Citroen",
     "model": "Berlingo",
-    "traveledDistance": 436804201,
+    "travelledDistance": 436804201,
     "partsId": [
       111,
       71,
@@ -3764,7 +3764,7 @@
   {
     "make": "Citroen",
     "model": "C5",
-    "traveledDistance": 32203443,
+    "travelledDistance": 32203443,
     "partsId": [
       29,
       64,
@@ -3782,7 +3782,7 @@
   {
     "make": "Citroen",
     "model": "C5",
-    "traveledDistance": 347651789,
+    "travelledDistance": 347651789,
     "partsId": [
       64,
       108,
@@ -3792,7 +3792,7 @@
   {
     "make": "Citroen",
     "model": "C8",
-    "traveledDistance": 48263045,
+    "travelledDistance": 48263045,
     "partsId": [
       7,
       87,
@@ -3805,7 +3805,7 @@
   {
     "make": "Citroen",
     "model": "Elysée",
-    "traveledDistance": 4120281,
+    "travelledDistance": 4120281,
     "partsId": [
       106,
       15,
@@ -3823,7 +3823,7 @@
   {
     "make": "Citroen",
     "model": "C1",
-    "traveledDistance": 217089114,
+    "travelledDistance": 217089114,
     "partsId": [
       24,
       12,
@@ -3833,7 +3833,7 @@
   {
     "make": "Citroen",
     "model": "C4",
-    "traveledDistance": 385550653,
+    "travelledDistance": 385550653,
     "partsId": [
       63,
       80,
@@ -3843,7 +3843,7 @@
   {
     "make": "Citroen",
     "model": "C5",
-    "traveledDistance": 38829917,
+    "travelledDistance": 38829917,
     "partsId": [
       79,
       92,
@@ -3861,7 +3861,7 @@
   {
     "make": "Citroen",
     "model": "C1",
-    "traveledDistance": 447103875,
+    "travelledDistance": 447103875,
     "partsId": [
       98,
       64,
@@ -3874,7 +3874,7 @@
   {
     "make": "Citroen",
     "model": "C3",
-    "traveledDistance": 214064329,
+    "travelledDistance": 214064329,
     "partsId": [
       95,
       100,
@@ -3884,7 +3884,7 @@
   {
     "make": "Citroen",
     "model": "C1",
-    "traveledDistance": 389207601,
+    "travelledDistance": 389207601,
     "partsId": [
       9,
       17,
@@ -3902,7 +3902,7 @@
   {
     "make": "Citroen",
     "model": "C4",
-    "traveledDistance": 501689589,
+    "travelledDistance": 501689589,
     "partsId": [
       98,
       13,
@@ -3912,7 +3912,7 @@
   {
     "make": "Citroen",
     "model": "C1",
-    "traveledDistance": 498211182,
+    "travelledDistance": 498211182,
     "partsId": [
       7,
       47,
@@ -3922,7 +3922,7 @@
   {
     "make": "Citroen",
     "model": "C5",
-    "traveledDistance": 98486390,
+    "travelledDistance": 98486390,
     "partsId": [
       42,
       107,
@@ -3940,7 +3940,7 @@
   {
     "make": "Citroen",
     "model": "C3",
-    "traveledDistance": 404111136,
+    "travelledDistance": 404111136,
     "partsId": [
       116,
       95,
@@ -3950,7 +3950,7 @@
   {
     "make": "Citroen",
     "model": "C8",
-    "traveledDistance": 118984206,
+    "travelledDistance": 118984206,
     "partsId": [
       33,
       49,
@@ -3960,7 +3960,7 @@
   {
     "make": "Citroen",
     "model": "C1",
-    "traveledDistance": 174494239,
+    "travelledDistance": 174494239,
     "partsId": [
       24,
       31,
@@ -3978,7 +3978,7 @@
   {
     "make": "Citroen",
     "model": "C3",
-    "traveledDistance": 486926519,
+    "travelledDistance": 486926519,
     "partsId": [
       1,
       54,
@@ -3988,7 +3988,7 @@
   {
     "make": "Citroen",
     "model": "Elysée",
-    "traveledDistance": 277281794,
+    "travelledDistance": 277281794,
     "partsId": [
       85,
       41,
@@ -4001,7 +4001,7 @@
   {
     "make": "Citroen",
     "model": "C1",
-    "traveledDistance": 130512554,
+    "travelledDistance": 130512554,
     "partsId": [
       50,
       51,
@@ -4019,7 +4019,7 @@
   {
     "make": "Citroen",
     "model": "C4",
-    "traveledDistance": 404134333,
+    "travelledDistance": 404134333,
     "partsId": [
       86,
       18,
@@ -4029,7 +4029,7 @@
   {
     "make": "Citroen",
     "model": "C3",
-    "traveledDistance": 295402694,
+    "travelledDistance": 295402694,
     "partsId": [
       53,
       62,
@@ -4039,7 +4039,7 @@
   {
     "make": "Citroen",
     "model": "C1",
-    "traveledDistance": 339260713,
+    "travelledDistance": 339260713,
     "partsId": [
       113,
       41,
@@ -4057,7 +4057,7 @@
   {
     "make": "Citroen",
     "model": "C5",
-    "traveledDistance": 476502389,
+    "travelledDistance": 476502389,
     "partsId": [
       18,
       43,
@@ -4070,7 +4070,7 @@
   {
     "make": "Citroen",
     "model": "C1",
-    "traveledDistance": 505029588,
+    "travelledDistance": 505029588,
     "partsId": [
       114,
       58,
@@ -4080,7 +4080,7 @@
   {
     "make": "Citroen",
     "model": "C8",
-    "traveledDistance": 309422851,
+    "travelledDistance": 309422851,
     "partsId": [
       11,
       79,
@@ -4098,7 +4098,7 @@
   {
     "make": "Seat",
     "model": "Toledo",
-    "traveledDistance": 144201918,
+    "travelledDistance": 144201918,
     "partsId": [
       73,
       109,
@@ -4108,7 +4108,7 @@
   {
     "make": "Seat",
     "model": "Mii",
-    "traveledDistance": 304944609,
+    "travelledDistance": 304944609,
     "partsId": [
       91,
       106,
@@ -4118,7 +4118,7 @@
   {
     "make": "Seat",
     "model": "Ibiza",
-    "traveledDistance": 333280407,
+    "travelledDistance": 333280407,
     "partsId": [
       28,
       40,
@@ -4136,7 +4136,7 @@
   {
     "make": "Seat",
     "model": "Mii",
-    "traveledDistance": 508783407,
+    "travelledDistance": 508783407,
     "partsId": [
       8,
       10,
@@ -4146,7 +4146,7 @@
   {
     "make": "Seat",
     "model": "Ibiza",
-    "traveledDistance": 182688172,
+    "travelledDistance": 182688172,
     "partsId": [
       108,
       80,
@@ -4156,7 +4156,7 @@
   {
     "make": "Seat",
     "model": "Mii",
-    "traveledDistance": 473519569,
+    "travelledDistance": 473519569,
     "partsId": [
       69,
       2,
@@ -4174,7 +4174,7 @@
   {
     "make": "Seat",
     "model": "Toledo",
-    "traveledDistance": 43341591,
+    "travelledDistance": 43341591,
     "partsId": [
       40,
       112,
@@ -4184,7 +4184,7 @@
   {
     "make": "Seat",
     "model": "Toledo",
-    "traveledDistance": 453385478,
+    "travelledDistance": 453385478,
     "partsId": [
       55,
       82,
@@ -4197,7 +4197,7 @@
   {
     "make": "Seat",
     "model": "Ibiza",
-    "traveledDistance": 197399178,
+    "travelledDistance": 197399178,
     "partsId": [
       88,
       102,
@@ -4215,7 +4215,7 @@
   {
     "make": "Seat",
     "model": "Mii",
-    "traveledDistance": 485157233,
+    "travelledDistance": 485157233,
     "partsId": [
       98,
       78,
@@ -4225,7 +4225,7 @@
   {
     "make": "Seat",
     "model": "Toledo",
-    "traveledDistance": 266451047,
+    "travelledDistance": 266451047,
     "partsId": [
       31,
       58,
@@ -4235,7 +4235,7 @@
   {
     "make": "Seat",
     "model": "Mii",
-    "traveledDistance": 306842982,
+    "travelledDistance": 306842982,
     "partsId": [
       42,
       70,
@@ -4253,7 +4253,7 @@
   {
     "make": "Seat",
     "model": "Toledo",
-    "traveledDistance": 196618703,
+    "travelledDistance": 196618703,
     "partsId": [
       50,
       12,
@@ -4266,7 +4266,7 @@
   {
     "make": "Seat",
     "model": "Ibiza",
-    "traveledDistance": 390958489,
+    "travelledDistance": 390958489,
     "partsId": [
       42,
       53,
@@ -4276,7 +4276,7 @@
   {
     "make": "Seat",
     "model": "Toledo",
-    "traveledDistance": 172222867,
+    "travelledDistance": 172222867,
     "partsId": [
       76,
       10,
@@ -4294,7 +4294,7 @@
   {
     "make": "Seat",
     "model": "Mii",
-    "traveledDistance": 20379344,
+    "travelledDistance": 20379344,
     "partsId": [
       51,
       83,
@@ -4304,7 +4304,7 @@
   {
     "make": "Skoda",
     "model": "Citigo",
-    "traveledDistance": 353678487,
+    "travelledDistance": 353678487,
     "partsId": [
       63,
       91,
@@ -4314,7 +4314,7 @@
   {
     "make": "Skoda",
     "model": "Rapid Spaceback",
-    "traveledDistance": 477031551,
+    "travelledDistance": 477031551,
     "partsId": [
       73,
       68,
@@ -4332,7 +4332,7 @@
   {
     "make": "Skoda",
     "model": "Citigo",
-    "traveledDistance": 326326638,
+    "travelledDistance": 326326638,
     "partsId": [
       59,
       32,
@@ -4342,7 +4342,7 @@
   {
     "make": "Skoda",
     "model": "Citigo",
-    "traveledDistance": 186951373,
+    "travelledDistance": 186951373,
     "partsId": [
       76,
       64,
@@ -4352,7 +4352,7 @@
   {
     "make": "Skoda",
     "model": "Citigo",
-    "traveledDistance": 334919977,
+    "travelledDistance": 334919977,
     "partsId": [
       33,
       1,
@@ -4370,7 +4370,7 @@
   {
     "make": "Skoda",
     "model": "Fabia",
-    "traveledDistance": 506138915,
+    "travelledDistance": 506138915,
     "partsId": [
       18,
       52,
@@ -4380,7 +4380,7 @@
   {
     "make": "Skoda",
     "model": "Citigo",
-    "traveledDistance": 46712305,
+    "travelledDistance": 46712305,
     "partsId": [
       98,
       89,
@@ -4393,7 +4393,7 @@
   {
     "make": "Skoda",
     "model": "Fabia",
-    "traveledDistance": 57662452,
+    "travelledDistance": 57662452,
     "partsId": [
       15,
       32,
@@ -4411,7 +4411,7 @@
   {
     "make": "Skoda",
     "model": "Rapid",
-    "traveledDistance": 267561546,
+    "travelledDistance": 267561546,
     "partsId": [
       57,
       72,
@@ -4421,7 +4421,7 @@
   {
     "make": "Skoda",
     "model": "Fabia",
-    "traveledDistance": 58958961,
+    "travelledDistance": 58958961,
     "partsId": [
       79,
       31,
@@ -4431,7 +4431,7 @@
   {
     "make": "Skoda",
     "model": "Fabia",
-    "traveledDistance": 231485138,
+    "travelledDistance": 231485138,
     "partsId": [
       97,
       4,
@@ -4449,7 +4449,7 @@
   {
     "make": "Skoda",
     "model": "Rapid",
-    "traveledDistance": 490651056,
+    "travelledDistance": 490651056,
     "partsId": [
       2,
       56,
@@ -4462,7 +4462,7 @@
   {
     "make": "Skoda",
     "model": "Rapid Spaceback",
-    "traveledDistance": 371247268,
+    "travelledDistance": 371247268,
     "partsId": [
       57,
       87,
@@ -4472,7 +4472,7 @@
   {
     "make": "Skoda",
     "model": "Fabia",
-    "traveledDistance": 520029040,
+    "travelledDistance": 520029040,
     "partsId": [
       73,
       31,
@@ -4490,7 +4490,7 @@
   {
     "make": "Dacia",
     "model": "Logan",
-    "traveledDistance": 71570263,
+    "travelledDistance": 71570263,
     "partsId": [
       76,
       36,
@@ -4500,7 +4500,7 @@
   {
     "make": "Dacia",
     "model": "Sandero Stepway",
-    "traveledDistance": 249776933,
+    "travelledDistance": 249776933,
     "partsId": [
       36,
       52,
@@ -4510,7 +4510,7 @@
   {
     "make": "Dacia",
     "model": "Sandero",
-    "traveledDistance": 443192096,
+    "travelledDistance": 443192096,
     "partsId": [
       40,
       50,
@@ -4528,7 +4528,7 @@
   {
     "make": "Dacia",
     "model": "Dokker",
-    "traveledDistance": 73324963,
+    "travelledDistance": 73324963,
     "partsId": [
       44,
       39,
@@ -4538,7 +4538,7 @@
   {
     "make": "Dacia",
     "model": "Sandero",
-    "traveledDistance": 451514728,
+    "travelledDistance": 451514728,
     "partsId": [
       94,
       78,
@@ -4548,7 +4548,7 @@
   {
     "make": "Dacia",
     "model": "Logan",
-    "traveledDistance": 459233576,
+    "travelledDistance": 459233576,
     "partsId": [
       13,
       34,
@@ -4566,7 +4566,7 @@
   {
     "make": "Dacia",
     "model": "Logan",
-    "traveledDistance": 84177042,
+    "travelledDistance": 84177042,
     "partsId": [
       61,
       52,
@@ -4576,7 +4576,7 @@
   {
     "make": "Dacia",
     "model": "Dokker",
-    "traveledDistance": 316948000,
+    "travelledDistance": 316948000,
     "partsId": [
       2,
       3,
@@ -4589,7 +4589,7 @@
   {
     "make": "Dacia",
     "model": "Sandero",
-    "traveledDistance": 410003689,
+    "travelledDistance": 410003689,
     "partsId": [
       72,
       32,
@@ -4607,7 +4607,7 @@
   {
     "make": "Dacia",
     "model": "Dokker",
-    "traveledDistance": 294315564,
+    "travelledDistance": 294315564,
     "partsId": [
       64,
       84,
@@ -4617,7 +4617,7 @@
   {
     "make": "Dacia",
     "model": "Logan",
-    "traveledDistance": 315644424,
+    "travelledDistance": 315644424,
     "partsId": [
       13,
       88,
@@ -4627,7 +4627,7 @@
   {
     "make": "Dacia",
     "model": "Duster",
-    "traveledDistance": 423453236,
+    "travelledDistance": 423453236,
     "partsId": [
       100,
       116,
@@ -4645,7 +4645,7 @@
   {
     "make": "Dacia",
     "model": "Sandero Stepway",
-    "traveledDistance": 279714744,
+    "travelledDistance": 279714744,
     "partsId": [
       73,
       10,
@@ -4658,7 +4658,7 @@
   {
     "make": "Dacia",
     "model": "Duster",
-    "traveledDistance": 297581436,
+    "travelledDistance": 297581436,
     "partsId": [
       56,
       66,
@@ -4668,7 +4668,7 @@
   {
     "make": "Dacia",
     "model": "Logan",
-    "traveledDistance": 231160691,
+    "travelledDistance": 231160691,
     "partsId": [
       14,
       78,
