@@ -1,5 +1,6 @@
 ﻿namespace CarDealer;
 
+using System.Globalization;
 using Microsoft.EntityFrameworkCore;
 
 using AutoMapper;
@@ -8,8 +9,6 @@ using Newtonsoft.Json;
 using CarDealer.Data;
 using CarDealer.DTOs.Import;
 using CarDealer.Models;
-using Castle.Core.Resource;
-using System.Globalization;
 
 public class StartUp
 {
@@ -41,7 +40,10 @@ public class StartUp
         //Console.WriteLine(GetOrderedCustomers(context));
 
         //15. Export Cars from Make Toyota
-        Console.WriteLine(GetCarsFromMakeToyota(context));
+        //Console.WriteLine(GetCarsFromMakeToyota(context));
+
+        //16. Export Local Suppliers
+        Console.WriteLine(GetLocalSuppliers(context));
     }
 
     //09. Import Suppliers
@@ -192,6 +194,22 @@ public class StartUp
                 .ToArray();
 
         return JsonConvert.SerializeObject(cars, Formatting.Indented);
+    }
+
+    //16. Export Local Suppliers
+    public static string GetLocalSuppliers(CarDealerContext context)
+    {
+        var suppliers = context.Suppliers
+            .Where(s => s.IsImporter == false)
+            .Select(s => new
+            {
+                s.Id,
+                s.Name,
+                PartsCount = s.Parts.Count()
+            })
+            .ToArray();
+
+        return JsonConvert.SerializeObject(suppliers, Formatting.Indented);
     }
 
     private static IMapper CreateMapper()
