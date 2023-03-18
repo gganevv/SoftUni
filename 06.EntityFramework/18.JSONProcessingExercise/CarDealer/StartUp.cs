@@ -8,6 +8,7 @@ using Newtonsoft.Json;
 using CarDealer.Data;
 using CarDealer.DTOs.Import;
 using CarDealer.Models;
+using Castle.Core.Resource;
 
 public class StartUp
 {
@@ -28,8 +29,12 @@ public class StartUp
         //Console.WriteLine(ImportCars(context, inputJson));
 
         //12. Import Customers
-        string inputJson = File.ReadAllText("../../../Datasets/customers.json");
-        Console.WriteLine(ImportCustomers(context, inputJson));
+        //string inputJson = File.ReadAllText("../../../Datasets/customers.json");
+        //Console.WriteLine(ImportCustomers(context, inputJson));
+
+        //13. Import Sales
+        string inputJson = File.ReadAllText("../../../Datasets/sales.json");
+        Console.WriteLine(ImportSales(context, inputJson));
     }
 
     //09. Import Suppliers
@@ -124,6 +129,25 @@ public class StartUp
         context.SaveChanges();
 
         return $"Successfully imported {customers.Count}.";
+    }
+
+    //13. Import Sales
+    public static string ImportSales(CarDealerContext context, string inputJson)
+    {
+        IMapper mapper = CreateMapper();
+        ImportSaleDto[] importSaleDtos = JsonConvert.DeserializeObject<ImportSaleDto[]>(inputJson);
+        HashSet<Sale> sales = new HashSet<Sale>();
+
+        foreach (var saleDto in importSaleDtos)
+        {
+            Sale sale = mapper.Map<Sale>(saleDto);
+            sales.Add(sale);
+        }
+
+        context.AddRange(sales);
+        context.SaveChanges();
+
+        return $"Successfully imported {sales.Count}.";
     }
 
     private static IMapper CreateMapper()

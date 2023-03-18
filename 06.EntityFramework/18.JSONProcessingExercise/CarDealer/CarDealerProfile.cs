@@ -33,5 +33,11 @@ public class CarDealerProfile : Profile
             .ForMember(d => d.Name, opt => opt.MapFrom(s => s.Name))
             .ForMember(d => d.BirthDate, opt => opt.MapFrom(s => s.BirthDate))
             .ForMember(d => d.IsYoungDriver, opt => opt.MapFrom(s => s.IsYoungDriver));
+
+        //Sale
+        this.CreateMap<ImportSaleDto, Sale>()
+            .ForMember(d => d.CustomerId, opt => opt.MapFrom(s => s.CustomerId))
+            .ForMember(d => d.CarId, opt => opt.MapFrom(s => s.CarId))
+            .ForMember(d => d.Discount, opt => opt.MapFrom(s => s.Discount));
     }
 }
