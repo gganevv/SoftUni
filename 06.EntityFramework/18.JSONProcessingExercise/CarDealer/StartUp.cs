@@ -178,20 +178,20 @@ public class StartUp
     //15. Export Cars from Make Toyota
     public static string GetCarsFromMakeToyota(CarDealerContext context)
     {
-        var carsFromMakeToyota = context.Cars
-            .Where(c => c.Make == "Toyota")
-            .OrderBy(c => c.Model)
-            .ThenByDescending(c => c.TravelledDistance)
-            .Select(c => new
-            {
-                Id = c.Id,
-                Make = c.Make,
-                Model = c.Model,
-                TraveledDistance = c.TravelledDistance
-            })
-            .ToArray();
+        var cars = context.Cars
+                .Where(c => c.Make == "Toyota")
+                .OrderBy(c => c.Model)
+                .ThenByDescending(c => c.TravelledDistance)
+                .Select(c => new
+                {
+                    c.Id,
+                    c.Make,
+                    c.Model,
+                    c.TravelledDistance
+                })
+                .ToArray();
 
-        return JsonConvert.SerializeObject(carsFromMakeToyota, Formatting.Indented);
+        return JsonConvert.SerializeObject(cars, Formatting.Indented);
     }
 
     private static IMapper CreateMapper()
