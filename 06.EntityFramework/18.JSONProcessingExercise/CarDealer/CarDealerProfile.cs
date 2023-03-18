@@ -1,6 +1,7 @@
 ﻿namespace CarDealer;
 
 using AutoMapper;
+
 using CarDealer.DTOs.Import;
 using CarDealer.Models;
 
@@ -20,5 +21,11 @@ public class CarDealerProfile : Profile
             .ForMember(d => d.Quantity, opt => opt.MapFrom(s => s.Quantity))
             .ForMember(d => d.SupplierId, opt => opt.MapFrom(s => s.SupplierId));
 
+        //Car
+        this.CreateMap<ImportCarDto, Car>()
+            .ForMember(d => d.Make, opt => opt.MapFrom(s => s.Make))
+            .ForMember(d => d.Model, opt => opt.MapFrom(s => s.Model))
+            .ForMember(d => d.TravelledDistance, opt => opt.MapFrom(s => s.TravelledDistance))
+            .ForMember(d => d.PartsCars, opt => opt.Ignore());
     }
 }
