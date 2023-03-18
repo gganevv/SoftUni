@@ -27,5 +27,11 @@ public class CarDealerProfile : Profile
             .ForMember(d => d.Model, opt => opt.MapFrom(s => s.Model))
             .ForMember(d => d.TravelledDistance, opt => opt.MapFrom(s => s.TravelledDistance))
             .ForMember(d => d.PartsCars, opt => opt.Ignore());
+
+        //Customer
+        this.CreateMap<ImportCustomerDto, Customer>()
+            .ForMember(d => d.Name, opt => opt.MapFrom(s => s.Name))
+            .ForMember(d => d.BirthDate, opt => opt.MapFrom(s => s.BirthDate))
+            .ForMember(d => d.IsYoungDriver, opt => opt.MapFrom(s => s.IsYoungDriver));
     }
 }

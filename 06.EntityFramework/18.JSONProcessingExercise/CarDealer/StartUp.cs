@@ -1,13 +1,13 @@
 ﻿namespace CarDealer;
 
+using Microsoft.EntityFrameworkCore;
+
 using AutoMapper;
 using Newtonsoft.Json;
 
 using CarDealer.Data;
 using CarDealer.DTOs.Import;
 using CarDealer.Models;
-using System.IO;
-using Microsoft.EntityFrameworkCore;
 
 public class StartUp
 {
@@ -24,8 +24,12 @@ public class StartUp
         //Console.WriteLine(ImportParts(context, inputJson));
 
         //11. Import Cars
-        string inputJson = File.ReadAllText("../../../Datasets/cars.json");
-        Console.WriteLine(ImportCars(context, inputJson));
+        //string inputJson = File.ReadAllText("../../../Datasets/cars.json");
+        //Console.WriteLine(ImportCars(context, inputJson));
+
+        //12. Import Customers
+        string inputJson = File.ReadAllText("../../../Datasets/customers.json");
+        Console.WriteLine(ImportCustomers(context, inputJson));
     }
 
     //09. Import Suppliers
@@ -101,6 +105,25 @@ public class StartUp
         context.SaveChanges();
 
         return $"Successfully imported {cars.Count}.";
+    }
+
+    //12. Import Customers 
+    public static string ImportCustomers(CarDealerContext context, string inputJson)
+    {
+        IMapper mapper = CreateMapper();
+        HashSet<Customer> customers = new HashSet<Customer>();
+
+        ImportCustomerDto[] importCustomerDtos = JsonConvert.DeserializeObject<ImportCustomerDto[]>(inputJson);
+        foreach (var customerDto in importCustomerDtos)
+        {
+            Customer customer = mapper.Map<Customer>(customerDto);
+            customers.Add(customer);
+        }
+
+        context.Customers.AddRange(customers);
+        context.SaveChanges();
+
+        return $"Successfully imported {customers.Count}.";
     }
 
     private static IMapper CreateMapper()
