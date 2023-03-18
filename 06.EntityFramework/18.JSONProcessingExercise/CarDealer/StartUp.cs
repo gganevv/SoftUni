@@ -9,6 +9,7 @@ using CarDealer.Data;
 using CarDealer.DTOs.Import;
 using CarDealer.Models;
 using Castle.Core.Resource;
+using System.Globalization;
 
 public class StartUp
 {
@@ -33,8 +34,11 @@ public class StartUp
         //Console.WriteLine(ImportCustomers(context, inputJson));
 
         //13. Import Sales
-        string inputJson = File.ReadAllText("../../../Datasets/sales.json");
-        Console.WriteLine(ImportSales(context, inputJson));
+        //string inputJson = File.ReadAllText("../../../Datasets/sales.json");
+        //Console.WriteLine(ImportSales(context, inputJson));
+
+        //14. Export Ordered Customers
+        Console.WriteLine(GetOrderedCustomers(context));
     }
 
     //09. Import Suppliers
@@ -148,6 +152,24 @@ public class StartUp
         context.SaveChanges();
 
         return $"Successfully imported {sales.Count}.";
+    }
+
+    //14. Export Ordered Customers
+    public static string GetOrderedCustomers(CarDealerContext context)
+    {
+        var customers = context.Customers
+            .OrderBy(x => x.BirthDate)
+            .ThenBy(x => x.IsYoungDriver)
+            .Select(c => new
+            {
+                c.Name,
+                BirthDate = c.BirthDate.ToString("dd/MM/yyyy", CultureInfo.InvariantCulture),
+                c.IsYoungDriver
+            })
+            .AsNoTracking()
+            .ToList();
+
+        return JsonConvert.SerializeObject(customers, Formatting.Indented);
     }
 
     private static IMapper CreateMapper()
