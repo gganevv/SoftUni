@@ -17,8 +17,12 @@ public class StartUp
         //Console.WriteLine(ImportUsers(context, inputXml));
 
         //02. Import Products
-        string inputXml = File.ReadAllText("../../../Datasets/products.xml");
-        Console.WriteLine(ImportProducts(context, inputXml));
+        //string inputXml = File.ReadAllText("../../../Datasets/products.xml");
+        //Console.WriteLine(ImportProducts(context, inputXml));
+
+        //03. Import Categories
+        string inputXml = File.ReadAllText("../../../Datasets/categories.xml");
+        Console.WriteLine(ImportCategories(context, inputXml));
     }
 
     //01. Import Users
@@ -60,6 +64,30 @@ public class StartUp
         context.SaveChanges();
 
         return $"Successfully imported {products.Count}";
+    }
+
+    //03. Import Categories
+    public static string ImportCategories(ProductShopContext context, string inputXml)
+    {
+        IMapper mapper = CreateMapper();
+        XmlHelper xmlHelper = new XmlHelper();
+
+        var categoryDtos = xmlHelper.Deserialize<ImportCategoryDto[]>(inputXml, "Categories");
+        var categories = new HashSet<Category>();
+
+        foreach (var categoryDto in categoryDtos)
+        {
+            Category category = mapper.Map<Category>(categoryDto);
+            if (category.Name != null)
+            {
+                categories.Add(category);
+            }
+        }
+
+        context.Categories.AddRange(categories);
+        context.SaveChanges();
+
+        return $"Successfully imported {categories.Count}";
     }
 
     private static IMapper CreateMapper()
