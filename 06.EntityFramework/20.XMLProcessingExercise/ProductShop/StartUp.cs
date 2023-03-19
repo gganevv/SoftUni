@@ -1,10 +1,9 @@
-﻿namespace ProductShop
-{
-    public class StartUp
-    {
-        public static void Main()
-        {
+﻿namespace ProductShop;
 
-        }
+public class StartUp
+{
+    public static void Main()
+    {
+
     }
 }

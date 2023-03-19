@@ -1,7 +1,6 @@
-﻿namespace ProductShop.Data
+﻿namespace ProductShop.Data;
+
+public static class Configuration
 {
-    public static class Configuration
-    {
-        public const string ConnectionString = @"Server=.;Database=ProductShop;Integrated Security=True;Encrypt=False";
-    }
+    public const string ConnectionString = @"Server=.;Database=ProductShop2;Integrated Security=True;Encrypt=False";
 }
