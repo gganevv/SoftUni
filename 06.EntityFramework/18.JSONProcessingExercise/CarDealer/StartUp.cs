@@ -9,6 +9,7 @@ using Newtonsoft.Json;
 using CarDealer.Data;
 using CarDealer.DTOs.Import;
 using CarDealer.Models;
+using Newtonsoft.Json.Serialization;
 
 public class StartUp
 {
@@ -46,7 +47,10 @@ public class StartUp
         //Console.WriteLine(GetLocalSuppliers(context));
 
         //17. Export Cars with Their List of Parts
-        Console.WriteLine(GetCarsWithTheirListOfParts(context));
+        //Console.WriteLine(GetCarsWithTheirListOfParts(context));
+
+        //18. Export Total Sales by Customer
+        Console.WriteLine(GetTotalSalesByCustomer(context));
     }
 
     //09. Import Suppliers
@@ -156,7 +160,7 @@ public class StartUp
             sales.Add(sale);
         }
 
-        context.AddRange(sales);
+        context.Sales.AddRange(sales);
         context.SaveChanges();
 
         return $"Successfully imported {sales.Count}.";
@@ -239,11 +243,37 @@ public class StartUp
         return JsonConvert.SerializeObject(cars, Formatting.Indented);
     }
 
+    //18.Export Total Sales by Customer
+    public static string GetTotalSalesByCustomer(CarDealerContext context)
+    {
+        var customers = context.Customers
+            .Where(c => c.Sales.Count >= 1)
+            .Select(c => new
+            {
+                FullName = c.Name,
+                BoughtCars = c.Sales.Count,
+                SpentMoney = c.Sales.SelectMany(s => s.Car.PartsCars.Select(pc => pc.Part.Price)).Sum()
+            })
+            .OrderByDescending(c => c.SpentMoney)
+            .ThenByDescending(c => c.BoughtCars)
+            .ToArray();
+
+        return JsonConvert.SerializeObject(customers, Formatting.Indented, CamelCaseNamingStrategy());
+    }
+
     private static IMapper CreateMapper()
     {
         return new Mapper(new MapperConfiguration(cfg =>
         {
             cfg.AddProfile<CarDealerProfile>();
         }));
+    }
+
+    private static JsonSerializerSettings CamelCaseNamingStrategy()
+    {
+        return new JsonSerializerSettings()
+        {
+            ContractResolver = new CamelCasePropertyNamesContractResolver()
+        };
     }
 }
