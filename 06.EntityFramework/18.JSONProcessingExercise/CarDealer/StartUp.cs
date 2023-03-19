@@ -50,7 +50,10 @@ public class StartUp
         //Console.WriteLine(GetCarsWithTheirListOfParts(context));
 
         //18. Export Total Sales by Customer
-        Console.WriteLine(GetTotalSalesByCustomer(context));
+        //Console.WriteLine(GetTotalSalesByCustomer(context));
+
+        //19. Export Sales with Applied Discount
+        Console.WriteLine(GetSalesWithAppliedDiscount(context));
     }
 
     //09. Import Suppliers
@@ -259,6 +262,29 @@ public class StartUp
             .ToArray();
 
         return JsonConvert.SerializeObject(customers, Formatting.Indented, CamelCaseNamingStrategy());
+    }
+
+    //19. Export Sales with Applied Discount
+    public static string GetSalesWithAppliedDiscount(CarDealerContext context)
+    {
+        var sales = context.Sales
+                .Take(10)
+                .Select(s => new
+                {
+                    car = new
+                    {
+                        s.Car.Make,
+                        s.Car.Model,
+                        s.Car.TravelledDistance
+                    },
+                    customerName = s.Customer.Name,
+                    discount = $"{s.Discount:f2}",
+                    price = $"{s.Car.PartsCars.Sum(p => p.Part.Price):f2}",
+                    priceWithDiscount = $"{s.Car.PartsCars.Sum(p => p.Part.Price) * (1 - s.Discount / 100):f2}"
+                })
+                .ToArray();
+
+        return JsonConvert.SerializeObject(sales, Formatting.Indented);
     }
 
     private static IMapper CreateMapper()
