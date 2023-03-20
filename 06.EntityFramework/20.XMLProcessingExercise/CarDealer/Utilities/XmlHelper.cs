@@ -11,9 +11,7 @@ public class XmlHelper
         XmlSerializer xmlSerializer = new XmlSerializer(typeof(T), xmlRoot);
 
         using StringReader reader = new StringReader(inputXml);
-#pragma warning disable CS8600 // Converting null literal or possible null value to non-nullable type.
         T deserializedDtos = (T)xmlSerializer.Deserialize(reader);
-#pragma warning restore CS8600 // Converting null literal or possible null value to non-nullable type.
 
         return deserializedDtos;
     }
