@@ -1,6 +1,6 @@
-﻿using System.Xml.Serialization;
+﻿namespace ProductShop.DTOs.Export;
 
-namespace ProductShop.DTOs.Export;
+using System.Xml.Serialization;
 
 [XmlType("User")]
 public class ExportSoldProductDto
