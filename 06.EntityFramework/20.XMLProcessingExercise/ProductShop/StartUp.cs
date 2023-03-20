@@ -1,7 +1,5 @@
 ﻿namespace ProductShop;
 
-using Microsoft.EntityFrameworkCore;
-
 using AutoMapper;
 
 using ProductShop.Data;
@@ -33,7 +31,10 @@ public class StartUp
         //Console.WriteLine(ImportCategoryProducts(context, inputXml));
 
         //05. Export Products in Range
-        Console.WriteLine(GetProductsInRange(context));
+        //Console.WriteLine(GetProductsInRange(context));
+
+        //06. Export Sold Products
+        Console.WriteLine(GetSoldProducts(context));
     }
 
     //01. Import Users
@@ -143,6 +144,31 @@ public class StartUp
         string result = xmlHelper.Serialize<ExportProductInRangeDto[]>(products, "Products");
 
         return result;
+    }
+
+    //06. Export Sold Products
+    public static string GetSoldProducts(ProductShopContext context)
+    {
+        XmlHelper xmlHelper = new XmlHelper();
+
+        var products = context.Users
+            .Where(u => u.ProductsSold.Count > 0)
+            .OrderBy(u => u.LastName)
+            .ThenBy(u => u.FirstName)
+            .Take(5)
+            .Select(u => new ExportSoldProductDto
+            {
+                FirstName = u.FirstName,
+                LastName = u.LastName,
+                ProductDtos = u.ProductsSold.Select( p => new ProductDto
+                {
+                    ProductName = p.Name,
+                    Price = p.Price
+                }).ToArray()
+            })
+            .ToArray();
+
+        return xmlHelper.Serialize(products, "Users");
     }
 
     private static IMapper CreateMapper()
