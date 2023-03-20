@@ -1,6 +1,6 @@
-﻿using AutoMapper;
+﻿namespace CarDealer;
 
-namespace CarDealer;
+using AutoMapper;
 
 public class StartUp
 {
