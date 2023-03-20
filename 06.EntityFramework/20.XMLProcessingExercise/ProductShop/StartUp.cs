@@ -1,10 +1,14 @@
-﻿using AutoMapper;
+﻿namespace ProductShop;
+
+using Microsoft.EntityFrameworkCore;
+
+using AutoMapper;
+
 using ProductShop.Data;
+using ProductShop.DTOs.Export;
 using ProductShop.DTOs.Import;
 using ProductShop.Models;
 using ProductShop.Utilities;
-
-namespace ProductShop;
 
 public class StartUp
 {
@@ -25,8 +29,11 @@ public class StartUp
         //Console.WriteLine(ImportCategories(context, inputXml));
 
         //04. Import Categories and Products
-        string inputXml = File.ReadAllText("../../../Datasets/categories-products.xml");
-        Console.WriteLine(ImportCategoryProducts(context, inputXml));
+        //string inputXml = File.ReadAllText("../../../Datasets/categories-products.xml");
+        //Console.WriteLine(ImportCategoryProducts(context, inputXml));
+
+        //05. Export Products in Range
+        Console.WriteLine(GetProductsInRange(context));
     }
 
     //01. Import Users
@@ -113,6 +120,29 @@ public class StartUp
         context.SaveChanges();
 
         return $"Successfully imported {categoryProducts.Count}";
+    }
+
+    //05. Export Products in Range
+    public static string GetProductsInRange(ProductShopContext context)
+    {
+        IMapper mapper = CreateMapper();
+        XmlHelper xmlHelper = new XmlHelper();
+
+        var products = context.Products
+            .Where(x => x.Price >= 500 && x.Price <= 1000)
+            .OrderBy(x => x.Price)
+            .Take(10)
+            .Select(p => new ExportProductInRangeDto()
+            {
+                Price = p.Price,
+                Name = p.Name,
+                BuyerName = p.Buyer.FirstName + " " + p.Buyer.LastName
+            })
+            .ToArray();
+
+        string result = xmlHelper.Serialize<ExportProductInRangeDto[]>(products, "Products");
+
+        return result;
     }
 
     private static IMapper CreateMapper()
