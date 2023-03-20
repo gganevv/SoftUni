@@ -37,7 +37,10 @@ public class StartUp
         //Console.WriteLine(GetSoldProducts(context));
 
         //07. Export Categories by Product Count
-        Console.WriteLine(GetCategoriesByProductsCount(context));
+        //Console.WriteLine(GetCategoriesByProductsCount(context));
+
+        //08. Export Users and Products
+        Console.WriteLine(GetUsersWithProducts(context));
     }
 
     //01. Import Users
@@ -192,6 +195,41 @@ public class StartUp
             .ToArray();
 
         return xmlHelper.Serialize(categories, "Categories");
+    }
+
+    //08. Export Users and Products
+    public static string GetUsersWithProducts(ProductShopContext context)
+    {
+        XmlHelper xmlHelper = new XmlHelper();
+        var users = context.Users
+            .OrderByDescending(p => p.ProductsSold.Count)
+            .Select(u => new ExportUsersProductsDto
+            {
+                FirstName = u.FirstName,
+                LastName = u.LastName,
+                Age = u.Age,
+                ProductSold = new ProductWrapper
+                {
+                    Count = u.ProductsSold.Count,
+                    Products = u.ProductsSold.Select(p => new ProductDto
+                    {
+                        ProductName = p.Name,
+                        Price = p.Price
+                    })
+                    .OrderByDescending(p => p.Price)
+                    .ToArray()
+                }
+            })
+            .Take(10)
+            .ToArray();
+
+        UserWrapper exportUserCountDto = new UserWrapper()
+        {
+            Count = context.Users.Count(u => u.ProductsSold.Any()),
+            Users = users
+        };
+
+        return xmlHelper.Serialize(exportUserCountDto, "Users");
     }
 
     private static IMapper CreateMapper()

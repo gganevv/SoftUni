@@ -14,13 +14,3 @@ public class ExportSoldProductDto
     [XmlArray("soldProducts")]
     public ProductDto[] ProductDtos { get; set; }
 }
-
-[XmlType("Product")]
-public class ProductDto
-{
-    [XmlElement("name")]
-    public string ProductName { get; set; }
-
-    [XmlElement("price")]
-    public decimal Price { get; set; }
-}
