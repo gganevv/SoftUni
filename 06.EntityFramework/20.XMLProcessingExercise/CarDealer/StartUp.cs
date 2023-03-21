@@ -14,8 +14,12 @@ public class StartUp
         CarDealerContext context = new CarDealerContext();
 
         //09. Import Suppliers
-        string inputXml = File.ReadAllText("../../../Datasets/suppliers.xml");
-        Console.WriteLine(ImportSuppliers(context, inputXml));
+        //string inputXml = File.ReadAllText("../../../Datasets/suppliers.xml");
+        //Console.WriteLine(ImportSuppliers(context, inputXml));
+
+        //10. Import Parts
+        string inputXml = File.ReadAllText("../../../Datasets/parts.xml");
+        Console.WriteLine(ImportParts(context, inputXml));
     }
 
     //09. Import Suppliers
@@ -37,6 +41,33 @@ public class StartUp
         context.SaveChanges();
 
         return $"Successfully imported {suppliers.Count}";
+    }
+
+    //10. Import Parts
+    public static string ImportParts(CarDealerContext context, string inputXml)
+    {
+        XmlHelper xmlHelper = new XmlHelper();
+        IMapper mapper = CreateMapper();
+
+        ImportPartDto[] importPartDtos = xmlHelper.Deserialize<ImportPartDto[]>(inputXml, "Parts");
+        HashSet<Part> parts = new HashSet<Part>();
+
+        List<int> supplierIds = context.Suppliers
+            .Select(x => x.Id).ToList();
+
+        foreach (var partDto in importPartDtos)
+        {
+            Part part = mapper.Map<Part>(partDto);
+            if (supplierIds.Contains(part.SupplierId))
+            {
+                parts.Add(part);
+            }
+        }
+
+        context.Parts.AddRange(parts);
+        context.SaveChanges();
+
+        return $"Successfully imported {parts.Count}";
     }
 
     private static IMapper CreateMapper()
