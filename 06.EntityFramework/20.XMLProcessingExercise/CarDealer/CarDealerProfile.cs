@@ -14,5 +14,8 @@ public class CarDealerProfile : Profile
 
         //Part
         this.CreateMap<ImportPartDto, Part>();
+
+        //Car
+        this.CreateMap<ImportCarDto, Car>();
     }
 }

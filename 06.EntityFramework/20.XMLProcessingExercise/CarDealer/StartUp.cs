@@ -6,6 +6,7 @@ using CarDealer.Data;
 using CarDealer.DTOs.Import;
 using CarDealer.Models;
 using CarDealer.Utilities;
+using Microsoft.EntityFrameworkCore;
 
 public class StartUp
 {
@@ -18,8 +19,12 @@ public class StartUp
         //Console.WriteLine(ImportSuppliers(context, inputXml));
 
         //10. Import Parts
-        string inputXml = File.ReadAllText("../../../Datasets/parts.xml");
-        Console.WriteLine(ImportParts(context, inputXml));
+        //string inputXml = File.ReadAllText("../../../Datasets/parts.xml");
+        //Console.WriteLine(ImportParts(context, inputXml));
+
+        //11. Import Cars
+        string inputXml = File.ReadAllText("../../../Datasets/cars.xml");
+        Console.WriteLine(ImportCars(context, inputXml));
     }
 
     //09. Import Suppliers
@@ -68,6 +73,43 @@ public class StartUp
         context.SaveChanges();
 
         return $"Successfully imported {parts.Count}";
+    }
+
+    //11. Import Cars
+    public static string ImportCars(CarDealerContext context, string inputXml)
+    {
+        IMapper mapper = CreateMapper();
+        XmlHelper xmlHelper = new XmlHelper();
+
+        ImportCarDto[] importCarDtos = xmlHelper.Deserialize<ImportCarDto[]>(inputXml, "Cars");
+
+        HashSet<Car> cars = new HashSet<Car>();
+        foreach (var carDto in importCarDtos)
+        {
+            Car car = mapper.Map<Car>(carDto);
+
+            foreach (var part in carDto.Parts.DistinctBy(p => p.Id))
+            {
+                if (!context.Parts.Any(p => p.Id == part.Id))
+                {
+                    continue;
+                }
+
+                PartCar partCar = new PartCar()
+                {
+                    PartId = part.Id
+                };
+
+                car.PartsCars.Add(partCar);
+
+            }
+            cars.Add(car);
+        }
+
+        context.Cars.AddRange(cars);
+        context.SaveChanges();
+
+        return $"Successfully imported {cars.Count}";
     }
 
     private static IMapper CreateMapper()
