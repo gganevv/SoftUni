@@ -1,8 +1,9 @@
 ﻿namespace CarDealer;
 
 using AutoMapper;
-
+using AutoMapper.QueryableExtensions;
 using CarDealer.Data;
+using CarDealer.DTOs.Export;
 using CarDealer.DTOs.Import;
 using CarDealer.Models;
 using CarDealer.Utilities;
@@ -31,8 +32,11 @@ public class StartUp
         //Console.WriteLine(ImportCustomers(context, inputXml));
 
         //13. Import Sales
-        string inputXml = File.ReadAllText("../../../Datasets/sales.xml");
-        Console.WriteLine(ImportSales(context, inputXml));
+        //string inputXml = File.ReadAllText("../../../Datasets/sales.xml");
+        //Console.WriteLine(ImportSales(context, inputXml));
+
+        //14. Export Cars with Distance
+        Console.WriteLine(GetCarsWithDistance(context));
     }
 
     //09. Import Suppliers
@@ -167,6 +171,23 @@ public class StartUp
         context.SaveChanges();
 
         return $"Successfully imported {sales.Count}";
+    }
+
+    //14. Export Cars with Distance
+    public static string GetCarsWithDistance(CarDealerContext context)
+    {
+        XmlHelper xmlHelper = new XmlHelper();
+        IMapper mapper = CreateMapper();
+
+        var cars = context.Cars
+            .Where(c => c.TraveledDistance > 2000000)
+            .OrderBy(c => c.Make)
+            .ThenBy(c => c.Model)
+            .Take(10);
+
+        var carsDtos = mapper.ProjectTo<ExportCarWithDistanceDto>(cars).ToList();
+
+        return xmlHelper.Serialize(carsDtos, "cars");
     }
 
     private static IMapper CreateMapper()
