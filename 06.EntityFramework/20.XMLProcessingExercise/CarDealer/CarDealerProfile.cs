@@ -17,5 +17,8 @@ public class CarDealerProfile : Profile
 
         //Car
         this.CreateMap<ImportCarDto, Car>();
+
+        //Customer
+        this.CreateMap<ImportCustomerDto, Customer>();
     }
 }

@@ -23,8 +23,12 @@ public class StartUp
         //Console.WriteLine(ImportParts(context, inputXml));
 
         //11. Import Cars
-        string inputXml = File.ReadAllText("../../../Datasets/cars.xml");
-        Console.WriteLine(ImportCars(context, inputXml));
+        //string inputXml = File.ReadAllText("../../../Datasets/cars.xml");
+        //Console.WriteLine(ImportCars(context, inputXml));
+
+        //12. Import Customers
+        string inputXml = File.ReadAllText("../../../Datasets/customers.xml");
+        Console.WriteLine(ImportCustomers(context, inputXml));
     }
 
     //09. Import Suppliers
@@ -110,6 +114,27 @@ public class StartUp
         context.SaveChanges();
 
         return $"Successfully imported {cars.Count}";
+    }
+
+    //12. Import Customers
+    public static string ImportCustomers(CarDealerContext context, string inputXml)
+    {
+        IMapper mapper = CreateMapper();
+        XmlHelper xmlHelper = new XmlHelper();
+
+        ImportCustomerDto[] importCustomerDtos = xmlHelper.Deserialize<ImportCustomerDto[]>(inputXml, "Customers");
+        HashSet<Customer> customers = new HashSet<Customer>();
+
+        foreach (var customerDto in importCustomerDtos)
+        {
+            Customer customer = mapper.Map<Customer>(customerDto);
+            customers.Add(customer);
+        }
+
+        context.AddRange(customers);
+        context.SaveChanges();
+
+        return $"Successfully imported {customers.Count}"; ;
     }
 
     private static IMapper CreateMapper()
