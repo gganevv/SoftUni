@@ -36,7 +36,10 @@ public class StartUp
         //Console.WriteLine(ImportSales(context, inputXml));
 
         //14. Export Cars with Distance
-        Console.WriteLine(GetCarsWithDistance(context));
+        //Console.WriteLine(GetCarsWithDistance(context));
+
+        //15. Export Cars from Make BWM
+        Console.WriteLine(GetCarsFromMakeBmw(context));
     }
 
     //09. Import Suppliers
@@ -186,6 +189,22 @@ public class StartUp
             .Take(10);
 
         var carsDtos = mapper.ProjectTo<ExportCarWithDistanceDto>(cars).ToList();
+
+        return xmlHelper.Serialize(carsDtos, "cars");
+    }
+
+    //15. Export Cars from Make BMW
+    public static string GetCarsFromMakeBmw(CarDealerContext context)
+    {
+        XmlHelper xmlHelper = new XmlHelper();
+        IMapper mapper = CreateMapper();
+
+        var cars = context.Cars
+            .Where(c => c.Make == "BMW")
+            .OrderBy(c => c.Model)
+            .ThenByDescending(c => c.TraveledDistance);
+
+        var carsDtos = mapper.ProjectTo<ExportCarsFromMakeBmwDto>(cars).ToList();
 
         return xmlHelper.Serialize(carsDtos, "cars");
     }

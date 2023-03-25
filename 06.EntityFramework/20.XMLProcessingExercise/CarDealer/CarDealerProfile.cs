@@ -18,6 +18,7 @@ public class CarDealerProfile : Profile
         //Car
         this.CreateMap<ImportCarDto, Car>();
         this.CreateMap<Car, ExportCarWithDistanceDto>();
+        this.CreateMap<Car, ExportCarsFromMakeBmwDto>();
 
         //Customer
         this.CreateMap<ImportCustomerDto, Customer>();
