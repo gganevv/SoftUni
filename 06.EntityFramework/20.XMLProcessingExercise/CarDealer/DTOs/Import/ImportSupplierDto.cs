@@ -1,6 +1,6 @@
-﻿using System.Xml.Serialization;
+﻿namespace CarDealer.DTOs.Import;
 
-namespace CarDealer.DTOs.Import;
+using System.Xml.Serialization;
 
 [XmlType("Supplier")]
 public class ImportSupplierDto
