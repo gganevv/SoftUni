@@ -47,7 +47,10 @@ public class StartUp
         //Console.WriteLine(GetCarsWithTheirListOfParts(context));
 
         //18. Export Total Sales by Customer
-        Console.WriteLine(GetTotalSalesByCustomer(context));
+        //Console.WriteLine(GetTotalSalesByCustomer(context));
+
+        //19. Export Sales with Applied Discount
+        Console.WriteLine(GetSalesWithAppliedDiscount(context));
     }
 
     //09. Import Suppliers
@@ -250,7 +253,6 @@ public class StartUp
     //18. Export Total Sales by Customer
     public static string GetTotalSalesByCustomer(CarDealerContext context)
     {
-        IMapper mapper = CreateMapper();
         XmlHelper xmlHelper = new XmlHelper();
 
         var customers = context.Customers
@@ -267,6 +269,29 @@ public class StartUp
 
 
         return xmlHelper.Serialize(customers, "customers");
+    }
+
+    //19. Export Sales with Applied Discount
+    public static string GetSalesWithAppliedDiscount(CarDealerContext context)
+    {
+        XmlHelper xmlHelper = new XmlHelper();
+
+        var sales = context.Sales
+            .Select(s => new ExportSalesWithDiscountDto
+            {
+                SaleCar = new SaleCarDto
+                {
+                    CarMake = s.Car.Make,
+                    CarModel = s.Car.Model,
+                    CarTravelledDistance = s.Car.TraveledDistance
+                },
+                SaleDiscount = s.Discount,
+                CustomerName = s.Customer.Name,
+                Price = s.Car.PartsCars.Select(cp => cp.Part.Price).Sum(),
+                PriceWithDiscount = Math.Round(s.Car.PartsCars.Select(cp => cp.Part.Price).Sum() * (1 - s.Discount / 100), 2).ToString("f2")
+            }).ToArray();
+
+        return xmlHelper.Serialize(sales, "sales");
     }
 
     private static IMapper CreateMapper()
