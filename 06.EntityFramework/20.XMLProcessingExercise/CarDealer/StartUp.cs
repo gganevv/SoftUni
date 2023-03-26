@@ -1,7 +1,7 @@
 ﻿namespace CarDealer;
 
 using AutoMapper;
-using AutoMapper.QueryableExtensions;
+
 using CarDealer.Data;
 using CarDealer.DTOs.Export;
 using CarDealer.DTOs.Import;
@@ -42,7 +42,10 @@ public class StartUp
         //Console.WriteLine(GetCarsFromMakeBmw(context));
 
         //16. Export Local Suppliers
-        Console.WriteLine(GetLocalSuppliers(context));
+        //Console.WriteLine(GetLocalSuppliers(context));
+
+        //17. Export Cars with Their List of Parts
+        Console.WriteLine(GetCarsWithTheirListOfParts(context));
     }
 
     //09. Import Suppliers
@@ -224,6 +227,22 @@ public class StartUp
         var supplierDtos = mapper.ProjectTo<ExportLocalSupplierDto>(suppliers).ToList();
 
         return xmlHelper.Serialize(supplierDtos, "suppliers");
+    }
+
+    //17. Export Cars with Their List of Parts
+    public static string GetCarsWithTheirListOfParts(CarDealerContext context)
+    {
+        IMapper mapper = CreateMapper();
+        XmlHelper xmlHelper = new XmlHelper();
+
+        var cars = context.Cars
+            .OrderByDescending(c => c.TraveledDistance)
+            .ThenBy(c => c.Model)
+            .Take(5);
+
+        var carsDtos = mapper.ProjectTo<ExportCarWithPartDto>(cars).ToList();
+
+        return xmlHelper.Serialize(carsDtos, "cars");
     }
 
     private static IMapper CreateMapper()

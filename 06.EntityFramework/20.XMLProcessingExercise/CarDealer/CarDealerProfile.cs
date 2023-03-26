@@ -16,11 +16,16 @@ public class CarDealerProfile : Profile
 
         //Part
         this.CreateMap<ImportPartDto, Part>();
+        CreateMap<PartCar, DTOs.Export.PartDto>()
+            .ForMember(d => d.Name, opt => opt.MapFrom(s => s.Part.Name))
+            .ForMember(d => d.Price, opt => opt.MapFrom(s => s.Part.Price));
 
         //Car
         this.CreateMap<ImportCarDto, Car>();
         this.CreateMap<Car, ExportCarWithDistanceDto>();
         this.CreateMap<Car, ExportCarsFromMakeBmwDto>();
+        this.CreateMap<Car, ExportCarWithPartDto>()
+            .ForMember(d => d.Parts, opt => opt.MapFrom(s => s.PartsCars.OrderByDescending(p => p.Part.Price)));
 
         //Customer
         this.CreateMap<ImportCustomerDto, Customer>();
