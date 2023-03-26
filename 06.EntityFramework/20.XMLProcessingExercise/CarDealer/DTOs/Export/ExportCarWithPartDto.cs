@@ -1,7 +1,6 @@
-﻿using System.Xml.Serialization;
+﻿namespace CarDealer.DTOs.Export;
 
-namespace CarDealer.DTOs.Export;
-
+using System.Xml.Serialization;
 
 [XmlType("car")]
 public class ExportCarWithPartDto

@@ -7,7 +7,6 @@ using CarDealer.DTOs.Export;
 using CarDealer.DTOs.Import;
 using CarDealer.Models;
 using CarDealer.Utilities;
-using Microsoft.EntityFrameworkCore;
 
 public class StartUp
 {
@@ -45,7 +44,10 @@ public class StartUp
         //Console.WriteLine(GetLocalSuppliers(context));
 
         //17. Export Cars with Their List of Parts
-        Console.WriteLine(GetCarsWithTheirListOfParts(context));
+        //Console.WriteLine(GetCarsWithTheirListOfParts(context));
+
+        //18. Export Total Sales by Customer
+        Console.WriteLine(GetTotalSalesByCustomer(context));
     }
 
     //09. Import Suppliers
@@ -243,6 +245,28 @@ public class StartUp
         var carsDtos = mapper.ProjectTo<ExportCarWithPartDto>(cars).ToList();
 
         return xmlHelper.Serialize(carsDtos, "cars");
+    }
+
+    //18. Export Total Sales by Customer
+    public static string GetTotalSalesByCustomer(CarDealerContext context)
+    {
+        IMapper mapper = CreateMapper();
+        XmlHelper xmlHelper = new XmlHelper();
+
+        var customers = context.Customers
+            .Where(c => c.Sales.Any())
+            .Select(c => new ExportSalesByCustomerDto
+            {
+                FullName = c.Name,
+                BoughtCars = c.Sales.Count(),
+                SpentMoney = c.IsYoungDriver ? Math.Round(c.Sales.SelectMany(s => s.Car.PartsCars.Select(pc => pc.Part.Price)).Sum() * 0.95M, 2) : 
+                    c.Sales.SelectMany(s => s.Car.PartsCars.Select(pc => pc.Part.Price)).Sum()
+            })
+            .OrderByDescending(c => c.SpentMoney)
+            .ToList();
+
+
+        return xmlHelper.Serialize(customers, "customers");
     }
 
     private static IMapper CreateMapper()
