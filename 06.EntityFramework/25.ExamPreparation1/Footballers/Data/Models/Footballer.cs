@@ -21,14 +21,14 @@ namespace Footballers.Data.Models
 
         public DateTime ContractEndDate { get; set; }
 
-        public PositionType Position { get; set; }
+        public PositionType PositionType { get; set; }
 
-        public BestSkillType BestSkill { get; set; }
+        public BestSkillType BestSkillType { get; set; }
 
         [ForeignKey(nameof(Coach))]
         public int CoachId { get; set; }
 
-        public Coach Coach { get; set; }
+        public virtual Coach Coach { get; set; }
 
         public virtual ICollection<TeamFootballer> TeamsFootballers { get; set; }
     }
