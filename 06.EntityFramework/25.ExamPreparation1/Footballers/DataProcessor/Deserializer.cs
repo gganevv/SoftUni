@@ -126,7 +126,10 @@
                 teams.Add(team);
             }
 
-            return "";
+            context.AddRange(teams);
+            context.SaveChanges();
+
+            return sb.ToString().TrimEnd();
         }
 
         private static bool IsValid(object dto)
