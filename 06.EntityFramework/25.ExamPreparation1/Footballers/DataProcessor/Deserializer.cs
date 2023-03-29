@@ -30,7 +30,7 @@
 
             foreach (var coachDto in coachesDtos)
             {
-                if (!IsValid(coachDto))
+                if (!IsValid(coachDto) || string.IsNullOrEmpty(coachDto.Nationality))
                 {
                     sb.AppendLine(ErrorMessage);
                     continue;
@@ -90,7 +90,6 @@
 
             var teamDtos = JsonConvert.DeserializeObject<ImportTeamDto[]>(jsonString);
             var teams = new HashSet<Team>();
-            List<int> takenFootballers = new List<int>();
             List<int> existingFootballers = context.Footballers
                 .Select(f => f.Id) 
                 .ToList();
@@ -110,20 +109,24 @@
                     Trophies = teamDto.Trophies
                 };
                 
-                foreach (var footballer in teamDto.Footballers)
+                foreach (var footballer in teamDto.Footballers.Distinct())
                 {
-                    if (!takenFootballers.Contains(footballer) && existingFootballers.Contains(footballer))
+                    if (existingFootballers.Contains(footballer))
                     {
                         team.TeamsFootballers.Add(new TeamFootballer()
                         {
                             FootballerId = footballer,
                             Team = team
                         });
-                        takenFootballers.Add(footballer);
+                    }
+                    else
+                    {
+                        sb.AppendLine(ErrorMessage);
                     }
                 }
 
                 teams.Add(team);
+                sb.AppendLine(string.Format(SuccessfullyImportedTeam, team.Name, team.TeamsFootballers.Count()));
             }
 
             context.AddRange(teams);
