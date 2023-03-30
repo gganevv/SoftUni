@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Text;
 using AutoMapper;
 using Data;
+using Newtonsoft.Json;
 using Trucks.Data.Models;
 using Trucks.DataProcessor.ImportDto;
 using Trucks.Util;
@@ -53,11 +54,58 @@ public class Deserializer
             sb.AppendLine(string.Format(SuccessfullyImportedDespatcher, despatcher.Name, despatcher.Trucks.Count));
         }
 
+        context.Despatchers.AddRange(despatchers);
+        context.SaveChanges();
+
         return sb.ToString().TrimEnd();
     }
     public static string ImportClient(TrucksContext context, string jsonString)
     {
-        throw new NotImplementedException();
+        IMapper mapper = CreateMapper();
+        StringBuilder sb = new StringBuilder();
+
+        var clientDtos = JsonConvert.DeserializeObject<ImportClientDto[]>(jsonString);
+        var clients = new HashSet<Client>();
+
+        var truckIds = context.Trucks
+            .Select(t => t.Id)
+            .ToArray();
+
+        foreach (var clientDto in clientDtos)
+        {
+            if (!IsValid(clientDto) || clientDto.Type == "usual")
+            {
+                sb.AppendLine(ErrorMessage);
+                continue;
+            }
+
+            Client client = mapper.Map<Client>(clientDto);
+            clients.Add(client);
+
+            foreach (var truck in clientDto.Trucks)
+            {
+                if (!truckIds.Contains(truck))
+                {
+                    sb.AppendLine(ErrorMessage);
+                    continue;
+                }
+
+                ClientTruck clientTruck = new ClientTruck()
+                {
+                    Client = client,
+                    TruckId = truck
+                };
+
+                client.ClientsTrucks.Add(clientTruck);
+            }
+
+            sb.AppendLine(string.Format(SuccessfullyImportedClient, client.Name, client.ClientsTrucks.Count));
+        }
+
+        context.Clients.AddRange(clients);
+        context.SaveChanges();
+
+        return sb.ToString().TrimEnd();
     }
 
     private static bool IsValid(object dto)

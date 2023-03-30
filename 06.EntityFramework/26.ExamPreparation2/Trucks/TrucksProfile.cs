@@ -14,5 +14,8 @@ public class TrucksProfile : Profile
 
         //Truck
         this.CreateMap<ImportTruckDto, Truck>();
+
+        //Client
+        this.CreateMap<ImportClientDto, Client>();
     }
 }
