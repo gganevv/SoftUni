@@ -1,10 +1,9 @@
-﻿namespace Trucks.Data.Models.Enums
+﻿namespace Trucks.Data.Models.Enums;
+
+public enum CategoryType
 {
-    public enum CategoryType
-    {
-        Flatbed,
-        Jumbo,
-        Refrigerated,
-        Semi
-    }
+    Flatbed,
+    Jumbo,
+    Refrigerated,
+    Semi
 }
