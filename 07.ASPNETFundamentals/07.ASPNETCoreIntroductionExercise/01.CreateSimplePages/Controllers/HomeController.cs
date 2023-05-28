@@ -24,6 +24,12 @@ namespace _01.CreateSimplePages.Controllers
             return View();
         }
 
+        public IActionResult About()
+        {
+            ViewBag.Message = "This is an ASP.NET Core MVC app.";
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
