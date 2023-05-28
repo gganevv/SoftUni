@@ -1,0 +1,18 @@
+﻿@{
+    ViewBag.Title = "Nums 1 ... " + ViewBag.Count;
+}
+
+<h2>@ViewBag.Title</h2>
+<ol type="I">
+    @for (int i = 1; i <= ViewBag.Count; i++)
+    {
+        <li>@i</li>
+    }
+</ol>
+
+<div>
+    <form>
+        <input type="text" id="name" name="count" />
+        <button>Submit</button>
+    </form>
+</div>
