@@ -30,6 +30,11 @@ namespace _01.CreateSimplePages.Controllers
             return View();
         }
 
+        public IActionResult Numbers()
+        {
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
