@@ -19,11 +19,6 @@ namespace _01.CreateSimplePages.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
-
         public IActionResult About()
         {
             ViewBag.Message = "This is an ASP.NET Core MVC app.";
