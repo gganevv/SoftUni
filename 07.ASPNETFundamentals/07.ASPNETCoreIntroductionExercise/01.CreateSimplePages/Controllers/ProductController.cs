@@ -1,5 +1,6 @@
 ﻿using _01.CreateSimplePages.Models;
 using Microsoft.AspNetCore.Mvc;
+using System.Text.Json;
 
 namespace _01.CreateSimplePages.Controllers
 {
@@ -44,6 +45,28 @@ namespace _01.CreateSimplePages.Controllers
             {
                 return RedirectToAction("All");
             }
+        }
+
+        public IActionResult AllAsJson()
+        {
+            var options = new JsonSerializerOptions
+            {
+                WriteIndented = true
+            };
+
+            return Json(products, options);
+        }
+
+        public IActionResult AllAsText()
+        {
+            var text = string.Empty;
+            foreach (var product in products)
+            {
+                text += $"Product {product.Id}: {product.Name} - {product.Price} lv.";
+                text += "\r\n";
+            }
+
+            return Content(text);
         }
     }
 }
