@@ -1,5 +1,7 @@
 ﻿using _01.CreateSimplePages.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Net.Http.Headers;
+using System.Text;
 using System.Text.Json;
 
 namespace _01.CreateSimplePages.Controllers
@@ -59,14 +61,29 @@ namespace _01.CreateSimplePages.Controllers
 
         public IActionResult AllAsText()
         {
-            var text = string.Empty;
+            var productsAsText = ConvertToText();
+
+            return Content(productsAsText);
+        }
+
+        public IActionResult AllAsTextFile()
+        {
+            var productsAsText = ConvertToText();
+
+            Response.Headers.Add(HeaderNames.ContentDisposition, @"attachment;filename=products.txt");
+
+            return File(Encoding.UTF8.GetBytes(productsAsText), "text/plain");
+        }
+
+        public string ConvertToText()
+        {
+            StringBuilder sb = new StringBuilder();
             foreach (var product in products)
             {
-                text += $"Product {product.Id}: {product.Name} - {product.Price} lv.";
-                text += "\r\n";
+                sb.AppendLine($"Product {product.Id}: {product.Name} - {product.Price} lv.");
             }
 
-            return Content(text);
+            return sb.ToString();
         }
     }
 }
