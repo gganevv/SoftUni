@@ -7,8 +7,9 @@
     <ul class="list-group list-group-flush">
         @foreach (var product in Model)
         {
-            <li class="list-group-item">
+            <li class="list-group-item"><a href="/Product/ById/@product.Id">
                 N.@product.Id: @product.Name - @product.Price lv.
+                </a>
             </li>
         }
     </ul>

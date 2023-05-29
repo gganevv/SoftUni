@@ -32,5 +32,18 @@ namespace _01.CreateSimplePages.Controllers
         {
             return View(products);
         }
+
+        public IActionResult ById(int id)
+        {
+            var product = products.FirstOrDefault(x => x.Id == id);
+            if (product != null)
+            {
+                return View(product);
+            }
+            else
+            {
+                return RedirectToAction("All");
+            }
+        }
     }
 }
