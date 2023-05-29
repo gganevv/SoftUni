@@ -36,6 +36,7 @@ namespace _01.CreateSimplePages.Controllers
             return View(products);
         }
 
+        [Route("/Product/Details/{id?}")]
         public IActionResult ById(int id)
         {
             var product = products.FirstOrDefault(x => x.Id == id);
