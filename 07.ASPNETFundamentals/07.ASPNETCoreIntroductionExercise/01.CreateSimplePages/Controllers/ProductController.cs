@@ -31,8 +31,14 @@ namespace _01.CreateSimplePages.Controllers
                 }
             };
 
-        public IActionResult All()
+        public IActionResult All(string keyword)
         {
+            if (keyword != null)
+            {
+                var foundProducts = products
+                    .Where(p => p.Name.ToLower().Contains(keyword.ToLower()));
+                return View(foundProducts);
+            }
             return View(products);
         }
 

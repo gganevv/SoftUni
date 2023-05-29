@@ -2,6 +2,12 @@
     ViewBag.Title = "All Products";
 }
 
+<form asp-controller="Product" asp-action="All">
+    <p>
+        Product: <input type="text" name="keyword" />
+        <input type="submit" value="Search" />
+    </p>
+</form>
 <div class="card" style="width: 18rem;">
     <div class="card-header">@ViewBag.Title</div>
     <ul class="list-group list-group-flush">
