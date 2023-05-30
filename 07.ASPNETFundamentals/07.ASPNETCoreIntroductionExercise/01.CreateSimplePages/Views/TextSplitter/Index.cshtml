@@ -6,7 +6,8 @@
 
 <form asp-controller="TextSplitter" asp-action="Split" method="post">
     <div class="col-12">
-        <input asp-for="@Model.Text" class="mr-2" />
+        <input asp-for="@Model.Text" class="mr-2" /><br />
+        <span asp-validation-for="@Model.Text" class="small text-danger col-2"></span><br />
         <button type="submit" class="btn btn-primary">Split Text</button>
     </div>
 
@@ -14,3 +15,8 @@
         <textarea rows="10">@Model.SplitText</textarea>
     </div>
 </form>
+
+@section Scripts
+{
+    <partial name="_ValidationScriptsPartial" />
+}
