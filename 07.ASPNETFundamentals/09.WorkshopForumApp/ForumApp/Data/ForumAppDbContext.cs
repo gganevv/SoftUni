@@ -51,7 +51,7 @@ namespace ForumApp.Data
                 Id = 3,
                 Title = "My third post",
                 Content = "Hello there! I'm getting better and better with the CRUD operations in MVC. Stay tuned!"
-            }
+            };
         }
     }
 }
