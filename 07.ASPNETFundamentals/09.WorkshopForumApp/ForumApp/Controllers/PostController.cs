@@ -51,5 +51,29 @@ namespace ForumApp.Controllers
 
             return RedirectToAction("All");
         }
+
+        public async Task<IActionResult> Edit(int id)
+        {
+            var post = await Data.Posts.FindAsync(id);
+
+            return View(new PostFormModel()
+            {
+                Title = post.Title,
+                Content = post.Content
+            });
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Edit(int id, PostFormModel model)
+        {
+            var post = await Data.Posts.FindAsync(id);
+
+            post.Title = model.Title;
+            post.Content = model.Content;
+
+            await Data.SaveChangesAsync();
+
+            return RedirectToAction("All");
+        }
     }
 }
