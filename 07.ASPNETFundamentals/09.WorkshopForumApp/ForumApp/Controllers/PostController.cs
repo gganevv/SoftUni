@@ -75,5 +75,16 @@ namespace ForumApp.Controllers
 
             return RedirectToAction("All");
         }
+
+        [HttpPost]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var post = await Data.Posts.FindAsync(id);
+
+            Data.Posts.Remove(post);
+            await Data.SaveChangesAsync();
+
+            return RedirectToAction("All");
+        }
     }
 }
