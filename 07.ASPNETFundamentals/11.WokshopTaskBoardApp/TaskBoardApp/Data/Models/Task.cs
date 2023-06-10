@@ -16,7 +16,7 @@ namespace TaskBoardApp.Data.Models
         [MaxLength(TaskMaxDescription)]
         public string Description { get; set; } = null!;
 
-        DateTime CratedOn { get; set; }
+        public DateTime CreatedOn { get; set; }
 
         public int BoardId { get; set; }
 
