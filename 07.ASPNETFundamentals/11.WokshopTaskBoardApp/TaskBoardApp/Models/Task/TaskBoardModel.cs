@@ -2,8 +2,8 @@
 {
     public class TaskBoardModel
     {
-        public int Id { get; set; }
+        public int Id { get; init; }
 
-        public string Name { get; set; } = null!;
+        public string Name { get; init; } = null!;
     }
 }

@@ -16,6 +16,6 @@ namespace TaskBoardApp.Models.Task
         [Display(Name = "Board")]
         public int BoardId { get; set; }
 
-        public IEnumerable<TaskBoardModel> Boards { get; set; } = null!;
+        public IEnumerable<TaskBoardModel>? Boards { get; set; }
     }
 }
