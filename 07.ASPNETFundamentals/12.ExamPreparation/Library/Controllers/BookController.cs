@@ -28,5 +28,24 @@ namespace Library.Controllers
 
             return View(books);
         }
+
+        public IActionResult Mine()
+        {
+            var userId = GetuserId();
+
+            var books = data.UserBooks
+                .Where(ub => ub.CollectorId == userId)
+                .Select(b => new MineBookView()
+                {
+                    Title = b.Book.Title,
+                    Author = b.Book.Author,
+                    Description = b.Book.Description,
+                    Category = b.Book.Category.Name,
+                    Id = b.Book.Id,
+                    ImageUrl = b.Book.ImageUrl
+                }).ToList();
+
+            return View(books);
+        }
     }
 }
