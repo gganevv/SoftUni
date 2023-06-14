@@ -14,6 +14,8 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.Requ
     .AddEntityFrameworkStores<LibraryDbContext>();
 builder.Services.AddControllersWithViews();
 
+builder.Services.AddDbContext<LibraryDbContext>();
+
 builder.Services.Configure<IdentityOptions>(options =>
 {
     options.Password.RequireDigit = false;
