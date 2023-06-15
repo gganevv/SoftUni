@@ -1,4 +1,5 @@
 ﻿using Library.Data;
+using Library.Data.Models;
 using Library.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -46,6 +47,56 @@ namespace Library.Controllers
                 }).ToList();
 
             return View(books);
+        }
+
+        public IActionResult Add()
+        {
+            var categories = data.Categories
+                .Select(c => new Category()
+                {
+                    Id = c.Id,
+                    Name = c.Name
+                }).ToList();
+
+            var model = new AddBookView
+            {
+                Categories = categories
+            };
+
+            return View(model);
+        }
+
+        [HttpPost]
+        public IActionResult Add(AddBookView model)
+        {
+            var categories = data.Categories
+               .Select(c => new Category()
+               {
+                   Id = c.Id,
+                   Name = c.Name
+               }).ToList();
+
+            model.Categories = categories;
+
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+
+            var book = new Book
+            {
+                Title = model.Title,
+                Author = model.Author,
+                CategoryId = model.CategoryId,
+                Description = model.Description,
+                ImageUrl = model.Url,
+                Rating = model.Rating
+            };
+
+            data.Books.Add(book);
+            data.SaveChanges();
+
+            return RedirectToAction("All", "Book");
         }
     }
 }
