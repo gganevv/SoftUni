@@ -26,6 +26,6 @@ namespace Library.Models
 
         [Required]
         public int CategoryId { get; set; }
-        public List<Category> Categories { get; set; } = null!;
+        public List<Category> Categories { get; set; } = new List<Category>();
     }
 }
