@@ -98,5 +98,36 @@ namespace Library.Controllers
 
             return RedirectToAction("All", "Book");
         }
+
+        public IActionResult AddToCollection(int id)
+        {
+            var myBook = new IdentityUserBook()
+            {
+                BookId = id,
+                CollectorId = GetuserId()
+            };
+            if (!data.UserBooks.Any(b => b.CollectorId == myBook.CollectorId && b.BookId == myBook.BookId))
+            {
+                data.UserBooks.Add(myBook);
+                data.SaveChanges();
+            }
+
+            return RedirectToAction("All", "Book");
+        }
+
+        public IActionResult RemoveFromCollection(int id)
+        {
+            var myBook = new IdentityUserBook()
+            {
+                BookId = id,
+                CollectorId = GetuserId()
+            };
+            if (data.UserBooks.Any(b => b.CollectorId == myBook.CollectorId && b.BookId == myBook.BookId))
+            {
+                data.UserBooks.Remove(myBook);
+                data.SaveChanges();
+            }
+            return RedirectToAction("Mine", "Book");
+        }
     }
 }
