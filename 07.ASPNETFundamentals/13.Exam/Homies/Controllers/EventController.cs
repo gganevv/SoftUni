@@ -98,6 +98,7 @@ namespace Homies.Controllers
         public async Task<IActionResult> Edit(int id)
         {
             var userId = GetUserId();
+
             var types = await data.Types
                 .Select(t => new Data.Models.Type()
                 {
@@ -112,7 +113,7 @@ namespace Homies.Controllers
 
             if (userId != oldEvent.OrganiserId)
             {
-                RedirectToAction("All", "Event");
+                return RedirectToAction("All", "Event");
             }
 
             var model = new EventViewModel()
@@ -134,6 +135,10 @@ namespace Homies.Controllers
             var userId = GetUserId();
             
             var oldEvent = await data.Events.FirstOrDefaultAsync(e => e.Id == id);
+            if (oldEvent.OrganiserId != userId)
+            {
+                return RedirectToAction("All", "Event");
+            }
             if (oldEvent == null)
             {
                 RedirectToAction("All", "Event");
@@ -173,6 +178,10 @@ namespace Homies.Controllers
                 data.EventParticipants.Add(eventToJoin);
                 await data.SaveChangesAsync();
             }
+            else
+            {
+                return RedirectToAction("All", "Event");
+            }
 
             return RedirectToAction("Joined", "Event");
         }
@@ -193,6 +202,32 @@ namespace Homies.Controllers
             }
 
             return RedirectToAction("All", "Event");
+        }
+
+        public async Task<IActionResult> Details(int id)
+        {
+            var eventFromDb = await data.Events
+                .Include(e => e.Organiser)
+                .Include(e => e.Type)
+                .FirstOrDefaultAsync(e => e.Id == id);
+
+            if (eventFromDb == null)
+            {
+                return RedirectToAction("All", "Event");
+            }
+
+            var eventToDisplay = new DetailsViewModel()
+            {
+                Name = eventFromDb.Name,
+                Description = eventFromDb.Description,
+                Start = eventFromDb.Start,
+                End = eventFromDb.End,
+                Organiser = eventFromDb.Organiser.UserName,
+                CreatedOn = eventFromDb.CreatedOn,
+                Type = eventFromDb.Type.Name
+            };
+
+            return View(eventToDisplay);
         }
     }
 }
