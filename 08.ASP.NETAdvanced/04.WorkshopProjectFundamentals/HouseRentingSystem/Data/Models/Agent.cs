@@ -13,7 +13,7 @@ namespace HouseRentingSystem.Data.Models
         public string PhoneNumber { get; set; } = null!;
 
         [Required]
-        public string Userid { get; set; } = null!;
+        public string UserId { get; set; } = null!;
 
         public IdentityUser? User { get; set; }
     }
