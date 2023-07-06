@@ -1,4 +1,5 @@
 ﻿using HouseRentingSystem.Models;
+using HouseRentingSystem.Models.Home;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -10,8 +11,8 @@ namespace HouseRentingSystem.Controllers
         {
         }
 
-        public IActionResult Index() 
-            => View();
+        public async Task<IActionResult> Index() 
+            => View(new IndexViewModel());
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
