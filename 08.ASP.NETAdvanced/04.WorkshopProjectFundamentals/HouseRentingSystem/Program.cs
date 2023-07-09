@@ -1,5 +1,7 @@
+using HouseRentingSystem.Contracts.Agent;
 using HouseRentingSystem.Contracts.House;
 using HouseRentingSystem.Data;
+using HouseRentingSystem.Services.Agent;
 using HouseRentingSystem.Services.House;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -29,6 +31,7 @@ namespace HouseRentingSystem
 
             builder.Services.AddControllersWithViews();
             builder.Services.AddTransient<IHouseService, HouseService>();
+            builder.Services.AddTransient<IAgentService, AgentService>();
 
             var app = builder.Build();
 
