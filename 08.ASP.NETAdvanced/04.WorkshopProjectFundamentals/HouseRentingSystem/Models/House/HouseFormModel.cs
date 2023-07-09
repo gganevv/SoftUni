@@ -7,7 +7,7 @@ namespace HouseRentingSystem.Models.Houses
     public class HouseFormModel
     {
         [Required]
-        [StringLength(TitleMaxLength, MinimumLength = TitleMaxLength)]
+        [StringLength(TitleMaxLength, MinimumLength = TitleMinLength)]
         public string Title { get; set; } = null!;
 
         [Required]

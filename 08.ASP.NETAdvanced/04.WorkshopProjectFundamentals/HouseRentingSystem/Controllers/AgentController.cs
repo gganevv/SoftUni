@@ -7,11 +7,11 @@ using Microsoft.AspNetCore.Mvc;
 namespace HouseRentingSystem.Controllers
 {
     [Authorize]
-    public class AgentsController : Controller
+    public class AgentController : Controller
     {
         private readonly IAgentService agents;
 
-        public AgentsController(IAgentService agents)
+        public AgentController(IAgentService agents)
         {
             this.agents = agents;
         }

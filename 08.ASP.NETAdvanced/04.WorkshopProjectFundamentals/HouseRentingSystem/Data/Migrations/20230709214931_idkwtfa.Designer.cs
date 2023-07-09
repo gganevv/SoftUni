@@ -4,6 +4,7 @@ using HouseRentingSystem.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HouseRentingSystem.Data.Migrations
 {
     [DbContext(typeof(HouseRentingDbContex))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230709214931_idkwtfa")]
+    partial class idkwtfa
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -294,15 +296,15 @@ namespace HouseRentingSystem.Data.Migrations
                         {
                             Id = "dea12856-c198-4129-b3f3-b893d8395082",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "fbf5b51c-4af7-419c-b640-543716e4c2cf",
+                            ConcurrencyStamp = "ecf46292-ebaf-48b0-92b5-b65a888c2e32",
                             Email = "agent@mail.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
                             NormalizedEmail = "agent@mail.com",
                             NormalizedUserName = "agent@mail.com",
-                            PasswordHash = "AQAAAAEAACcQAAAAELQz3T327ZZlDoqsagotbO+2N/9mFqZRskaSr7W6RS46Qd4ECAsqMYlJiyPNQurw2A==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEPJNB7y1BNO7N401gbzn8C2eXYq3zdOrdz1w2Co0OWCDHaXglKoPTIAWwrd8R8vg9Q==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "a5b4e446-0857-478b-bc51-e086151d303a",
+                            SecurityStamp = "6a63311f-e8f6-4bdc-bcb4-a1fbac1a31c2",
                             TwoFactorEnabled = false,
                             UserName = "agent@mail.com"
                         },
@@ -310,15 +312,15 @@ namespace HouseRentingSystem.Data.Migrations
                         {
                             Id = "6d5800ce-d726-4fc8-83d9-d6b3ac1f591e",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "6ba83b8d-2ddc-4a32-8322-36b63a3e70d2",
+                            ConcurrencyStamp = "8ad22104-c34f-495c-9d00-d5694373bcc9",
                             Email = "guest@mail.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
                             NormalizedEmail = "guest@mail.com",
                             NormalizedUserName = "guest@mail.com",
-                            PasswordHash = "AQAAAAEAACcQAAAAEJtL1OljGYZlpAJQfScXKNJCT58gU9XqmHMSKZR3CLXnvZ+FFemvbef5g5QdEgdnJw==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEEqL/sv2n/RL7L9uFeR/DlfK8ZOeiQMtVJb+DG2bnoiK3yRojqYpBijo++ln9x/HTQ==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "dea7ba85-1148-4e00-960d-b015825ea994",
+                            SecurityStamp = "014bc656-eabd-4467-bb5e-63ed3a9d6705",
                             TwoFactorEnabled = false,
                             UserName = "guest@mail.com"
                         });
