@@ -42,7 +42,7 @@ namespace HouseRentingSystem.Services.Agent
 
         public async Task<int> GetAgentId(string userId)
         {
-            return data.Agents.FirstOrDefaultAsync(a => a.UserId == userId).Id;
+            return data.Agents.FirstOrDefault(a => a.UserId == userId).Id;
         }
     }
 }

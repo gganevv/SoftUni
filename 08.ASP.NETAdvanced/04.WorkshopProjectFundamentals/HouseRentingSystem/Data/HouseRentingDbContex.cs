@@ -46,26 +46,26 @@ namespace HouseRentingSystem.Data
                 .HasForeignKey(h => h.AgentId)
                 .OnDelete(DeleteBehavior.Restrict);
 
-            SeedUsers();
-            builder.Entity<IdentityUser>()
-                .HasData(AgentUser, GuestUser);
-
-            SeedAgent();
-            builder.Entity<Agent>()
-                .HasData(Agent);
-
-            SeedCategories();
-            builder.Entity<Category>()
-                .HasData(CottageCategory,
-                SingleCategory,
-                DuplexCategory);
-
-            SeedHouses();
-            builder.Entity<House>()
-                .HasData(FirstHouse,
-                SecondHouse,
-                ThirdHouse);
-
+                //SeedUsers();
+                //builder.Entity<IdentityUser>()
+                //    .HasData(AgentUser, GuestUser);
+                //
+                //SeedAgent();
+                //builder.Entity<Agent>()
+                //    .HasData(Agent);
+                //
+                SeedCategories();
+                builder.Entity<Category>()
+                    .HasData(CottageCategory,
+                    SingleCategory,
+                    DuplexCategory);
+                
+                //SeedHouses();
+                //builder.Entity<House>()
+                //    .HasData(FirstHouse,
+                //    SecondHouse,
+                //    ThirdHouse);
+            
             base.OnModelCreating(builder);
         }
 
