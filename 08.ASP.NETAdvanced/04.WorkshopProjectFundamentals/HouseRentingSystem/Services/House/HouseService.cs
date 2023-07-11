@@ -1,5 +1,6 @@
 ﻿using HouseRentingSystem.Contracts.House;
 using HouseRentingSystem.Data;
+using HouseRentingSystem.Data.Models;
 using HouseRentingSystem.Infrastructure;
 using HouseRentingSystem.Models.Houses;
 using HouseRentingSystem.Services.House.Models;
@@ -90,6 +91,26 @@ namespace HouseRentingSystem.Services.House
                 .ToListAsync();
         }
 
+        public async Task<IEnumerable<HouseServiceModel>> AllHousesByAgentId(int agentId)
+        {
+            var houses = await data
+                .Houses
+                .Where(h => h.AgentId == agentId)
+                .ToListAsync();
+
+            return ProjectToModel(houses);
+        }
+
+        public async Task<IEnumerable<HouseServiceModel>> AllHousesByUserId(string userId)
+        {
+            var houses = await data
+                .Houses
+                .Where(h => h.RenterId == userId)
+                .ToListAsync();
+
+            return ProjectToModel(houses);
+        }
+
         public async Task<bool> CategoryExists(int categoryId)
         {
             return await data.Categories.AnyAsync(c => c.Id == categoryId);
@@ -126,6 +147,23 @@ namespace HouseRentingSystem.Services.House
                     ImageUrl = h.ImageUrl
                 })
                 .Take(3);
+        }
+
+        private List<HouseServiceModel> ProjectToModel(List<Data.Models.House> houses)
+        {
+            var resultHouses = houses
+                .Select(h => new HouseServiceModel()
+                {
+                    Id = h.Id,
+                    Title = h.Title,
+                    Address = h.Address,
+                    ImageUrl = h.ImageUrl,
+                    PricePerMonth = h.PricePerMonth,
+                    IsRented = h.RenterId != null!
+                })
+                .ToList();
+
+            return resultHouses;
         }
     }
 }
