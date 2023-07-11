@@ -135,11 +135,48 @@ namespace HouseRentingSystem.Services.House
             return house.Id;
         }
 
+        public async Task Edit(int houseId, string title, string address, string description, string imageUrl, decimal price, int categoryId)
+        {
+            var house = data.Houses.Find(houseId);
+
+            house.Title = title;
+            house.Address = address;
+            house.Description = description;
+            house.ImageUrl = imageUrl;
+            house.PricePerMonth = price;
+            house.CategoryId = categoryId;
+
+            await data.SaveChangesAsync();
+        }
+
         public async Task<bool> Exists(int id)
         {
             return await data
                 .Houses
                 .AnyAsync(h => h.Id == id);
+        }
+
+        public int GetHouseCategoryId(int houseId)
+        {
+            return data.Houses.FindAsync(houseId).Result.CategoryId;
+        }
+
+        public async Task<bool> HasAgentWithId(int houseId, string currentUserId)
+        {
+            var house = await data.Houses.FindAsync(houseId);
+            var agent = await data.Agents.FirstOrDefaultAsync(a => a.Id == house.AgentId);
+
+            if (agent == null)
+            {
+                return false;
+            }
+
+            if (agent.UserId != currentUserId)
+            {
+                return false;
+            }
+
+            return true;
         }
 
         public async Task<HouseDetailsServiceModel> HouseDetailsById(int id)
@@ -178,6 +215,11 @@ namespace HouseRentingSystem.Services.House
                     ImageUrl = h.ImageUrl
                 })
                 .Take(3);
+        }
+
+        int IHouseService.GetHouseCategoryId(int houseId)
+        {
+            return data.Houses.FindAsync(houseId).Result.CategoryId;
         }
 
         private List<HouseServiceModel> ProjectToModel(List<Data.Models.House> houses)
