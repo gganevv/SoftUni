@@ -3,7 +3,7 @@ using HouseRentingSystem.Data;
 using HouseRentingSystem.Data.Models;
 using HouseRentingSystem.Infrastructure;
 using HouseRentingSystem.Models.Houses;
-using HouseRentingSystem.Services.House.Models;
+using HouseRentingSystem.Services.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace HouseRentingSystem.Services.House

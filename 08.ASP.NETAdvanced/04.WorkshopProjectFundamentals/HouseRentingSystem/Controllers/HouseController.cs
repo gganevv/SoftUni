@@ -2,7 +2,7 @@
 using HouseRentingSystem.Contracts.House;
 using HouseRentingSystem.Infrastructure;
 using HouseRentingSystem.Models.Houses;
-using HouseRentingSystem.Services.House.Models;
+using HouseRentingSystem.Services.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 

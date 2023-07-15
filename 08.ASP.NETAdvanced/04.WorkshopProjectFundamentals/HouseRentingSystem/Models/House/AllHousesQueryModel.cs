@@ -1,5 +1,5 @@
 ﻿using HouseRentingSystem.Infrastructure;
-using HouseRentingSystem.Services.House.Models;
+using HouseRentingSystem.Services.Models;
 using System.ComponentModel.DataAnnotations;
 
 namespace HouseRentingSystem.Models.Houses

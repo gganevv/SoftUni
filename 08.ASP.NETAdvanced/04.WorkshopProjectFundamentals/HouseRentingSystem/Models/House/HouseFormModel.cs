@@ -1,4 +1,4 @@
-﻿using HouseRentingSystem.Services.House.Models;
+﻿using HouseRentingSystem.Services.Models;
 using System.ComponentModel.DataAnnotations;
 using static HouseRentingSystem.Data.DataConstants.House;
 

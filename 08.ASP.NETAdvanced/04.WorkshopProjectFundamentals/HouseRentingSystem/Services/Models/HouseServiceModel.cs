@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace HouseRentingSystem.Services.House.Models
+namespace HouseRentingSystem.Services.Models
 {
     public class HouseServiceModel
     {

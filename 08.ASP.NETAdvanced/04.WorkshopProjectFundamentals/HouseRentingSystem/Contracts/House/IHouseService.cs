@@ -1,6 +1,6 @@
 ﻿using HouseRentingSystem.Infrastructure;
 using HouseRentingSystem.Models.Houses;
-using HouseRentingSystem.Services.House.Models;
+using HouseRentingSystem.Services.Models;
 
 namespace HouseRentingSystem.Contracts.House
 {
