@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using ProductsApi.Data;
+using ProductsApi.Services;
 
 namespace WebApplication1
 {
@@ -18,6 +19,7 @@ namespace WebApplication1
             builder.Services.AddControllers();
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+            builder.Services.AddTransient<IProductService, ProductService>();
 
 
             var app = builder.Build();
