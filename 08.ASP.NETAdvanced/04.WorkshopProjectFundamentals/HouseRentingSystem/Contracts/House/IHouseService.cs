@@ -31,5 +31,7 @@ namespace HouseRentingSystem.Contracts.House
         Task<bool> HasAgentWithId(int houseId, string currentUserId);
 
         int GetHouseCategoryId(int houseId);
+
+        Task Delete(int houseId);
     }
 }

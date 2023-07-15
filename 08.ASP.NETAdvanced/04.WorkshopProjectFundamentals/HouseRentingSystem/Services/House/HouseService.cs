@@ -135,6 +135,14 @@ namespace HouseRentingSystem.Services.House
             return house.Id;
         }
 
+        public async Task Delete(int houseId)
+        {
+            var house = await data.Houses.FindAsync(houseId);
+
+            data.Remove(houseId);
+            await data.SaveChangesAsync();
+        }
+
         public async Task Edit(int houseId, string title, string address, string description, string imageUrl, decimal price, int categoryId)
         {
             var house = data.Houses.Find(houseId);
