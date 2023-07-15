@@ -6,6 +6,7 @@ using HouseRentingSystem.Services.Agent;
 using HouseRentingSystem.Services.House;
 using HouseRentingSystem.Services.Statistic;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace HouseRentingSystem
@@ -31,7 +32,11 @@ namespace HouseRentingSystem
             })
                 .AddEntityFrameworkStores<HouseRentingDbContex>();
 
-            builder.Services.AddControllersWithViews();
+            builder.Services.AddControllersWithViews(options =>
+                options.Filters.Add<AutoValidateAntiforgeryTokenAttribute>()
+            );
+
+
             builder.Services.AddTransient<IHouseService, HouseService>();
             builder.Services.AddTransient<IAgentService, AgentService>();
             builder.Services.AddTransient<IStatisticService, StatisticService>();
