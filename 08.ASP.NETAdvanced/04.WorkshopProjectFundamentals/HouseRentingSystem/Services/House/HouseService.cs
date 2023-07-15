@@ -211,6 +211,31 @@ namespace HouseRentingSystem.Services.House
                 .FirstOrDefaultAsync();
         }
 
+        public async Task<bool> IsRented(int id)
+        {
+            var house = await data.Houses.FindAsync(id);
+            var result = house.RenterId != null!;
+
+            return result;
+        }
+
+        public async Task<bool> IsRentedByUserWithId(int houseId, string userId)
+        {
+            var house = await data.Houses.FindAsync(houseId);
+
+            if (house == null)
+            {
+                return false;
+            }
+
+            if (house.RenterId != userId)
+            {
+                return false;
+            }
+
+            return true;
+        }
+
         public async Task<IEnumerable<HouseIndexServiceModel>> LastThreeHouses()
         {
             return data
@@ -223,6 +248,14 @@ namespace HouseRentingSystem.Services.House
                     ImageUrl = h.ImageUrl
                 })
                 .Take(3);
+        }
+
+        public async void Rent(int houseId, string userId)
+        {
+            var house = await data.Houses.FindAsync(houseId);
+
+            house.RenterId = userId;
+            data.SaveChanges();
         }
 
         int IHouseService.GetHouseCategoryId(int houseId)
