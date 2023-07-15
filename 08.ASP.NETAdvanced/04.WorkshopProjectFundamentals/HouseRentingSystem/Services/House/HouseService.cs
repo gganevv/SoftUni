@@ -139,7 +139,7 @@ namespace HouseRentingSystem.Services.House
         {
             var house = await data.Houses.FindAsync(houseId);
 
-            data.Remove(houseId);
+            data.Remove(house);
             await data.SaveChangesAsync();
         }
 
@@ -248,6 +248,14 @@ namespace HouseRentingSystem.Services.House
                     ImageUrl = h.ImageUrl
                 })
                 .Take(3);
+        }
+
+        public async Task Leave(int houseId)
+        {
+            var house = await data.Houses.FindAsync(houseId);
+
+            house.RenterId = null;
+            await data.SaveChangesAsync();
         }
 
         public async void Rent(int houseId, string userId)

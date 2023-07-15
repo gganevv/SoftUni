@@ -33,8 +33,8 @@ namespace HouseRentingSystem.Controllers
             query.TotalHousesCount = queryResult.TotalHousesCount;
             query.Houses = queryResult.Houses;
 
-            var houseCategories = houses.AllCategoriesNames();
-            query.Categories = (IEnumerable<string>)houseCategories;
+            var houseCategories = await houses.AllCategoriesNames();
+            query.Categories = houseCategories;
 
             return View(query);
         }
@@ -178,7 +178,7 @@ namespace HouseRentingSystem.Controllers
                 return BadRequest();
             }
 
-            if (await houses.HasAgentWithId(id, User.Id()))
+            if (!await houses.HasAgentWithId(id, User.Id()))
             {
                 return Unauthorized();
             }
@@ -239,6 +239,18 @@ namespace HouseRentingSystem.Controllers
         [HttpPost]
         public async Task<IActionResult> Leave(int id)
         {
+            if (await houses.Exists(id) == false || await houses.IsRented(id) == false)
+            {
+                return BadRequest();
+            }
+
+            if (!await houses.IsRentedByUserWithId(id, User.Id()))
+            {
+                return Unauthorized();
+            }
+
+            await houses.Leave(id);
+
             return RedirectToAction(nameof(Mine));
         }
     }
