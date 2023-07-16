@@ -1,8 +1,9 @@
-﻿using System.ComponentModel;
+﻿using HouseRentingSystem.Contracts;
+using System.ComponentModel;
 
 namespace HouseRentingSystem.Services.Models
 {
-    public class HouseServiceModel
+    public class HouseServiceModel : IHouseModel
     {
         public int Id { get; set; }
 

@@ -59,6 +59,16 @@ namespace HouseRentingSystem
             app.UseStaticFiles();
 
             app.UseRouting();
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllerRoute(
+                    name: "House Details",
+                    pattern: "/House/Details/{id}/{information}",
+                    defaults: new { Controller = "House", Action = "Details" });
+
+                endpoints.MapDefaultControllerRoute();
+                endpoints.MapRazorPages();
+            });
 
             app.UseAuthentication();
             app.UseAuthorization();
