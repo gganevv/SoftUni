@@ -41,7 +41,8 @@ namespace HouseRentingSystem
             builder.Services.AddTransient<IAgentService, AgentService>();
             builder.Services.AddTransient<IStatisticService, StatisticService>();
 
-            var app = builder.Build();
+            var app = builder.Build(); 
+            
 
             if (app.Environment.IsDevelopment())
             {
@@ -59,6 +60,10 @@ namespace HouseRentingSystem
             app.UseStaticFiles();
 
             app.UseRouting();
+
+            app.UseAuthentication();
+            app.UseAuthorization();
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
@@ -69,9 +74,6 @@ namespace HouseRentingSystem
                 endpoints.MapDefaultControllerRoute();
                 endpoints.MapRazorPages();
             });
-
-            app.UseAuthentication();
-            app.UseAuthorization();
 
             app.MapDefaultControllerRoute();
             app.MapRazorPages();
