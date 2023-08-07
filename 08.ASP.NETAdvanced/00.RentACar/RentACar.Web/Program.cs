@@ -2,8 +2,7 @@ namespace RentACar.Web
 {
     using Microsoft.AspNetCore.Identity;
     using Microsoft.EntityFrameworkCore;
-
-    using Data;
+    using RentACar.Web.Data;
 
     public class Program
     {

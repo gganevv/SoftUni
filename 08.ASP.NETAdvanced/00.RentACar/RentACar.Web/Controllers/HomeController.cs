@@ -4,7 +4,7 @@
     
     using Microsoft.AspNetCore.Mvc;
 
-    using RentACar.Web.Models;
+    using ViewModels.Home;
 
     public class HomeController : Controller
     {

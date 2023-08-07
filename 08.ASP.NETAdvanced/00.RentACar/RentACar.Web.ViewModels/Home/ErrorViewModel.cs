@@ -1,4 +1,4 @@
-namespace RentACar.Web.Models
+namespace RentACar.Web.ViewModels.Home
 {
     public class ErrorViewModel
     {
