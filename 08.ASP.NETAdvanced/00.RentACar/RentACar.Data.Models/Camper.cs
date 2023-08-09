@@ -1,7 +1,6 @@
 ﻿namespace RentACar.Data.Models
 {
-    public class Class1
+    public class Camper
     {
-
     }
 }
